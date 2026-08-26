@@ -1,1 +1,633 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhawna Tuition Classes | Top Tutoring in Babarpur, Delhi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f5ff',
+                            100: '#e0ebff',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#1e3a8a',
+                        },
+                        accent: {
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans antialiased text-slate-800 bg-slate-50 selection:bg-brand-500 selection:text-white">
 
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-brand-600 flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-brand-500/30">
+                    B
+                </div>
+                <div>
+                    <h1 class="font-bold text-slate-900 text-lg sm:text-xl leading-tight">Bhawna Tuition Classes</h1>
+                    <p class="text-xs text-slate-500 font-medium">Shaping Young Minds in Babarpur</p>
+                </div>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-8 font-medium text-sm text-slate-600">
+                <a href="#about" class="hover:text-brand-600 transition-colors">Why Us</a>
+                <a href="#courses" class="hover:text-brand-600 transition-colors">Batches & Courses</a>
+                <a href="#results" class="hover:text-brand-600 transition-colors">Results</a>
+                <a href="#reviews" class="hover:text-brand-600 transition-colors">Reviews</a>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <a href="tel:09650430881" class="hidden sm:flex items-center gap-2 text-sm font-semibold text-brand-700 bg-brand-50 hover:bg-brand-100 px-4 py-2.5 rounded-full transition-all">
+                    <i data-lucide="phone" class="w-4 h-4"></i>
+                    <span>096504 30881</span>
+                </a>
+                <button onclick="openModal()" class="bg-brand-600 hover:bg-brand-700 text-white font-semibold text-sm px-5 py-2.5 rounded-full shadow-md shadow-brand-600/20 hover:shadow-lg transition-all transform hover:-translate-y-0.5">
+                    Enroll Now
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="bg-gradient-to-r from-amber-500 via-amber-600 to-accent-600 text-white text-xs sm:text-sm font-medium py-2.5 px-4 text-center flex items-center justify-center gap-2 shadow-inner">
+        <i data-lucide="zap" class="w-4 h-4 fill-white animate-pulse"></i>
+        <span><strong>New Academic Batch Starting Soon!</strong> Limited seats for personalized attention.</span>
+        <span class="hidden md:inline-block border-l border-white/30 pl-2 ml-1">Call 096504 30881 to book a free demo.</span>
+    </div>
+
+    <section class="relative pt-12 pb-20 lg:pt-20 lg:pb-28 overflow-hidden bg-gradient-to-b from-brand-50/50 to-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <div class="flex justify-center mb-8">
+                <div class="inline-flex p-1.5 bg-slate-200/80 backdrop-blur rounded-2xl gap-1">
+                    <button id="tab-btn-primary" onclick="switchHeroTab('primary')" class="hero-tab-btn active px-5 py-2.5 rounded-xl font-semibold text-sm transition-all duration-200 bg-white text-brand-700 shadow-sm">
+                        Class 1st - 5th (Foundational)
+                    </button>
+                    <button id="tab-btn-middle" onclick="switchHeroTab('middle')" class="hero-tab-btn px-5 py-2.5 rounded-xl font-semibold text-sm transition-all duration-200 text-slate-600 hover:text-slate-900">
+                        Class 6th - 8th (Comprehensive)
+                    </button>
+                    <button id="tab-btn-board" onclick="switchHeroTab('board')" class="hero-tab-btn px-5 py-2.5 rounded-xl font-semibold text-sm transition-all duration-200 text-slate-600 hover:text-slate-900">
+                        Class 9th - 10th (Board Prep)
+                    </button>
+                </div>
+            </div>
+
+            <div class="text-center max-w-4xl mx-auto">
+                
+                <div id="hero-content-primary" class="hero-tab-content block transition-opacity duration-300">
+                    <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-brand-100 text-brand-700 mb-6">
+                        <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Strong Academic Roots
+                    </span>
+                    <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-tight mb-6">
+                        Build Unshakeable Basics & <span class="text-brand-600 underline decoration-accent-400 decoration-wavy decoration-2">Academic Confidence</span> Early
+                    </h2>
+                    <p class="text-lg sm:text-xl text-slate-600 mb-8 max-w-2xl mx-auto">
+                        Gentle, caring, and highly engaging tuition for young learners. We turn difficult math and science concepts into fun, simple lessons.
+                    </p>
+                </div>
+
+                <div id="hero-content-middle" class="hero-tab-content hidden transition-opacity duration-300">
+                    <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-accent-100 text-accent-700 mb-6">
+                        <i data-lucide="book-open" class="w-3.5 h-3.5"></i> Conceptual Mastery
+                    </span>
+                    <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-tight mb-6">
+                        Master Complex Subjects with <span class="text-brand-600 underline decoration-accent-400 decoration-wavy decoration-2">Personalized Attention</span>
+                    </h2>
+                    <p class="text-lg sm:text-xl text-slate-600 mb-8 max-w-2xl mx-auto">
+                        Helping Class 6-8 students overcome learning hurdles, improve problem-solving speed, and consistently achieve top school grades.
+                    </p>
+                </div>
+
+                <div id="hero-content-board" class="hero-tab-content hidden transition-opacity duration-300">
+                    <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 mb-6">
+                        <i data-lucide="award" class="w-3.5 h-3.5"></i> Target 95%+ Board Score
+                    </span>
+                    <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-tight mb-6">
+                        Rigorous Prep & Test Series for <span class="text-brand-600 underline decoration-accent-400 decoration-wavy decoration-2">Class 9th & 10th</span>
+                    </h2>
+                    <p class="text-lg sm:text-xl text-slate-600 mb-8 max-w-2xl mx-auto">
+                        Structured revision schedules, weak-area remediation, and regular exam simulations under Bhawna Ma’am’s direct mentorship.
+                    </p>
+                </div>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+                    <button onclick="openModal()" class="w-full sm:w-auto bg-brand-600 hover:bg-brand-700 text-white font-bold text-base px-8 py-4 rounded-xl shadow-lg shadow-brand-600/30 hover:shadow-xl transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                        <span>Book Free Demo Class</span>
+                        <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    </button>
+                    <a href="https://wa.me/919650430881?text=Hi%20Bhawna%20Ma'am,%20I%20want%20to%20enquire%20about%20tuition%20classes." target="_blank" class="w-full sm:w-auto bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-base px-8 py-4 rounded-xl shadow-lg shadow-emerald-500/20 hover:shadow-xl transition-all flex items-center justify-center gap-2">
+                        <i data-lucide="message-circle" class="w-5 h-5"></i>
+                        <span>WhatsApp Us Directly</span>
+                    </a>
+                </div>
+
+                <div class="inline-flex flex-wrap items-center justify-center gap-6 p-4 rounded-2xl bg-white border border-slate-200/80 shadow-sm text-sm font-semibold text-slate-700">
+                    <div class="flex items-center gap-2">
+                        <div class="flex text-amber-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <span class="font-bold text-slate-900">4.9 / 5.0</span> (77 Google Reviews)
+                    </div>
+                    <div class="w-px h-4 bg-slate-300 hidden sm:block"></div>
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="map-pin" class="w-4 h-4 text-brand-600"></i>
+                        <span>Babarpur, North East Delhi</span>
+                    </div>
+                    <div class="w-px h-4 bg-slate-300 hidden sm:block"></div>
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="users" class="w-4 h-4 text-brand-600"></i>
+                        <span>Small Batches (Max 12-15)</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="results" class="bg-slate-900 text-white py-12 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="space-y-1">
+                    <div class="text-4xl sm:text-5xl font-black text-brand-500 tracking-tight">4.9 ★</div>
+                    <p class="text-xs sm:text-sm font-medium text-slate-400 uppercase tracking-wider">Google Rating (77+ Reviews)</p>
+                </div>
+                <div class="space-y-1">
+                    <div class="text-4xl sm:text-5xl font-black text-accent-400 tracking-tight">100%</div>
+                    <p class="text-xs sm:text-sm font-medium text-slate-400 uppercase tracking-wider">Pass Rate Guaranteed</p>
+                </div>
+                <div class="space-y-1">
+                    <div class="text-4xl sm:text-5xl font-black text-emerald-400 tracking-tight">500+</div>
+                    <p class="text-xs sm:text-sm font-medium text-slate-400 uppercase tracking-wider">Students Mentored</p>
+                </div>
+                <div class="space-y-1">
+                    <div class="text-4xl sm:text-5xl font-black text-purple-400 tracking-tight">1:1</div>
+                    <p class="text-xs sm:text-sm font-medium text-slate-400 uppercase tracking-wider">Personalized Attention</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-brand-600 font-bold text-sm uppercase tracking-wider">Dedicated & Caring Education</span>
+                    <h3 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2 mb-6">
+                        Why Parents in Babarpur Trust Bhawna Tuition Classes
+                    </h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        At Bhawna Tuition Classes, education goes beyond simple rote memorization. Led by Bhawna Ma’am, our center provides a nurturing, safe, and positive environment where students feel comfortable asking questions and overcoming their academic anxieties.
+                    </p>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-brand-100 text-brand-600 flex items-center justify-center shrink-0 mt-1">
+                                <i data-lucide="check" class="w-4 h-4"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Patient & Skillful Pedagogy</h4>
+                                <p class="text-sm text-slate-600">Complex mathematics and science concepts broken down step-by-step.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-brand-100 text-brand-600 flex items-center justify-center shrink-0 mt-1">
+                                <i data-lucide="check" class="w-4 h-4"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Individual Weakness Identification</h4>
+                                <p class="text-sm text-slate-600">Immediate diagnostic feedback to convert academic weaknesses into strengths.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-brand-100 text-brand-600 flex items-center justify-center shrink-0 mt-1">
+                                <i data-lucide="check" class="w-4 h-4"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Strong Community & Noble Values</h4>
+                                <p class="text-sm text-slate-600">Dedicated to providing top-quality education accessible to every section of society.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button onclick="openModal()" class="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white font-semibold px-6 py-3 rounded-xl transition-all">
+                        <span>Schedule a Visit to Center</span>
+                        <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                    </button>
+                </div>
+
+                <div class="bg-gradient-to-br from-brand-50 to-indigo-50/50 p-8 rounded-3xl border border-brand-100 relative shadow-lg">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-14 h-14 rounded-full bg-brand-600 text-white flex items-center justify-center text-2xl font-bold">
+                            G
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-lg">Top Rated on Google</h4>
+                            <div class="flex items-center gap-2 text-sm text-slate-600">
+                                <span class="text-amber-500 font-bold">4.9 Stars</span>
+                                <span>•</span>
+                                <span>77 Verified Reviews</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <blockquote class="text-slate-700 italic text-base leading-relaxed mb-6">
+                        "Bhawna Tuition Classes is doing a phenomenal job in shaping the future of young minds. Beyond excellent academic coaching, their dedication to providing quality education to every section of society is truly commendable. It is rare to find an institute that balances educational excellence with such a strong community spirit."
+                    </blockquote>
+
+                    <div class="flex items-center justify-between pt-4 border-t border-brand-200/60 text-xs font-semibold text-slate-500">
+                        <span>Verified Local Resident</span>
+                        <span class="flex items-center gap-1 text-brand-700"><i data-lucide="shield-check" class="w-4 h-4"></i> Google Review</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="courses" class="py-16 sm:py-24 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-brand-600 font-bold text-sm uppercase tracking-wider">Structured Programs</span>
+                <h3 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">Batches & Subject Options</h3>
+                <p class="text-slate-600 mt-2">Choose the right coaching plan tailored to your child's current standard and academic goals.</p>
+            </div>
+
+            <div class="overflow-x-auto bg-white rounded-2xl shadow-md border border-slate-200">
+                <table class="w-full text-left border-collapse min-w-[640px]">
+                    <thead>
+                        <tr class="bg-slate-900 text-white text-sm uppercase tracking-wider">
+                            <th class="p-4 sm:p-5">Batch / Class</th>
+                            <th class="p-4 sm:p-5">Subjects Covered</th>
+                            <th class="p-4 sm:p-5">Batch Schedule</th>
+                            <th class="p-4 sm:p-5">Mode & Batch Size</th>
+                            <th class="p-4 sm:p-5 text-right">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-200 text-sm sm:text-base font-medium">
+                        <tr class="hover:bg-brand-50/50 transition-colors">
+                            <td class="p-4 sm:p-5 font-bold text-slate-900">
+                                Primary Batch<br>
+                                <span class="text-xs text-brand-600 font-semibold">Classes 1st – 5th</span>
+                            </td>
+                            <td class="p-4 sm:p-5 text-slate-600">All Core Subjects (Maths, EVS, English, Hindi)</td>
+                            <td class="p-4 sm:p-5 text-slate-600">Mon - Fri (1 Hour Daily)</td>
+                            <td class="p-4 sm:p-5 text-slate-600">Offline • Small Groups (Max 10)</td>
+                            <td class="p-4 sm:p-5 text-right">
+                                <button onclick="openModal('Primary Batch (Class 1-5)')" class="bg-brand-600 hover:bg-brand-700 text-white text-xs font-bold px-4 py-2 rounded-lg transition-all">
+                                    Enquire
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-brand-50/50 transition-colors">
+                            <td class="p-4 sm:p-5 font-bold text-slate-900">
+                                Middle School Batch<br>
+                                <span class="text-xs text-brand-600 font-semibold">Classes 6th – 8th</span>
+                            </td>
+                            <td class="p-4 sm:p-5 text-slate-600">Mathematics, Science, English, Social Studies</td>
+                            <td class="p-4 sm:p-5 text-slate-600">Mon - Sat (1.5 Hours Daily)</td>
+                            <td class="p-4 sm:p-5 text-slate-600">Offline • Interactive (Max 12)</td>
+                            <td class="p-4 sm:p-5 text-right">
+                                <button onclick="openModal('Middle School (Class 6-8)')" class="bg-brand-600 hover:bg-brand-700 text-white text-xs font-bold px-4 py-2 rounded-lg transition-all">
+                                    Enquire
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-brand-50/50 transition-colors bg-brand-50/30">
+                            <td class="p-4 sm:p-5 font-bold text-slate-900">
+                                Secondary Board Batch<br>
+                                <span class="text-xs text-brand-600 font-semibold">Classes 9th & 10th</span>
+                            </td>
+                            <td class="p-4 sm:p-5 text-slate-600">Science (Physics, Chem, Bio) & Mathematics</td>
+                            <td class="p-4 sm:p-5 text-slate-600">Mon - Sat + Sunday Test Series</td>
+                            <td class="p-4 sm:p-5 text-slate-600">Offline • Focused (Max 15)</td>
+                            <td class="p-4 sm:p-5 text-right">
+                                <button onclick="openModal('Board Prep (Class 9-10)')" class="bg-brand-600 hover:bg-brand-700 text-white text-xs font-bold px-4 py-2 rounded-lg transition-all">
+                                    Enquire
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-brand-50/50 transition-colors">
+                            <td class="p-4 sm:p-5 font-bold text-slate-900">
+                                1-on-1 Individual Tuition<br>
+                                <span class="text-xs text-accent-600 font-semibold">All Classes</span>
+                            </td>
+                            <td class="p-4 sm:p-5 text-slate-600">Customized Subject Focus based on Need</td>
+                            <td class="p-4 sm:p-5 text-slate-600">Flexible Timings</td>
+                            <td class="p-4 sm:p-5 text-slate-600">Personalized Exclusive Mentorship</td>
+                            <td class="p-4 sm:p-5 text-right">
+                                <button onclick="openModal('1-on-1 Personalized Coaching')" class="bg-accent-500 hover:bg-accent-600 text-white text-xs font-bold px-4 py-2 rounded-lg transition-all">
+                                    Enquire
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 sm:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-brand-600 font-bold text-sm uppercase tracking-wider">Expert Guidance</span>
+                <h3 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">Meet Your Lead Educator</h3>
+                <p class="text-slate-600 mt-2">Personal care and academic expertise driving every student forward.</p>
+            </div>
+
+            <div class="flex justify-center">
+                <div class="max-w-md w-full bg-white rounded-3xl border border-slate-200 p-8 text-center shadow-lg relative">
+                    <div class="w-24 h-24 rounded-full bg-slate-100 border-4 border-brand-500 mx-auto mb-4 flex items-center justify-center text-brand-700 font-bold text-3xl shadow-inner">
+                        BM
+                    </div>
+                    <h4 class="text-2xl font-bold text-slate-900">Bhawna Ma'am</h4>
+                    <p class="text-brand-600 font-medium text-sm mb-4">Founder & Lead Educator</p>
+                    <p class="text-slate-600 text-sm mb-6">
+                        Known for her patience, structured teaching methodologies, and ability to simplify tricky concepts for students of all learning levels.
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-2">
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 text-xs font-semibold rounded-full">Patient Teaching</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 text-xs font-semibold rounded-full">Concept Clearing</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 text-xs font-semibold rounded-full">Personal Attention</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="py-16 sm:py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-brand-600 font-bold text-sm uppercase tracking-wider">Testimonials</span>
+                <h3 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">What Parents & Students Say</h3>
+                <p class="text-slate-600 mt-2">Real feedback from Google reviews of Bhawna Tuition Classes.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-slate-700 text-sm leading-relaxed mb-6">
+                            "As a mother, I am very satisfied with this coaching centre. I have seen a noticeable improvement in my child’s understanding and confidence. Bhawna Ma’am is very dedicated, caring, and gives personal attention to each student."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+                        <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-700 font-bold flex items-center justify-center text-sm">
+                            RB
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-slate-900 text-sm">Reshma Bano</h5>
+                            <p class="text-xs text-slate-500">Parent Review</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-slate-700 text-sm leading-relaxed mb-6">
+                            "An amazing teacher! Very patient and excellent at explaining tricky concepts. I've learned so much and couldn't be happier with the progress I've made. Thank you Bhawna ma'am."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-700 font-bold flex items-center justify-center text-sm">
+                            KG
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-slate-900 text-sm">K Gupta</h5>
+                            <p class="text-xs text-slate-500">Student Review</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-slate-700 text-sm leading-relaxed mb-6">
+                            "Personalized attention and structured lessons made all the difference. Bhawna ma'am identified my weak points immediately and helped me turn them into strengths."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+                        <div class="w-10 h-10 rounded-full bg-purple-100 text-purple-700 font-bold flex items-center justify-center text-sm">
+                            PG
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-slate-900 text-sm">Pooja Gupta</h5>
+                            <p class="text-xs text-slate-500">Student Review</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 sm:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-brand-600 font-bold text-sm uppercase tracking-wider">Visit Our Coaching Center</span>
+                    <h3 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2 mb-6">Conveniently Located in Babarpur</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center shrink-0">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-slate-900">Address</h5>
+                                <p class="text-slate-600 text-sm">Lohiya Gali Number 4, Babarpur Village, Babarpur, Delhi, 110032</p>
+                                <p class="text-xs text-slate-400 mt-1">Plus Code: M7QJ+M7 Delhi</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center shrink-0">
+                                <i data-lucide="clock" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-slate-900">Operating Hours</h5>
+                                <p class="text-slate-600 text-sm">Open Daily • Closes at 9:00 PM</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center shrink-0">
+                                <i data-lucide="phone" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-slate-900">Phone / Admissions</h5>
+                                <p class="text-slate-600 text-sm">+91 96504 30881</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rounded-3xl bg-slate-100 border border-slate-200 p-8 text-center flex flex-col items-center justify-center min-h-[300px]">
+                    <i data-lucide="map" class="w-12 h-12 text-slate-400 mb-3"></i>
+                    <h4 class="font-bold text-slate-900 text-lg">Locate Us in Babarpur Village</h4>
+                    <p class="text-slate-500 text-sm max-w-xs mt-1 mb-6">Lohiya Gali No. 4, nearby central market landmarks.</p>
+                    <a href="https://maps.google.com/?q=Lohiya+Gali+Number+4,+Babarpur+Village,+Babarpur,+Delhi,+110032" target="_blank" class="bg-slate-900 hover:bg-slate-800 text-white text-sm font-semibold px-6 py-3 rounded-xl transition-all flex items-center gap-2">
+                        <span>Open in Google Maps</span>
+                        <i data-lucide="external-link" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left flex flex-col sm:flex-row justify-between items-center gap-6">
+            <div>
+                <h4 class="text-white font-bold text-lg">Bhawna Tuition Classes</h4>
+                <p class="text-xs text-slate-500 mt-1">Quality & Inclusive Coaching in North East Delhi</p>
+            </div>
+            <p class="text-xs text-slate-500">
+                &copy; 2026 Bhawna Tuition Classes. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <div class="fixed bottom-6 right-6 z-40">
+        <button onclick="openModal()" class="bg-gradient-to-r from-brand-600 to-brand-700 hover:from-brand-700 hover:to-brand-800 text-white font-bold px-6 py-3.5 rounded-full shadow-2xl flex items-center gap-3 transform hover:scale-105 transition-all">
+            <i data-lucide="edit-3" class="w-5 h-5"></i>
+            <span>Enquire Now</span>
+        </button>
+    </div>
+
+    <div id="enquiryModal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl relative animate-in fade-in zoom-in duration-200">
+            
+            <button onclick="closeModal()" class="absolute top-5 right-5 text-slate-400 hover:text-slate-600 p-1 rounded-full hover:bg-slate-100 transition-colors">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+
+            <div class="mb-6">
+                <span class="text-xs font-bold text-brand-600 uppercase tracking-wider">Admissions Open</span>
+                <h3 class="text-2xl font-bold text-slate-900 mt-1">Book a Free Demo Class</h3>
+                <p class="text-xs text-slate-500 mt-1">Fill in the details to submit enquiry directly on WhatsApp.</p>
+            </div>
+
+            <form onsubmit="handleFormSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">Student Name</label>
+                    <input type="text" id="modal-name" required placeholder="Enter student's name" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none text-sm transition-all">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">Target Class / Course</label>
+                    <select id="modal-course" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none text-sm transition-all">
+                        <option value="Primary Batch (Class 1-5)">Class 1st – 5th (Primary)</option>
+                        <option value="Middle School (Class 6-8)">Class 6th – 8th (Middle)</option>
+                        <option value="Board Prep (Class 9-10)">Class 9th & 10th (Boards)</option>
+                        <option value="1-on-1 Individual Tuition">1-on-1 Individual Tuition</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">Contact Phone Number</label>
+                    <input type="tel" id="modal-phone" required placeholder="10-digit mobile number" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none text-sm transition-all">
+                </div>
+
+                <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 rounded-xl shadow-lg shadow-emerald-600/20 hover:shadow-xl transition-all flex items-center justify-center gap-2 mt-2">
+                    <i data-lucide="message-circle" class="w-5 h-5"></i>
+                    <span>Submit via WhatsApp</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Hero Tab Switcher Function
+        function switchHeroTab(tabId) {
+            // Hide all tab contents
+            const contents = document.querySelectorAll('.hero-tab-content');
+            contents.forEach(content => content.classList.add('hidden'));
+
+            // Remove active style from all tab buttons
+            const buttons = document.querySelectorAll('.hero-tab-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-white', 'text-brand-700', 'shadow-sm');
+                btn.classList.add('text-slate-600');
+            });
+
+            // Show selected content
+            const selectedContent = document.getElementById('hero-content-' + tabId);
+            if (selectedContent) {
+                selectedContent.classList.remove('hidden');
+            }
+
+            // Highlight active button
+            const selectedBtn = document.getElementById('tab-btn-' + tabId);
+            if (selectedBtn) {
+                selectedBtn.classList.add('bg-white', 'text-brand-700', 'shadow-sm');
+                selectedBtn.classList.remove('text-slate-600');
+            }
+        }
+
+        // Modal Functions
+        function openModal(selectedCourse = null) {
+            const modal = document.getElementById('enquiryModal');
+            if (selectedCourse) {
+                document.getElementById('modal-course').value = selectedCourse;
+            }
+            modal.classList.remove('hidden');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('enquiryModal');
+            modal.classList.add('hidden');
+        }
+
+        // WhatsApp Direct Submit
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('modal-name').value;
+            const course = document.getElementById('modal-course').value;
+            const phone = document.getElementById('modal-phone').value;
+
+            const text = `Hello Bhawna Ma'am, I am interested in admission for Bhawna Tuition Classes.%0A%0A*Student Name:* ${encodeURIComponent(name)}%0A*Course/Class:* ${encodeURIComponent(course)}%0A*Phone:* ${encodeURIComponent(phone)}`;
+            
+            const whatsappUrl = `https://wa.me/919650430881?text=${text}`;
+            window.open(whatsappUrl, '_blank');
+            closeModal();
+        }
+
+        // Initialize Lucide Icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>

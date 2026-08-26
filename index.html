@@ -1,461 +1,543 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dream Makeover Salon & Academy | Shahdara, Delhi</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            rose: '#E11D48',
-                            gold: '#D97706',
-                            dark: '#0F0E17',
-                            card: '#1A1825',
-                            accent: '#F43F5E'
-                        }
-                    },
-                    backgroundImage: {
-                        'radial-grid': 'radial-gradient(circle, rgba(225, 29, 72, 0.08) 1px, transparent 1px)'
-                    }
-                }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FIT GENERATION GYM - Premium Fitness & Gym in Shahdara, Delhi</title>
+  <meta name="description" content="Join FIT GENERATION GYM at Durgapuri Extension, Shahdara. Modern equipment, supportive certified trainers, high-energy environment, and professional guidance." />
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              red: '#FF2E00',
+              darkRed: '#CC2500',
+              charcoal: '#0F0F12',
+              card: '#18181C',
+              cardHover: '#222228',
+              accent: '#FF4D26'
             }
+          },
+          backgroundImage: {
+            'grid-pattern': "radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px)",
+          }
         }
-    </script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-        .glass-panel {
-            background: rgba(26, 24, 37, 0.75);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-        }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        .text-gradient {
-            background: linear-gradient(135deg, #FFF 0%, #FDA4AF 50%, #E11D48 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .gold-gradient {
-            background: linear-gradient(135deg, #FDE047 0%, #D97706 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-    </style>
+      }
+    }
+  </script>
+  <style>
+    .grid-bg {
+      background-size: 24px 24px;
+    }
+    .glass-card {
+      background: rgba(24, 24, 28, 0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-nav {
+      background: rgba(15, 15, 18, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .text-gradient {
+      background: linear-gradient(135deg, #FFFFFF 30%, #FF2E00 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
 </head>
-<body class="bg-brand-dark text-slate-100 font-sans antialiased bg-[size:24px_24px] bg-radial-grid">
+<body class="bg-brand-charcoal text-gray-100 font-sans antialiased selection:bg-brand-red selection:text-white">
 
-    <div class="bg-gradient-to-r from-rose-900 via-brand-rose to-rose-900 text-white text-xs md:text-sm py-2.5 px-4 text-center font-medium sticky top-0 z-50 shadow-md">
-        <div class="max-w-7xl mx-auto flex items-center justify-center gap-2">
-            <i data-lucide="sparkles" class="w-4 h-4 text-amber-300 animate-pulse"></i>
-            <span>Special Festival & Bridal Offers Open! Book Today for Up to 30% Off Services</span>
-            <i data-lucide="sparkles" class="w-4 h-4 text-amber-300 animate-pulse hidden sm:inline"></i>
+  <div class="bg-gradient-to-r from-brand-red to-brand-accent text-white text-xs md:text-sm font-semibold py-2.5 px-4 text-center tracking-wide flex items-center justify-center gap-2 shadow-md">
+    <i data-lucide="zap" class="w-4 h-4 animate-pulse">="fill-current"></i>
+    <span>Admissions & Admissions Open for the 2026 Season! Special Membership Offers Available.</span>
+  </div>
+
+  <header class="sticky top-0 z-50 glass-nav border-b border-white/10 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 bg-brand-red rounded-xl flex items-center justify-center font-black text-2xl text-white shadow-lg shadow-brand-red/30 group-hover:scale-105 transition-transform">
+          FG
         </div>
+        <div>
+          <span class="text-xl font-extrabold tracking-tight text-white block leading-none">FIT GENERATION</span>
+          <span class="text-xs text-brand-red tracking-widest uppercase font-semibold">Gym & Fitness Hub</span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
+        <a href="#services" class="hover:text-brand-red transition-colors">Programs</a>
+        <a href="#why-us" class="hover:text-brand-red transition-colors">Why Join Us</a>
+        <a href="#reviews" class="hover:text-brand-red transition-colors">Testimonials</a>
+        <a href="#location" class="hover:text-brand-red transition-colors">Location</a>
+      </nav>
+
+      <a href="tel:+918700954343" class="hidden sm:inline-flex items-center gap-2 bg-brand-red hover:bg-brand-darkRed text-white font-bold text-sm px-5 py-2.5 rounded-xl shadow-lg shadow-brand-red/25 hover:shadow-brand-red/40 transition-all transform hover:-translate-y-0.5">
+        <i data-lucide="phone-call" class="w-4 h-4"></i>
+        <span>Call Now</span>
+      </a>
     </div>
+  </header>
 
-    <header class="sticky top-[36px] z-40 glass-panel border-b border-white/10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <a href="#" class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-brand-rose to-amber-500 flex items-center justify-center font-bold text-lg text-white shadow-lg shadow-rose-900/40">
-                    DM
-                </div>
-                <div>
-                    <span class="font-bold text-lg leading-tight block tracking-wide">Dream Makeover</span>
-                    <span class="text-xs text-rose-400 font-medium block">Salon & Academy by Megha Mam</span>
-                </div>
+  <section class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden grid-bg bg-grid-pattern">
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-brand-charcoal/50 to-brand-charcoal pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-brand-red text-xs font-semibold uppercase tracking-wider">
+            <i data-lucide="award" class="w-4 h-4"></i>
+            Top Rated Gym in Shahdara, Delhi
+          </div>
+          
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight uppercase">
+            Transform Your Body. <br />
+            <span class="text-gradient">Fuel Your Ambition.</span>
+          </h1>
+
+          <p class="text-lg text-gray-400 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+            Unleash your strength at Fit Generation Gym. Equipped with modern machinery, a high-energy atmosphere, and certified trainers focused on your goals.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+            <a href="tel:+918700954343" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-brand-red hover:bg-brand-darkRed text-white font-bold text-base px-8 py-4 rounded-xl shadow-xl shadow-brand-red/30 transition-all hover:scale-105">
+              <i data-lucide="phone" class="w-5 h-5"></i>
+              <span>Call +91 87009 54343</span>
             </a>
-
-            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
-                <a href="#services" class="hover:text-rose-400 transition-colors">Services</a>
-                <a href="#why-us" class="hover:text-rose-400 transition-colors">Why Choose Us</a>
-                <a href="#reviews" class="hover:text-rose-400 transition-colors">Reviews</a>
-                <a href="#location" class="hover:text-rose-400 transition-colors">Location</a>
-            </nav>
-
-            <a href="tel:08860788535" class="flex items-center gap-2 bg-brand-rose hover:bg-rose-600 text-white px-5 py-2.5 rounded-full font-semibold text-sm transition-all duration-300 shadow-lg shadow-rose-600/30 hover:scale-105">
-                <i data-lucide="phone-call" class="w-4 h-4"></i>
-                <span>Call 088607 88535</span>
+            <a href="#inquiry" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 border border-white/15 text-white font-semibold text-base px-6 py-4 rounded-xl transition-all">
+              <span>Book Free Trial Session</span>
+              <i data-lucide="chevron-right" class="w-5 h-5"></i>
             </a>
-        </div>
-    </header>
+          </div>
 
-    <section class="relative py-12 lg:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
-            <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-card border-rose-500/30 text-rose-300 text-xs font-semibold">
-                    <i data-lucide="star" class="w-3.5 h-3.5 text-amber-400 fill-amber-400"></i>
-                    <span>Top-Rated Beauty Salon in Shahdara, Delhi</span>
-                </div>
-
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight">
-                    Unveil Your True Radiance at <span class="text-gradient">Dream Makeover</span>
-                </h1>
-
-                <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                    Lead expert <strong class="text-white">Megha Mam</strong> and her professional team bring you high-end Bridal Makeup, Hair Keratin Treatments, and soothing Skin Care right in Nathu Colony Chowk.
-                </p>
-
-                <div class="grid grid-cols-3 gap-4 pt-2 max-w-lg mx-auto lg:mx-0">
-                    <div class="glass-card p-3.5 rounded-2xl text-center">
-                        <div class="text-2xl font-bold text-amber-400 flex items-center justify-center gap-1">
-                            4.8 <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
-                        </div>
-                        <div class="text-xs text-slate-400 mt-1">255+ Google Reviews</div>
-                    </div>
-                    <div class="glass-card p-3.5 rounded-2xl text-center">
-                        <div class="text-2xl font-bold text-rose-400">100%</div>
-                        <div class="text-xs text-slate-400 mt-1">Hygiene Standard</div>
-                    </div>
-                    <div class="glass-card p-3.5 rounded-2xl text-center">
-                        <div class="text-2xl font-bold text-emerald-400">Expert</div>
-                        <div class="text-xs text-slate-400 mt-1">Megha & Team</div>
-                    </div>
-                </div>
-
-                <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-                    <a href="tel:08860788535" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-rose-600 to-rose-500 hover:from-rose-500 hover:to-rose-600 text-white px-8 py-4 rounded-xl font-bold shadow-xl shadow-rose-600/25 transition-all">
-                        <i data-lucide="phone" class="w-5 h-5"></i>
-                        <span>Call For Appointment</span>
-                    </a>
-                    <a href="#services" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 glass-card hover:bg-white/10 text-slate-200 px-8 py-4 rounded-xl font-semibold transition-all">
-                        <span>Explore Menu</span>
-                        <i data-lucide="arrow-down" class="w-4 h-4"></i>
-                    </a>
-                </div>
+          <div class="pt-6 border-t border-white/10 grid grid-cols-3 gap-4 max-w-lg mx-auto lg:mx-0">
+            <div class="text-center lg:text-left">
+              <div class="flex items-center justify-center lg:justify-start gap-1 text-yellow-400 font-bold text-xl">
+                <span>4.9</span>
+                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              </div>
+              <p class="text-xs text-gray-400 mt-1">106+ Google Reviews</p>
             </div>
-
-            <div class="lg:col-span-5">
-                <div class="glass-panel p-6 sm:p-8 rounded-3xl relative overflow-hidden shadow-2xl border-rose-500/20">
-                    <div class="absolute -top-24 -right-24 w-48 h-48 bg-rose-600/20 rounded-full blur-3xl pointer-events-none"></div>
-                    
-                    <div class="mb-6">
-                        <h3 class="text-xl font-bold text-white flex items-center gap-2">
-                            <i data-lucide="message-square" class="w-5 h-5 text-emerald-400"></i>
-                            Direct WhatsApp Inquiry
-                        </h3>
-                        <p class="text-xs text-slate-400 mt-1">Book your slot or query prices directly with Megha Mam</p>
-                    </div>
-
-                    <form id="whatsappForm" onsubmit="handleWhatsAppSubmit(event)" class="space-y-4">
-                        <div>
-                            <label class="block text-xs font-semibold text-slate-300 mb-1.5">Your Full Name</label>
-                            <input type="text" id="fullName" required placeholder="e.g. Vidhi Sharma" class="w-full bg-slate-900/80 border border-slate-700/80 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-rose-500 focus:ring-1 focus:ring-rose-500 transition-all">
-                        </div>
-
-                        <div>
-                            <label class="block text-xs font-semibold text-slate-300 mb-1.5">Phone / WhatsApp Number</label>
-                            <input type="tel" id="phoneNumber" required placeholder="e.g. 9876543210" class="w-full bg-slate-900/80 border border-slate-700/80 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-rose-500 focus:ring-1 focus:ring-rose-500 transition-all">
-                        </div>
-
-                        <div>
-                            <label class="block text-xs font-semibold text-slate-300 mb-1.5">Service Required</label>
-                            <select id="serviceSelect" class="w-full bg-slate-900/80 border border-slate-700/80 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-rose-500 focus:ring-1 focus:ring-rose-500 transition-all">
-                                <option value="Bridal / Party Makeup">Bridal / Party Makeup</option>
-                                <option value="Hair Spa / Keratin Treatment">Hair Spa / Keratin Treatment</option>
-                                <option value="Facial / De-Tan Cleanup">Facial / De-Tan Cleanup</option>
-                                <option value="Manicure / Pedicure / Waxing">Manicure / Pedicure / Waxing</option>
-                                <option value="Academy / Professional Course Inquiry">Academy / Course Inquiry</option>
-                            </select>
-                        </div>
-
-                        <div>
-                            <label class="block text-xs font-semibold text-slate-300 mb-1.5">Preferred Date / Notes</label>
-                            <textarea id="notes" rows="2" placeholder="Mention date, time, or specific hairstyle requirements..." class="w-full bg-slate-900/80 border border-slate-700/80 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-rose-500 focus:ring-1 focus:ring-rose-500 transition-all"></textarea>
-                        </div>
-
-                        <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3.5 px-4 rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-emerald-600/30 transition-all duration-300 mt-2">
-                            <i data-lucide="send" class="w-4 h-4"></i>
-                            <span>Send via WhatsApp</span>
-                        </button>
-                    </form>
-                </div>
+            <div class="text-center lg:text-left">
+              <div class="text-white font-bold text-xl">Modern</div>
+              <p class="text-xs text-gray-400 mt-1">Imported Equipment</p>
             </div>
-
-        </div>
-    </section>
-
-    <section id="services" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/5">
-        <div class="text-center max-w-2xl mx-auto mb-12">
-            <h2 class="text-3xl font-bold text-white mb-3">Core Beauty & Hair Offerings</h2>
-            <p class="text-slate-400 text-sm">Tailored services crafted to match your facial features, skin type, and occasion requirements.</p>
+            <div class="text-center lg:text-left">
+              <div class="text-white font-bold text-xl">Certified</div>
+              <p class="text-xs text-gray-400 mt-1">Expert Fitness Coaches</p>
+            </div>
+          </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="glass-card rounded-2xl p-6 relative flex flex-col justify-between hover:border-rose-500/40 transition-all group">
-                <div>
-                    <div class="w-12 h-12 rounded-xl bg-rose-500/10 text-rose-400 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                        <i data-lucide="sparkle" class="w-6 h-6"></i>
-                    </div>
-                    <span class="bg-rose-500/20 text-rose-300 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Most Popular</span>
-                    <h3 class="text-xl font-bold text-white mt-3 mb-2">Bridal & Party Makeup</h3>
-                    <p class="text-slate-400 text-sm mb-4">Customized face sculpting and long-lasting makeup curated by Megha Mam.</p>
-                    <ul class="space-y-2 text-xs text-slate-300 mb-6">
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> HD Bridal Transformation</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Party & Engagement Look</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Face-shape Matching Hair Styling</li>
-                    </ul>
-                </div>
-                <a href="#whatsappForm" class="block text-center py-2.5 bg-white/5 hover:bg-rose-600/20 hover:text-rose-300 rounded-xl text-xs font-semibold transition-all">Inquire Pricing</a>
+        <div id="inquiry" class="lg:col-span-5">
+          <div class="glass-card rounded-2xl p-6 sm:p-8 shadow-2xl relative border border-white/10">
+            <div class="mb-6">
+              <h3 class="text-2xl font-bold text-white flex items-center gap-2">
+                <i data-lucide="message-square-plus" class="text-brand-red"></i>
+                Instant WhatsApp Inquiry
+              </h3>
+              <p class="text-sm text-gray-400 mt-1">Get membership pricing & schedule a visit instantly.</p>
             </div>
 
-            <div class="glass-card rounded-2xl p-6 relative flex flex-col justify-between hover:border-rose-500/40 transition-all group">
-                <div>
-                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                        <i data-lucide="scissors" class="w-6 h-6"></i>
-                    </div>
-                    <span class="bg-amber-500/20 text-amber-300 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Hair Care</span>
-                    <h3 class="text-xl font-bold text-white mt-3 mb-2">Keratin & Hair Spa</h3>
-                    <p class="text-slate-400 text-sm mb-4">Revitalize damaged hair, eliminate frizz, and achieve silky smooth hair.</p>
-                    <ul class="space-y-2 text-xs text-slate-300 mb-6">
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Keratin Treatment & Smoothening</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Deep Nourishing Hair Spa</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Hair Color & Highlights</li>
-                    </ul>
+            <form id="whatsappForm" class="space-y-4">
+              <div>
+                <label for="fullName" class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Full Name</label>
+                <div class="relative">
+                  <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-500">
+                    <i data-lucide="user" class="w-4 h-4"></i>
+                  </div>
+                  <input type="text" id="fullName" required placeholder="John Doe" class="w-full bg-brand-charcoal/80 border border-white/10 rounded-xl py-3 pl-10 pr-4 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-brand-red focus:ring-1 focus:ring-brand-red transition-all" />
                 </div>
-                <a href="#whatsappForm" class="block text-center py-2.5 bg-white/5 hover:bg-rose-600/20 hover:text-rose-300 rounded-xl text-xs font-semibold transition-all">Book Hair Session</a>
-            </div>
+              </div>
 
-            <div class="glass-card rounded-2xl p-6 relative flex flex-col justify-between hover:border-rose-500/40 transition-all group">
-                <div>
-                    <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                        <i data-lucide="heart-pulse" class="w-6 h-6"></i>
-                    </div>
-                    <span class="bg-purple-500/20 text-purple-300 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Skin Essentials</span>
-                    <h3 class="text-xl font-bold text-white mt-3 mb-2">Radiance Skin Care</h3>
-                    <p class="text-slate-400 text-sm mb-4">Relaxing skin cleanup, de-tan, facial sessions, and full-body grooming.</p>
-                    <ul class="space-y-2 text-xs text-slate-300 mb-6">
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> De-Tan & Glow Facials</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Hygienic Waxing Services</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Relaxing Manicure & Pedicure</li>
-                    </ul>
+              <div>
+                <label for="interest" class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Goal / Program Interest</label>
+                <div class="relative">
+                  <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-500">
+                    <i data-lucide="target" class="w-4 h-4"></i>
+                  </div>
+                  <select id="interest" required class="w-full bg-brand-charcoal/80 border border-white/10 rounded-xl py-3 pl-10 pr-4 text-sm text-white focus:outline-none focus:border-brand-red focus:ring-1 focus:ring-brand-red transition-all">
+                    <option value="General Strength & Gym Access" class="bg-brand-card">Strength Training & Muscle Building</option>
+                    <option value="Weight Loss & Cardio" class="bg-brand-card">Weight Loss & Conditioning</option>
+                    <option value="Personal Training Guidance" class="bg-brand-card">1-on-1 Personal Training</option>
+                    <option value="Group Classes" class="bg-brand-card">High-Energy Group Classes</option>
+                  </select>
                 </div>
-                <a href="#whatsappForm" class="block text-center py-2.5 bg-white/5 hover:bg-rose-600/20 hover:text-rose-300 rounded-xl text-xs font-semibold transition-all">Book Skin Service</a>
-            </div>
-        </div>
-    </section>
+              </div>
 
-    <section id="why-us" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/5">
-        <div class="text-center max-w-2xl mx-auto mb-12">
-            <h2 class="text-3xl font-bold text-white mb-3">Why Shahdara Trusts Dream Makeover</h2>
-            <p class="text-slate-400 text-sm">We combine professional expertise, premium products, and a welcoming ambiance.</p>
+              <div>
+                <label for="phoneNumber" class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Phone Number</label>
+                <div class="relative">
+                  <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-500">
+                    <i data-lucide="phone" class="w-4 h-4"></i>
+                  </div>
+                  <input type="tel" id="phoneNumber" required pattern="[0-9]{10}" placeholder="10-digit Mobile Number" class="w-full bg-brand-charcoal/80 border border-white/10 rounded-xl py-3 pl-10 pr-4 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-brand-red focus:ring-1 focus:ring-brand-red transition-all" />
+                </div>
+              </div>
+
+              <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-4 rounded-xl shadow-lg shadow-emerald-600/30 flex items-center justify-center gap-2 transition-all hover:scale-[1.02] mt-2">
+                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                <span>Connect via WhatsApp</span>
+              </button>
+              
+              <p class="text-[11px] text-gray-500 text-center">No spam guaranteed. Directly opens WhatsApp on your phone.</p>
+            </form>
+          </div>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="glass-card p-5 rounded-xl">
-                <div class="w-10 h-10 rounded-lg bg-rose-500/20 text-rose-400 flex items-center justify-center mb-4">
-                    <i data-lucide="user-check" class="w-5 h-5"></i>
-                </div>
-                <h4 class="font-bold text-white mb-1">Personalized Focus</h4>
-                <p class="text-xs text-slate-400">Customized hairstyles and makeup exact to face structure as guided by Megha Mam.</p>
-            </div>
+      </div>
+    </div>
+  </section>
 
-            <div class="glass-card p-5 rounded-xl">
-                <div class="w-10 h-10 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center mb-4">
-                    <i data-lucide="shield-check" class="w-5 h-5"></i>
-                </div>
-                <h4 class="font-bold text-white mb-1">100% Hygienic Care</h4>
-                <p class="text-xs text-slate-400">Sanitized tools, clean single-use supplies, and ultra-hygienic environment.</p>
-            </div>
+  <section id="services" class="py-20 bg-brand-charcoal relative border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-xs font-bold text-brand-red uppercase tracking-widest mb-2">Train With Purpose</h2>
+        <p class="text-3xl sm:text-4xl font-extrabold text-white">Core Fitness Programs</p>
+        <p class="text-gray-400 mt-3">Tailored fitness plans designed for every stage of your health journey.</p>
+      </div>
 
-            <div class="glass-card p-5 rounded-xl">
-                <div class="w-10 h-10 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center mb-4">
-                    <i data-lucide="wallet" class="w-5 h-5"></i>
-                </div>
-                <h4 class="font-bold text-white mb-1">Budget-Friendly</h4>
-                <p class="text-xs text-slate-400">Get top-tier luxury beauty treatments at accessible, reasonable package rates.</p>
-            </div>
-
-            <div class="glass-card p-5 rounded-xl">
-                <div class="w-10 h-10 rounded-lg bg-purple-500/20 text-purple-400 flex items-center justify-center mb-4">
-                    <i data-lucide="graduation-cap" class="w-5 h-5"></i>
-                </div>
-                <h4 class="font-bold text-white mb-1">Professional Academy</h4>
-                <p class="text-xs text-slate-400">Learn professional makeup and beauty artistry with industry-certified techniques.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="reviews" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/5">
-        <div class="text-center max-w-2xl mx-auto mb-12">
-            <div class="flex items-center justify-center gap-1 text-amber-400 mb-2">
-                <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
-                <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
-                <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
-                <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
-                <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
-            </div>
-            <h2 class="text-3xl font-bold text-white mb-2">Verified Client Reviews</h2>
-            <p class="text-slate-400 text-sm">Rated <strong>4.8 / 5.0</strong> based on 255+ authentic Google Reviews</p>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-brand-card rounded-2xl p-8 border border-white/5 hover:border-brand-red/50 transition-all hover:-translate-y-2 group">
+          <div class="w-14 h-14 bg-brand-red/10 rounded-xl flex items-center justify-center text-brand-red mb-6 group-hover:bg-brand-red group-hover:text-white transition-all">
+            <i data-lucide="dumbbell" class="w-7 h-7"></i>
+          </div>
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-xl font-bold text-white">Strength & Bodybuilding</h3>
+            <span class="text-xs font-semibold bg-white/5 text-gray-300 px-3 py-1 rounded-full border border-white/10">All Levels</span>
+          </div>
+          <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+            State-of-the-art heavy lifting gear, isolation machines, and free weight zones built for hypertrophy and raw athletic strength.
+          </p>
+          <ul class="space-y-2.5 text-sm text-gray-300">
+            <li class="flex items-center gap-2">
+              <i data-lucide="check-circle" class="w-4 h-4 text-brand-red"></i>
+              Imported Biomechanics Machinery
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="check-circle" class="w-4 h-4 text-brand-red"></i>
+              Spacious Free-Weight Rack Section
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="check-circle" class="w-4 h-4 text-brand-red"></i>
+              Spotting & Form Safety Assistance
+            </li>
+          </ul>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
-                <div>
-                    <div class="flex items-center gap-1 text-amber-400 mb-3">
-                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                    </div>
-                    <p class="text-slate-300 text-sm italic mb-4">
-                        "I had my makeup and facial done at Dream Makeover Salon & Academy, and I am extremely happy with the results. My skin looked radiant, and the makeup was beautiful and long-lasting! Megha mam did a fantastic job."
-                    </p>
-                </div>
-                <div class="flex items-center gap-3 pt-4 border-t border-white/5">
-                    <div class="w-9 h-9 rounded-full bg-rose-500/20 text-rose-300 font-bold flex items-center justify-center text-sm">VS</div>
-                    <div>
-                        <h5 class="text-xs font-bold text-white">Vidhi Sharma</h5>
-                        <span class="text-[10px] text-slate-400">Google Reviewer</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
-                <div>
-                    <div class="flex items-center gap-1 text-amber-400 mb-3">
-                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                    </div>
-                    <p class="text-slate-300 text-sm italic mb-4">
-                        "I took hairstyle from dream makeover salon & academy, it was so fantastic! Megha mam did a fabulous job. She gave exact hairstyle I saw before according to my face. Professional & hygienic staff."
-                    </p>
-                </div>
-                <div class="flex items-center gap-3 pt-4 border-t border-white/5">
-                    <div class="w-9 h-9 rounded-full bg-amber-500/20 text-amber-300 font-bold flex items-center justify-center text-sm">AA</div>
-                    <div>
-                        <h5 class="text-xs font-bold text-white">Aaruhi Aggarwal</h5>
-                        <span class="text-[10px] text-slate-400">Google Reviewer</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
-                <div>
-                    <div class="flex items-center gap-1 text-amber-400 mb-3">
-                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                    </div>
-                    <p class="text-slate-300 text-sm italic mb-4">
-                        "Have done de tan cleanup, hair spa, manicure and pedicure. All services are so good and budget friendly! Very relaxing and calming. Special thanks to Anjali di who is too good."
-                    </p>
-                </div>
-                <div class="flex items-center gap-3 pt-4 border-t border-white/5">
-                    <div class="w-9 h-9 rounded-full bg-purple-500/20 text-purple-300 font-bold flex items-center justify-center text-sm">S</div>
-                    <div>
-                        <h5 class="text-xs font-bold text-white">Sristi</h5>
-                        <span class="text-[10px] text-slate-400">Google Reviewer</span>
-                    </div>
-                </div>
-            </div>
+        <div class="bg-brand-card rounded-2xl p-8 border border-white/5 hover:border-brand-red/50 transition-all hover:-translate-y-2 group">
+          <div class="w-14 h-14 bg-brand-red/10 rounded-xl flex items-center justify-center text-brand-red mb-6 group-hover:bg-brand-red group-hover:text-white transition-all">
+            <i data-lucide="user-check" class="w-7 h-7"></i>
+          </div>
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-xl font-bold text-white">Personal Training</h3>
+            <span class="text-xs font-semibold bg-brand-red/20 text-brand-red px-3 py-1 rounded-full border border-brand-red/30">1-on-1 Focus</span>
+          </div>
+          <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+            Get structured workout roadmaps and custom nutrition guidance directly from our experienced, certified fitness coaches.
+          </p>
+          <ul class="space-y-2.5 text-sm text-gray-300">
+            <li class="flex items-center gap-2">
+              <i data-lucide="check-circle" class="w-4 h-4 text-brand-red"></i>
+              Customized Workout & Diet Plans
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="check-circle" class="w-4 h-4 text-brand-red"></i>
+              Body Fat & Metric Progress Tracking
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="check-circle" class="w-4 h-4 text-brand-red"></i>
+              Dedicated Accountability Partner
+            </li>
+          </ul>
         </div>
-    </section>
 
-    <section id="location" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/5">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-            
-            <div class="lg:col-span-5 space-y-6">
-                <div>
-                    <h2 class="text-3xl font-bold text-white mb-2">Visit Our Salon</h2>
-                    <p class="text-slate-400 text-sm">Located centrally in Shahdara with easy access and street parking.</p>
-                </div>
+        <div class="bg-brand-card rounded-2xl p-8 border border-white/5 hover:border-brand-red/50 transition-all hover:-translate-y-2 group">
+          <div class="w-14 h-14 bg-brand-red/10 rounded-xl flex items-center justify-center text-brand-red mb-6 group-hover:bg-brand-red group-hover:text-white transition-all">
+            <i data-lucide="flame" class="w-7 h-7"></i>
+          </div>
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-xl font-bold text-white">Cardio & Weight Loss</h3>
+            <span class="text-xs font-semibold bg-white/5 text-gray-300 px-3 py-1 rounded-full border border-white/10">High Energy</span>
+          </div>
+          <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+            Burn fat rapidly and boost stamina with top-tier treadmills, ellipticals, and high-octane group conditioning sessions.
+          </p>
+          <ul class="space-y-2.5 text-sm text-gray-300">
+            <li class="flex items-center gap-2">
+              <i data-lucide="check-circle" class="w-4 h-4 text-brand-red"></i>
+              Modern Cardio Equipment
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="check-circle" class="w-4 h-4 text-brand-red"></i>
+              Fat Burn & Stamina Building Programs
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="check-circle" class="w-4 h-4 text-brand-red"></i>
+              Dynamic Group Classes
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-                <div class="glass-card p-5 rounded-2xl flex items-start gap-4">
-                    <div class="w-10 h-10 rounded-xl bg-rose-500/10 text-rose-400 flex items-center justify-center shrink-0">
-                        <i data-lucide="map-pin" class="w-5 h-5"></i>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-white text-sm mb-1">Address</h4>
-                        <p class="text-xs text-slate-300 leading-relaxed">
-                            631/1, Main 100ft Road, Nathu Colony Chowk,<br>
-                            Above Relaxo Showroom, Opposite Bajaj Eye Hospital,<br>
-                            Shahdara, Delhi, 110032
-                        </p>
-                    </div>
-                </div>
+  <section id="why-us" class="py-20 bg-gradient-to-b from-brand-charcoal to-black">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-xs font-bold text-brand-red uppercase tracking-widest mb-2">The Difference</h2>
+        <p class="text-3xl sm:text-4xl font-extrabold text-white">Why Fit Generation Gym Stand Out</p>
+      </div>
 
-                <div class="glass-card p-5 rounded-2xl flex items-start gap-4">
-                    <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0">
-                        <i data-lucide="phone" class="w-5 h-5"></i>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-white text-sm mb-1">Phone / Booking</h4>
-                        <p class="text-xs text-slate-300">088607 88535</p>
-                        <p class="text-[11px] text-slate-400 mt-1">Call for quick appointment slots or bridal bookings</p>
-                    </div>
-                </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-brand-card/60 p-6 rounded-xl border border-white/5">
+          <div class="w-12 h-12 bg-white/5 rounded-lg flex items-center justify-center text-brand-red mb-4">
+            <i data-lucide="sparkles" class="w-6 h-6"></i>
+          </div>
+          <h4 class="text-lg font-bold text-white mb-2">Modern Equipment</h4>
+          <p class="text-xs text-gray-400 leading-relaxed">Smooth, ergonomic machines built for safe movement and max strength gains.</p>
+        </div>
 
-                <div class="glass-card p-5 rounded-2xl flex items-start gap-4">
-                    <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0">
-                        <i data-lucide="clock" class="w-5 h-5"></i>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-white text-sm mb-1">Operating Hours</h4>
-                        <p class="text-xs text-slate-300">Open Daily: 10:00 AM – 8:00 PM</p>
-                    </div>
-                </div>
+        <div class="bg-brand-card/60 p-6 rounded-xl border border-white/5">
+          <div class="w-12 h-12 bg-white/5 rounded-lg flex items-center justify-center text-brand-red mb-4">
+            <i data-lucide="shield-check" class="w-6 h-6"></i>
+          </div>
+          <h4 class="text-lg font-bold text-white mb-2">Clean & Hygiene First</h4>
+          <p class="text-xs text-gray-400 leading-relaxed">Spacious workout floor maintained meticulously clean throughout operating hours.</p>
+        </div>
+
+        <div class="bg-brand-card/60 p-6 rounded-xl border border-white/5">
+          <div class="w-12 h-12 bg-white/5 rounded-lg flex items-center justify-center text-brand-red mb-4">
+            <i data-lucide="users" class="w-6 h-6"></i>
+          </div>
+          <h4 class="text-lg font-bold text-white mb-2">Supportive Community</h4>
+          <p class="text-xs text-gray-400 leading-relaxed">A welcoming environment where beginners feel confident and pros stay challenged.</p>
+        </div>
+
+        <div class="bg-brand-card/60 p-6 rounded-xl border border-white/5">
+          <div class="w-12 h-12 bg-white/5 rounded-lg flex items-center justify-center text-brand-red mb-4">
+            <i data-lucide="clock" class="w-6 h-6"></i>
+          </div>
+          <h4 class="text-lg font-bold text-white mb-2">Flexible Timings</h4>
+          <p class="text-xs text-gray-400 leading-relaxed">Open early until late 10 PM to accommodate your demanding work schedule easily.</p>
+        </div>
+      </div>
+
+      <div class="mt-16 rounded-2xl overflow-hidden relative border border-white/10 shadow-2xl">
+        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1400&q=80" alt="Fit Generation Gym Equipment Floor" class="w-full h-64 sm:h-96 object-cover object-center brightness-75 filter" />
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal via-transparent to-transparent"></div>
+        <div class="absolute bottom-6 left-6 right-6 sm:bottom-10 sm:left-10 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4">
+          <div>
+            <h3 class="text-2xl sm:text-3xl font-black text-white uppercase">Experience The Vibe Yourself</h3>
+            <p class="text-gray-300 text-sm mt-1">Visit us at 100 Feet Road, Durgapuri Extension today.</p>
+          </div>
+          <a href="tel:+918700954343" class="bg-brand-red hover:bg-brand-darkRed text-white font-bold text-sm px-6 py-3 rounded-xl transition-all shadow-lg shadow-brand-red/30">
+            Visit Today
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews" class="py-20 bg-brand-charcoal">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div>
+          <h2 class="text-xs font-bold text-brand-red uppercase tracking-widest mb-2">Real Members, Real Results</h2>
+          <p class="text-3xl sm:text-4xl font-extrabold text-white">Google Reviews (4.9 Rating)</p>
+        </div>
+        <div class="flex items-center gap-3 bg-brand-card px-5 py-3 rounded-xl border border-white/10 w-fit">
+          <div class="text-2xl font-black text-white">4.9</div>
+          <div class="flex text-yellow-400">
+            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+          </div>
+          <span class="text-xs text-gray-400 border-l border-white/10 pl-3">106 Verified Ratings</span>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-brand-card p-6 rounded-2xl border border-white/5 flex flex-col justify-between">
+          <div>
+            <div class="flex text-yellow-400 mb-4">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <p class="text-gray-300 text-sm leading-relaxed italic">
+              "Amazing gym with a great atmosphere! The equipment is modern and well-maintained, and the staff is always friendly and helpful. Highly recommend to anyone from beginners to pros."
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between">
+            <div>
+              <p class="font-bold text-white text-sm">Nidhi Thukral</p>
+              <p class="text-xs text-gray-400">Verified Gym Member</p>
+            </div>
+            <span class="text-xs text-brand-red font-medium">Google Review</span>
+          </div>
+        </div>
+
+        <div class="bg-brand-card p-6 rounded-2xl border border-white/5 flex flex-col justify-between">
+          <div>
+            <div class="flex text-yellow-400 mb-4">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <p class="text-gray-300 text-sm leading-relaxed italic">
+              "This gym carries an atmosphere of strength, ambition, and consistency. It’s the kind of place where hard work speaks louder than words, and every workout session reflects determination."
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between">
+            <div>
+              <p class="font-bold text-white text-sm">Preet Raj</p>
+              <p class="text-xs text-gray-400">Verified Gym Member</p>
+            </div>
+            <span class="text-xs text-brand-red font-medium">Google Review</span>
+          </div>
+        </div>
+
+        <div class="bg-brand-card p-6 rounded-2xl border border-white/5 flex flex-col justify-between">
+          <div>
+            <div class="flex text-yellow-400 mb-4">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <p class="text-gray-300 text-sm leading-relaxed italic">
+              "Going to this gym for a few months now and some honest review from my side — it’s been a great experience! The equipment is well-maintained and trainers are supportive."
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between">
+            <div>
+              <p class="font-bold text-white text-sm">Kavyansh Oct</p>
+              <p class="text-xs text-gray-400">Verified Gym Member</p>
+            </div>
+            <span class="text-xs text-brand-red font-medium">Google Review</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="location" class="py-20 bg-black/60 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-10 items-stretch">
+        
+        <div class="lg:col-span-5 flex flex-col justify-between space-y-6">
+          <div>
+            <h2 class="text-xs font-bold text-brand-red uppercase tracking-widest mb-2">Find Us Easily</h2>
+            <h3 class="text-3xl font-extrabold text-white mb-6">Visit Fit Generation Gym</h3>
+            <p class="text-gray-400 text-sm leading-relaxed mb-8">
+              Conveniently located on Main 100 Feet Road in Shahdara, Delhi. Stop by today for a walkthrough of our facilities!
+            </p>
+          </div>
+
+          <div class="space-y-4">
+            <div class="bg-brand-card p-4 rounded-xl border border-white/10 flex items-start gap-4">
+              <div class="w-10 h-10 bg-brand-red/10 rounded-lg flex items-center justify-center text-brand-red shrink-0">
+                <i data-lucide="map-pin" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="text-white font-bold text-sm">Location Address</h4>
+                <p class="text-xs text-gray-400 mt-1">C-245, Main 100 Feet Rd, Durgapuri Extension, Hardevpuri, Shahdara, Delhi, 110093, India</p>
+              </div>
             </div>
 
-            <div class="lg:col-span-7 h-[380px] rounded-3xl overflow-hidden glass-panel border border-white/10 relative">
-                <iframe 
-                    title="Dream Makeover Salon Location"
-                    src="https://maps.google.com/maps?q=28.689482,77.299038&hl=en&z=16&output=embed" 
-                    class="w-full h-full border-0 filter grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500" 
-                    allowfullscreen="" 
-                    loading="lazy">
-                </iframe>
+            <div class="bg-brand-card p-4 rounded-xl border border-white/10 flex items-start gap-4">
+              <div class="w-10 h-10 bg-brand-red/10 rounded-lg flex items-center justify-center text-brand-red shrink-0">
+                <i data-lucide="phone" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="text-white font-bold text-sm">Phone Number</h4>
+                <p class="text-xs text-gray-400 mt-1">+91 87009 54343</p>
+              </div>
             </div>
 
+            <div class="bg-brand-card p-4 rounded-xl border border-white/10 flex items-start gap-4">
+              <div class="w-10 h-10 bg-brand-red/10 rounded-lg flex items-center justify-center text-brand-red shrink-0">
+                <i data-lucide="clock" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="text-white font-bold text-sm">Operating Hours</h4>
+                <p class="text-xs text-gray-400 mt-1">Open Daily • Closes 10:00 PM</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="tel:+918700954343" class="w-full bg-brand-red hover:bg-brand-darkRed text-white font-bold py-3.5 rounded-xl shadow-lg flex items-center justify-center gap-2 transition-all">
+            <i data-lucide="navigation" class="w-4 h-4"></i>
+            <span>Get Directions / Contact Now</span>
+          </a>
         </div>
-    </section>
 
-    <footer class="border-t border-white/10 py-8 text-center text-xs text-slate-400">
-        <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p>© 2026 Dream Makeover Salon & Academy. All Rights Reserved.</p>
-            <p>Main 100ft Road, Nathu Colony Chowk, Shahdara, Delhi</p>
+        <div class="lg:col-span-7 min-h-[350px] lg:min-h-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl relative bg-brand-card">
+          <iframe 
+            title="FIT GENERATION GYM Location Map"
+            src="https://maps.google.com/maps?q=28.689552,77.295898&z=16&output=embed" 
+            width="100%" 
+            height="100%" 
+            style="border:0; filter: grayscale(0.8) contrast(1.2) opacity(0.85);" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
         </div>
-    </footer>
 
-    <script>
-        function handleWhatsAppSubmit(event) {
-            event.preventDefault();
-            
-            const name = document.getElementById('fullName').value.trim();
-            const phone = document.getElementById('phoneNumber').value.trim();
-            const service = document.getElementById('serviceSelect').value;
-            const notes = document.getElementById('notes').value.trim();
-            
-            const whatsappNumber = "918860788535";
-            
-            let message = `Hello Megha Mam (Dream Makeover Salon)!%0A%0A`;
-            message += `I would like to book/inquire about services:%0A`;
-            message += `*Name:* ${encodeURIComponent(name)}%0A`;
-            message += `*Phone:* ${encodeURIComponent(phone)}%0A`;
-            message += `*Service:* ${encodeURIComponent(service)}%0A`;
-            if (notes) {
-                message += `*Details/Date:* ${encodeURIComponent(notes)}%0A`;
-            }
-            
-            const waUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
-            window.open(waUrl, '_blank');
-        }
+      </div>
+    </div>
+  </section>
 
-        // Initialize Lucide Icons
-        lucide.createIcons();
-    </script>
+  <footer class="bg-black py-8 border-t border-white/10 text-xs text-gray-500">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <span class="text-white font-bold text-base">FIT GENERATION GYM</span>
+        <span>— Shahdara, Delhi</span>
+      </div>
+      <p>© 2026 FIT GENERATION GYM. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Initialize Lucide Icons
+      lucide.createIcons();
+
+      // Form Handling
+      const form = document.getElementById('whatsappForm');
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const name = document.getElementById('fullName').value.trim();
+        const interest = document.getElementById('interest').value;
+        const phone = document.getElementById('phoneNumber').value.trim();
+
+        const targetWhatsAppNumber = "918700954343"; 
+
+        const textMessage = `Hello Fit Generation Gym! %0A%0AMy Name: ${encodeURIComponent(name)}%0AInterest: ${encodeURIComponent(interest)}%0AMy Phone Number: ${encodeURIComponent(phone)}%0A%0AI would like to inquire about gym membership and workout timings.`;
+
+        const whatsappUrl = `https://wa.me/${targetWhatsAppNumber}?text=${textMessage}`;
+
+        window.open(whatsappUrl, '_blank');
+      });
+    });
+  </script>
 </body>
 </html>

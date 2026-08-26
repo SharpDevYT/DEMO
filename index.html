@@ -3,146 +3,273 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calculator Demo</title>
+  <title>Edu. Base | Premier Coaching Center in Navin Shahdara, Delhi</title>
+  <meta name="description" content="Edu. Base by Aman Jain provides top-tier coaching, experienced faculty, affordable fees, and regular unit tests in Panchsheel Garden, Shahdara.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts & Lucide Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-    body {
-      background-color: #0d1117;
-      color: #c9d1d9;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
-
-    .calculator {
-      background-color: #161b22;
-      border: 1px solid #30363d;
-      border-radius: 12px;
-      padding: 20px;
-      width: 320px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-    }
-
-    .display {
-      background-color: #0d1117;
-      border: 1px solid #30363d;
-      border-radius: 8px;
-      color: #58a6ff;
-      font-size: 2rem;
-      padding: 15px;
-      text-align: right;
-      margin-bottom: 20px;
-      word-wrap: break-word;
-      min-height: 70px;
-    }
-
-    .buttons {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 10px;
-    }
-
-    button {
-      background-color: #21262d;
-      border: 1px solid #30363d;
-      border-radius: 6px;
-      color: #c9d1d9;
-      font-size: 1.2rem;
-      padding: 15px;
-      cursor: pointer;
-      transition: background-color 0.2s, transform 0.1s;
-    }
-
-    button:hover {
-      background-color: #30363d;
-    }
-
-    button:active {
-      transform: scale(0.95);
-    }
-
-    button.operator {
-      background-color: #1f6feb;
-      color: #ffffff;
-    }
-
-    button.operator:hover {
-      background-color: #388bfd;
-    }
-
-    button.clear {
-      background-color: #da3633;
-      color: #ffffff;
-    }
-
-    button.clear:hover {
-      background-color: #f85149;
-    }
-
-    button.zero {
-      grid-column: span 2;
-    }
+    body { font-family: 'Inter', sans-serif; }
   </style>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-indigo-500 selection:text-white">
 
-  <div class="calculator">
-    <div id="display" class="display">0</div>
-    <div class="buttons">
-      <button class="clear" onclick="clearDisplay()">C</button>
-      <button onclick="appendValue('/')" class="operator">/</button>
-      <button onclick="appendValue('*')" class="operator">*</button>
-      <button onclick="appendValue('-')" class="operator">-</button>
-      
-      <button onclick="appendValue('7')">7</button>
-      <button onclick="appendValue('8')">8</button>
-      <button onclick="appendValue('9')">9</button>
-      <button onclick="appendValue('+')" class="operator">+</button>
+  <!-- Navigation -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-md shadow-indigo-200">
+            EB
+          </div>
+          <div>
+            <span class="text-xl font-bold text-slate-900 block leading-none">Edu. Base</span>
+            <span class="text-xs text-indigo-600 font-medium">Directed by Aman Jain</span>
+          </div>
+        </div>
 
-      <button onclick="appendValue('4')">4</button>
-      <button onclick="appendValue('5')">5</button>
-      <button onclick="appendValue('6')">6</button>
-      <button onclick="calculate()" class="operator" style="grid-row: span 2; height: 100%;">=</button>
+        <nav class="hidden md:flex items-center gap-8 font-medium text-slate-600">
+          <a href="#about" class="hover:text-indigo-600 transition">About Us</a>
+          <a href="#features" class="hover:text-indigo-600 transition">Why Choose Us</a>
+          <a href="#reviews" class="hover:text-indigo-600 transition">Testimonials</a>
+          <a href="#contact" class="hover:text-indigo-600 transition">Contact</a>
+        </nav>
 
-      <button onclick="appendValue('1')">1</button>
-      <button onclick="appendValue('2')">2</button>
-      <button onclick="appendValue('3')">3</button>
-
-      <button onclick="appendValue('0')" class="zero">0</button>
-      <button onclick="appendValue('.')">.</button>
+        <div class="flex items-center gap-3">
+          <a href="tel:09711323246" class="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-5 py-2.5 rounded-xl transition shadow-lg shadow-indigo-200">
+            <i data-lucide="phone" class="w-4 h-4"></i>
+            <span>Call Now</span>
+          </a>
+        </div>
+      </div>
     </div>
-  </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative py-16 md:py-24 overflow-hidden bg-gradient-to-b from-indigo-50/50 to-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-amber-700 text-sm font-medium">
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+            <span>5.0 Star Rated (49+ Google Reviews)</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 tracking-tight leading-tight">
+            Building Strong Academic Foundations for Your Child
+          </h1>
+
+          <p class="text-lg text-slate-600 max-w-2xl">
+            At <strong>Edu. Base</strong>, we combine expert teaching methods with personal attention, affordable fee structures, and systematic unit testing to empower every student.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4 pt-4">
+            <a href="tel:09711323246" class="inline-flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-8 py-4 rounded-xl shadow-lg shadow-indigo-200 transition">
+              <i data-lucide="phone-call" class="w-5 h-5"></i>
+              <span>Call 097113 23246</span>
+            </a>
+            <a href="#contact" class="inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 font-semibold px-8 py-4 rounded-xl transition">
+              <i data-lucide="map-pin" class="w-5 h-5 text-indigo-600"></i>
+              <span>Visit Center</span>
+            </a>
+          </div>
+
+          <!-- Quick Stats -->
+          <div class="grid grid-cols-3 gap-4 pt-8 border-t border-slate-200/80">
+            <div>
+              <p class="text-3xl font-bold text-slate-900">5.0 ★</p>
+              <p class="text-xs text-slate-500 font-medium">Google Rating</p>
+            </div>
+            <div>
+              <p class="text-3xl font-bold text-slate-900">100%</p>
+              <p class="text-xs text-slate-500 font-medium">Dedicated Support</p>
+            </div>
+            <div>
+              <p class="text-3xl font-bold text-slate-900">Affordable</p>
+              <p class="text-xs text-slate-500 font-medium">Fee Structure</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5">
+          <div class="bg-white p-8 rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100 space-y-6">
+            <h3 class="text-xl font-bold text-slate-900">Enquire for Admissions</h3>
+            <form class="space-y-4" onsubmit="event.preventDefault(); alert('Enquiry submitted successfully!');">
+              <div>
+                <label class="block text-sm font-medium text-slate-700 mb-1">Student Name</label>
+                <input type="text" placeholder="Enter student's full name" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-slate-700 mb-1">Class / Subject</label>
+                <input type="text" placeholder="e.g. Class 9th / Science" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-slate-700 mb-1">Mobile Number</label>
+                <input type="tel" placeholder="Enter phone number" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+              </div>
+              <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3.5 rounded-xl shadow-md transition">
+                Book a Free Consultation
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Highlights -->
+  <section id="features" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-3xl font-bold text-slate-900">Why Parents & Students Choose Us</h2>
+        <p class="text-slate-600 mt-2">Focused on student growth with a balance of care, discipline, and regular feedback.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition">
+          <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center mb-6">
+            <i data-lucide="users" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Friendly & Supportive Environment</h3>
+          <p class="text-slate-600 leading-relaxed">Our faculty works extra hard with weak and needy students to ensure no one gets left behind.</p>
+        </div>
+
+        <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition">
+          <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center mb-6">
+            <i data-lucide="file-check" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Regular Unit Tests</h3>
+          <p class="text-slate-600 leading-relaxed">Structured evaluation and periodic test series ensure continuous revision and academic improvement.</p>
+        </div>
+
+        <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition">
+          <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center mb-6">
+            <i data-lucide="wallet" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Affordable Fee Structure</h3>
+          <p class="text-slate-600 leading-relaxed">Quality education and top-tier teaching methods made accessible for every family in Shahdara.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Real Google Reviews Section -->
+  <section id="reviews" class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <div class="flex items-center justify-center gap-1 text-amber-400 mb-2">
+          <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+          <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+          <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+          <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+          <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+        </div>
+        <h2 class="text-3xl font-bold text-slate-900">What Parents & Students Say</h2>
+        <p class="text-slate-600 mt-1">Verified reviews from our Google Business Profile</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Review 1 -->
+        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between">
+          <p class="text-slate-600 italic">"Nice way of teaching and behavior of staff. Fees is affordable and unit test helps in revision."</p>
+          <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="font-semibold text-slate-900">Rahul Sharma</span>
+            <span class="text-xs text-amber-500 font-bold">5.0 ★</span>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between">
+          <p class="text-slate-600 italic">"Faculty is so much helpful and support each and every student. Do very hard work and efforts with weak and needy students."</p>
+          <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="font-semibold text-slate-900">Rydhum Srivastava</span>
+            <span class="text-xs text-amber-500 font-bold">5.0 ★</span>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between">
+          <p class="text-slate-600 italic">"Very good institute in this area... my little one really improved in reading and writing. Thank you faculty!"</p>
+          <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="font-semibold text-slate-900">Ankita Dabral</span>
+            <span class="text-xs text-amber-500 font-bold">5.0 ★</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location & Contact -->
+  <section id="contact" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        
+        <div class="space-y-6">
+          <h2 class="text-3xl font-bold text-slate-900">Visit Our Center</h2>
+          <p class="text-slate-600">We are conveniently located in Panchsheel Garden, Shahdara. Drop by or call us to learn more about our batch timings.</p>
+
+          <div class="space-y-4">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-indigo-50 text-indigo-600 rounded-lg flex items-center justify-center shrink-0 mt-1">
+                <i data-lucide="map-pin" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold text-slate-900">Address</h4>
+                <p class="text-slate-600 text-sm">A Block, F-111, Panchsheel Garden, Navin Shahdara, Shahdara, New Delhi, Delhi 110032</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-indigo-50 text-indigo-600 rounded-lg flex items-center justify-center shrink-0 mt-1">
+                <i data-lucide="phone" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold text-slate-900">Contact Number</h4>
+                <p class="text-slate-600 text-sm">+91 97113 23246</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-indigo-50 text-indigo-600 rounded-lg flex items-center justify-center shrink-0 mt-1">
+                <i data-lucide="clock" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold text-slate-900">Operating Hours</h4>
+                <p class="text-slate-600 text-sm">Open Daily • Closes at 9:00 PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-slate-100 rounded-3xl overflow-hidden h-96 shadow-inner flex items-center justify-center border border-slate-200">
+          <iframe 
+            class="w-full h-full border-0"
+            src="https://maps.google.com/maps?q=Panchsheel%20Garden,%20Navin%20Shahdara,%20Shahdara,%20New%20Delhi&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            loading="lazy">
+          </iframe>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+      <p class="text-white font-semibold text-lg">Edu. Base (Aman Jain)</p>
+      <p class="text-sm">Empowering students across Shahdara, Delhi with quality coaching.</p>
+      <p class="text-xs text-slate-500 pt-4">© 2026 Edu. Base. All Rights Reserved.</p>
+    </div>
+  </footer>
 
   <script>
-    const display = document.getElementById('display');
-
-    function appendValue(val) {
-      if (display.innerText === '0' && val !== '.') {
-        display.innerText = val;
-      } else {
-        display.innerText += val;
-      }
-    }
-
-    function clearDisplay() {
-      display.innerText = '0';
-    }
-
-    function calculate() {
-      try {
-        display.innerText = eval(display.innerText.replace(/×/g, '*').replace(/÷/g, '/'));
-      } catch (e) {
-        display.innerText = 'Error';
-        setTimeout(clearDisplay, 1500);
-      }
-    }
+    lucide.createIcons();
   </script>
 </body>
 </html>

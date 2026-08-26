@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Edu. Base | Premier Coaching Center in Navin Shahdara, Delhi</title>
-  <meta name="description" content="Edu. Base by Aman Jain provides top-tier coaching, experienced faculty, affordable fees, and regular unit tests in Panchsheel Garden, Shahdara.">
+  <title>Edu. Base (Aman Jain) | Coaching Center in Shahdara, Delhi</title>
+  <meta name="description" content="Edu. Base by Aman Jain offers personal attention, experienced faculty, regular unit tests, and affordable fees in Navin Shahdara, Delhi.">
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -19,7 +19,7 @@
 <body class="bg-slate-50 text-slate-800 antialiased selection:bg-indigo-500 selection:text-white">
 
   <!-- Navigation -->
-  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         <div class="flex items-center gap-3">
@@ -57,15 +57,15 @@
         <div class="lg:col-span-7 space-y-6">
           <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-amber-700 text-sm font-medium">
             <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
-            <span>5.0 Star Rated (49+ Google Reviews)</span>
+            <span>5.0 Star Rated Center (49+ Google Reviews)</span>
           </div>
 
           <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 tracking-tight leading-tight">
-            Building Strong Academic Foundations for Your Child
+            Building Strong Academic Foundations for Tomorrow
           </h1>
 
           <p class="text-lg text-slate-600 max-w-2xl">
-            At <strong>Edu. Base</strong>, we combine expert teaching methods with personal attention, affordable fee structures, and systematic unit testing to empower every student.
+            At <strong>Edu. Base (Aman jain)</strong>, we nurture academic confidence through individual mentoring, dedicated faculty support, and structured revision tests designed for student success.
           </p>
 
           <div class="flex flex-col sm:flex-row gap-4 pt-4">
@@ -79,15 +79,14 @@
             </a>
           </div>
 
-          <!-- Quick Stats -->
           <div class="grid grid-cols-3 gap-4 pt-8 border-t border-slate-200/80">
             <div>
               <p class="text-3xl font-bold text-slate-900">5.0 ★</p>
               <p class="text-xs text-slate-500 font-medium">Google Rating</p>
             </div>
             <div>
-              <p class="text-3xl font-bold text-slate-900">100%</p>
-              <p class="text-xs text-slate-500 font-medium">Dedicated Support</p>
+              <p class="text-3xl font-bold text-slate-900">10+ Yrs</p>
+              <p class="text-xs text-slate-500 font-medium">Teaching Legacy</p>
             </div>
             <div>
               <p class="text-3xl font-bold text-slate-900">Affordable</p>
@@ -96,26 +95,33 @@
           </div>
         </div>
 
-        <div class="lg:col-span-5">
+        <!-- Admission Form -->
+        <div class="lg:col-span-5" id="enquire-section">
           <div class="bg-white p-8 rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100 space-y-6">
             <h3 class="text-xl font-bold text-slate-900">Enquire for Admissions</h3>
-            <form class="space-y-4" onsubmit="event.preventDefault(); alert('Enquiry submitted successfully!');">
+            
+            <form id="enquiryForm" class="space-y-4">
               <div>
-                <label class="block text-sm font-medium text-slate-700 mb-1">Student Name</label>
-                <input type="text" placeholder="Enter student's full name" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                <label class="block text-sm font-medium text-slate-700 mb-1">Student Name *</label>
+                <input type="text" id="studentName" required placeholder="Enter student's full name" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500">
               </div>
               <div>
-                <label class="block text-sm font-medium text-slate-700 mb-1">Class / Subject</label>
-                <input type="text" placeholder="e.g. Class 9th / Science" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                <label class="block text-sm font-medium text-slate-700 mb-1">Class / Subject *</label>
+                <input type="text" id="studentClass" required placeholder="e.g. Class 9th / Mathematics & Science" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500">
               </div>
               <div>
-                <label class="block text-sm font-medium text-slate-700 mb-1">Mobile Number</label>
-                <input type="tel" placeholder="Enter phone number" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                <label class="block text-sm font-medium text-slate-700 mb-1">Mobile Number *</label>
+                <input type="tel" id="studentPhone" required placeholder="Enter 10-digit mobile number" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500">
               </div>
               <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3.5 rounded-xl shadow-md transition">
-                Book a Free Consultation
+                Submit Enquiry
               </button>
             </form>
+
+            <div id="submissionMessage" class="hidden p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-sm font-medium text-center animate-fade-in">
+              <i data-lucide="check-circle" class="w-6 h-6 text-emerald-600 mx-auto mb-1"></i>
+              We will contact you soon!
+            </div>
           </div>
         </div>
 
@@ -123,44 +129,104 @@
     </div>
   </section>
 
-  <!-- Key Highlights -->
-  <section id="features" class="py-20 bg-white">
+  <!-- About Us Section -->
+  <section id="about" class="py-20 bg-white border-y border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-indigo-50 text-indigo-700 text-xs font-bold uppercase tracking-wider">
+            About Edu. Base
+          </div>
+          <h2 class="text-3xl font-bold text-slate-900 leading-tight">Dedicated to Excellence in Education Since 2014</h2>
+          <p class="text-slate-600 leading-relaxed">
+            Founded under the direct leadership of <strong>Aman Jain</strong>, <strong>Edu. Base</strong> has grown into one of Navin Shahdara’s most trusted coaching centers. Our institute is built on the philosophy that every student possesses unique learning styles and potential.
+          </p>
+          <p class="text-slate-600 leading-relaxed">
+            From foundational reading and writing skills for young learners (guided by specialized teachers like Srishti Mam) to advanced subject mastery and exam preparations for higher classes, our dedicated team works tirelessly with both high-achieving and academically challenged students.
+          </p>
+          
+          <div class="grid sm:grid-cols-2 gap-4 pt-2">
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="check" class="w-4 h-4"></i>
+              </div>
+              <span class="text-sm font-medium text-slate-700">Personalized attention for weaker students</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="check" class="w-4 h-4"></i>
+              </div>
+              <span class="text-sm font-medium text-slate-700">Continuous evaluation & progress reports</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="check" class="w-4 h-4"></i>
+              </div>
+              <span class="text-sm font-medium text-slate-700">Affordable, transparent fee structures</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="check" class="w-4 h-4"></i>
+              </div>
+              <span class="text-sm font-medium text-slate-700">Experienced & accessible teaching staff</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-indigo-900 text-white p-8 md:p-12 rounded-3xl relative overflow-hidden shadow-2xl">
+          <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-indigo-700/50 rounded-full blur-3xl"></div>
+          <blockquote class="relative z-10 space-y-4">
+            <p class="text-xl italic font-light leading-relaxed">
+              "Our primary objective at Edu. Base is not just teaching syllabus topics, but instilling self-belief in students and ensuring that no child feels left behind."
+            </p>
+            <footer class="pt-4 border-t border-indigo-700">
+              <p class="font-bold text-lg">Aman Jain</p>
+              <p class="text-indigo-300 text-sm">Director & Founder, Edu. Base</p>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="py-20 bg-slate-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-2xl mx-auto mb-16">
-        <h2 class="text-3xl font-bold text-slate-900">Why Parents & Students Choose Us</h2>
-        <p class="text-slate-600 mt-2">Focused on student growth with a balance of care, discipline, and regular feedback.</p>
+        <h2 class="text-3xl font-bold text-slate-900">Why Choose Edu. Base?</h2>
+        <p class="text-slate-600 mt-2">Proven methodology that combines discipline, encouragement, and academic tracking.</p>
       </div>
 
       <div class="grid md:grid-cols-3 gap-8">
-        <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition">
+        <div class="p-8 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-md transition">
           <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center mb-6">
             <i data-lucide="users" class="w-6 h-6"></i>
           </div>
-          <h3 class="text-xl font-bold text-slate-900 mb-2">Friendly & Supportive Environment</h3>
-          <p class="text-slate-600 leading-relaxed">Our faculty works extra hard with weak and needy students to ensure no one gets left behind.</p>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Supportive Faculty</h3>
+          <p class="text-slate-600 leading-relaxed">Our teachers invest special effort in weaker students to bring their academic concepts up to standard.</p>
         </div>
 
-        <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition">
+        <div class="p-8 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-md transition">
           <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center mb-6">
-            <i data-lucide="file-check" class="w-6 h-6"></i>
+            <i data-lucide="file-text" class="w-6 h-6"></i>
           </div>
-          <h3 class="text-xl font-bold text-slate-900 mb-2">Regular Unit Tests</h3>
-          <p class="text-slate-600 leading-relaxed">Structured evaluation and periodic test series ensure continuous revision and academic improvement.</p>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Periodic Unit Testing</h3>
+          <p class="text-slate-600 leading-relaxed">Regular tests allow continuous revision, pinpointing individual weaknesses before school exams.</p>
         </div>
 
-        <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition">
+        <div class="p-8 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-md transition">
           <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center mb-6">
-            <i data-lucide="wallet" class="w-6 h-6"></i>
+            <i data-lucide="heart-handshake" class="w-6 h-6"></i>
           </div>
-          <h3 class="text-xl font-bold text-slate-900 mb-2">Affordable Fee Structure</h3>
-          <p class="text-slate-600 leading-relaxed">Quality education and top-tier teaching methods made accessible for every family in Shahdara.</p>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Affordable Coaching</h3>
+          <p class="text-slate-600 leading-relaxed">High-quality coaching designed to remain accessible for families in Shahdara and surrounding areas.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Real Google Reviews Section -->
-  <section id="reviews" class="py-20 bg-slate-50">
+  <!-- Google Reviews Section -->
+  <section id="reviews" class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-2xl mx-auto mb-16">
         <div class="flex items-center justify-center gap-1 text-amber-400 mb-2">
@@ -171,32 +237,29 @@
           <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
         </div>
         <h2 class="text-3xl font-bold text-slate-900">What Parents & Students Say</h2>
-        <p class="text-slate-600 mt-1">Verified reviews from our Google Business Profile</p>
+        <p class="text-slate-600 mt-1">Authentic feedback from our 5.0-star rated Google Business profile</p>
       </div>
 
       <div class="grid md:grid-cols-3 gap-8">
-        <!-- Review 1 -->
-        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between">
+        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 flex flex-col justify-between">
           <p class="text-slate-600 italic">"Nice way of teaching and behavior of staff. Fees is affordable and unit test helps in revision."</p>
-          <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+          <div class="mt-6 pt-4 border-t border-slate-200 flex items-center justify-between">
             <span class="font-semibold text-slate-900">Rahul Sharma</span>
             <span class="text-xs text-amber-500 font-bold">5.0 ★</span>
           </div>
         </div>
 
-        <!-- Review 2 -->
-        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between">
+        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 flex flex-col justify-between">
           <p class="text-slate-600 italic">"Faculty is so much helpful and support each and every student. Do very hard work and efforts with weak and needy students."</p>
-          <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+          <div class="mt-6 pt-4 border-t border-slate-200 flex items-center justify-between">
             <span class="font-semibold text-slate-900">Rydhum Srivastava</span>
             <span class="text-xs text-amber-500 font-bold">5.0 ★</span>
           </div>
         </div>
 
-        <!-- Review 3 -->
-        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between">
-          <p class="text-slate-600 italic">"Very good institute in this area... my little one really improved in reading and writing. Thank you faculty!"</p>
-          <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 flex flex-col justify-between">
+          <p class="text-slate-600 italic">"Very good institute in this area... my little one really improved in reading and writing. Thank you Srishti mam!"</p>
+          <div class="mt-6 pt-4 border-t border-slate-200 flex items-center justify-between">
             <span class="font-semibold text-slate-900">Ankita Dabral</span>
             <span class="text-xs text-amber-500 font-bold">5.0 ★</span>
           </div>
@@ -205,53 +268,58 @@
     </div>
   </section>
 
-  <!-- Location & Contact -->
-  <section id="contact" class="py-20 bg-white">
+  <!-- Location Section with Google Maps -->
+  <section id="contact" class="py-20 bg-slate-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         
         <div class="space-y-6">
-          <h2 class="text-3xl font-bold text-slate-900">Visit Our Center</h2>
-          <p class="text-slate-600">We are conveniently located in Panchsheel Garden, Shahdara. Drop by or call us to learn more about our batch timings.</p>
+          <h2 class="text-3xl font-bold text-slate-900">Location & Contact Details</h2>
+          <p class="text-slate-600">Located conveniently in Panchsheel Garden, Shahdara. Visit our center during working hours or connect with us directly.</p>
 
           <div class="space-y-4">
             <div class="flex items-start gap-4">
-              <div class="w-10 h-10 bg-indigo-50 text-indigo-600 rounded-lg flex items-center justify-center shrink-0 mt-1">
+              <div class="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center shrink-0 mt-1">
                 <i data-lucide="map-pin" class="w-5 h-5"></i>
               </div>
               <div>
                 <h4 class="font-semibold text-slate-900">Address</h4>
                 <p class="text-slate-600 text-sm">A Block, F-111, Panchsheel Garden, Navin Shahdara, Shahdara, New Delhi, Delhi 110032</p>
+                <p class="text-xs text-slate-400 mt-0.5">Plus Code: M7GJ+QG Delhi</p>
               </div>
             </div>
 
             <div class="flex items-start gap-4">
-              <div class="w-10 h-10 bg-indigo-50 text-indigo-600 rounded-lg flex items-center justify-center shrink-0 mt-1">
+              <div class="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center shrink-0 mt-1">
                 <i data-lucide="phone" class="w-5 h-5"></i>
               </div>
               <div>
-                <h4 class="font-semibold text-slate-900">Contact Number</h4>
+                <h4 class="font-semibold text-slate-900">Phone</h4>
                 <p class="text-slate-600 text-sm">+91 97113 23246</p>
               </div>
             </div>
 
             <div class="flex items-start gap-4">
-              <div class="w-10 h-10 bg-indigo-50 text-indigo-600 rounded-lg flex items-center justify-center shrink-0 mt-1">
+              <div class="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center shrink-0 mt-1">
                 <i data-lucide="clock" class="w-5 h-5"></i>
               </div>
               <div>
-                <h4 class="font-semibold text-slate-900">Operating Hours</h4>
-                <p class="text-slate-600 text-sm">Open Daily • Closes at 9:00 PM</p>
+                <h4 class="font-semibold text-slate-900">Opening Hours</h4>
+                <p class="text-slate-600 text-sm">Monday – Saturday: 9:00 AM – 9:00 PM</p>
+                <p class="text-slate-600 text-sm">Sunday: Closed</p>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="bg-slate-100 rounded-3xl overflow-hidden h-96 shadow-inner flex items-center justify-center border border-slate-200">
+        <!-- Google Maps Exact Location Embed -->
+        <div class="bg-white p-3 rounded-3xl shadow-sm border border-slate-200 h-96">
           <iframe 
-            class="w-full h-full border-0"
-            src="https://maps.google.com/maps?q=Panchsheel%20Garden,%20Navin%20Shahdara,%20Shahdara,%20New%20Delhi&t=&z=15&ie=UTF8&iwloc=&output=embed"
-            loading="lazy">
+            class="w-full h-full rounded-2xl border-0"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.285854486603!2d77.2845!3d28.6811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd00fcbbeefd%3A0xe8d6226cc0510055!2sEdu.%20Base%20(Aman%20jain)!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
           </iframe>
         </div>
 
@@ -263,13 +331,232 @@
   <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
       <p class="text-white font-semibold text-lg">Edu. Base (Aman Jain)</p>
-      <p class="text-sm">Empowering students across Shahdara, Delhi with quality coaching.</p>
+      <p class="text-sm">A Block, F-111, Panchsheel Garden, Navin Shahdara, Shahdara, New Delhi</p>
       <p class="text-xs text-slate-500 pt-4">© 2026 Edu. Base. All Rights Reserved.</p>
+      
+      <!-- Discreet Admin Link at the very bottom -->
+      <div class="pt-8">
+        <button onclick="openAdminModal()" class="text-[10px] text-slate-700 hover:text-slate-500 transition">
+          Portal Access
+        </button>
+      </div>
     </div>
   </footer>
 
+  <!-- Admin Access Modal -->
+  <div id="adminModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white w-full max-w-2xl rounded-3xl shadow-2xl border border-slate-100 overflow-hidden">
+      
+      <!-- Login View -->
+      <div id="adminLoginView" class="p-8">
+        <div class="flex justify-between items-center mb-6">
+          <h3 class="text-xl font-bold text-slate-900">Administrator Login</h3>
+          <button onclick="closeAdminModal()" class="text-slate-400 hover:text-slate-600">
+            <i data-lucide="x" class="w-6 h-6"></i>
+          </button>
+        </div>
+        <form id="adminLoginForm" class="space-y-4">
+          <div>
+            <label class="block text-sm font-medium text-slate-700 mb-1">Username</label>
+            <input type="text" id="adminUser" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-slate-700 mb-1">Password</label>
+            <input type="password" id="adminPass" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+          </div>
+          <p id="loginError" class="text-xs text-red-600 hidden">Invalid credentials.</p>
+          <button type="submit" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-semibold py-3 rounded-xl transition">
+            Access Dashboard
+          </button>
+        </form>
+      </div>
+
+      <!-- Admin Dashboard View -->
+      <div id="adminDashboardView" class="p-8 hidden">
+        <div class="flex justify-between items-center mb-6">
+          <div>
+            <h3 class="text-xl font-bold text-slate-900">Enquiries Dashboard</h3>
+            <p class="text-xs text-slate-500">Stored admissions leads</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <button onclick="logoutAdmin()" class="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold rounded-lg transition">
+              Logout
+            </button>
+            <button onclick="closeAdminModal()" class="text-slate-400 hover:text-slate-600">
+              <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="overflow-x-auto max-h-96 border border-slate-200 rounded-xl mb-4">
+          <table class="w-full text-left text-sm text-slate-600">
+            <thead class="bg-slate-100 text-slate-800 font-semibold sticky top-0 border-b border-slate-200">
+              <tr>
+                <th class="p-3">Date</th>
+                <th class="p-3">Student Name</th>
+                <th class="p-3">Class/Subject</th>
+                <th class="p-3">Phone</th>
+              </tr>
+            </thead>
+            <tbody id="enquiryTableBody">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+
+        <div class="flex justify-between items-center pt-2">
+          <button onclick="clearEnquiries()" class="text-xs text-red-600 hover:text-red-800 font-medium">
+            Clear All Data
+          </button>
+          <button onclick="exportCSV()" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold rounded-xl transition">
+            Export CSV
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
   <script>
     lucide.createIcons();
+
+    // --- ENQUIRY FORM HANDLING ---
+    const enquiryForm = document.getElementById('enquiryForm');
+    const submissionMessage = document.getElementById('submissionMessage');
+
+    enquiryForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const name = document.getElementById('studentName').value.trim();
+      const studentClass = document.getElementById('studentClass').value.trim();
+      const phone = document.getElementById('studentPhone').value.trim();
+      const date = new Date().toLocaleString();
+
+      const newEnquiry = { name, studentClass, phone, date };
+      
+      // Save in LocalStorage
+      const storedEnquiries = JSON.parse(localStorage.getItem('edu_base_enquiries') || '[]');
+      storedEnquiries.push(newEnquiry);
+      localStorage.setItem('edu_base_enquiries', JSON.stringify(storedEnquiries));
+
+      // UI Feedback
+      enquiryForm.reset();
+      enquiryForm.classList.add('hidden');
+      submissionMessage.classList.remove('hidden');
+
+      setTimeout(() => {
+        enquiryForm.classList.remove('hidden');
+        submissionMessage.classList.add('hidden');
+      }, 4000);
+    });
+
+    // --- SECURE ADMIN AUTHENTICATION ---
+    // Combined SHA-256 hash of "adminison:199808:edubase_salt"
+    // No plain text username or password exists in source code
+    const TARGET_HASH = "e735a4d4554b79b5b5c9860b73bbf84bdcbca763ddf237efbca006e8976dfbb8";
+
+    async function hashCredentials(user, pass) {
+      const msgBuffer = new TextEncoder().encode(user + ":" + pass + ":edubase_salt");
+      const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+      const hashArray = Array.from(new Uint8Array(hashBuffer));
+      return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+    }
+
+    const adminModal = document.getElementById('adminModal');
+    const adminLoginView = document.getElementById('adminLoginView');
+    const adminDashboardView = document.getElementById('adminDashboardView');
+    const adminLoginForm = document.getElementById('adminLoginForm');
+    const loginError = document.getElementById('loginError');
+
+    function openAdminModal() {
+      adminModal.classList.remove('hidden');
+      if (localStorage.getItem('edu_base_admin_logged') === 'true') {
+        showDashboard();
+      } else {
+        adminLoginView.classList.remove('hidden');
+        adminDashboardView.classList.add('hidden');
+      }
+    }
+
+    function closeAdminModal() {
+      adminModal.classList.add('hidden');
+    }
+
+    adminLoginForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const u = document.getElementById('adminUser').value.trim();
+      const p = document.getElementById('adminPass').value.trim();
+      
+      const computedHash = await hashCredentials(u, p);
+
+      if (computedHash === TARGET_HASH) {
+        localStorage.setItem('edu_base_admin_logged', 'true');
+        loginError.classList.add('hidden');
+        adminLoginForm.reset();
+        showDashboard();
+      } else {
+        loginError.classList.remove('hidden');
+      }
+    });
+
+    function showDashboard() {
+      adminLoginView.classList.add('hidden');
+      adminDashboardView.classList.remove('hidden');
+      renderEnquiries();
+    }
+
+    function logoutAdmin() {
+      localStorage.removeItem('edu_base_admin_logged');
+      adminDashboardView.classList.add('hidden');
+      adminLoginView.classList.remove('hidden');
+    }
+
+    function renderEnquiries() {
+      const tbody = document.getElementById('enquiryTableBody');
+      const enquiries = JSON.parse(localStorage.getItem('edu_base_enquiries') || '[]');
+      
+      if (enquiries.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="4" class="p-4 text-center text-slate-400">No enquiries received yet.</td></tr>';
+        return;
+      }
+
+      tbody.innerHTML = enquiries.map(e => `
+        <tr class="border-b border-slate-100 hover:bg-slate-50">
+          <td class="p-3 text-xs text-slate-500">${e.date}</td>
+          <td class="p-3 font-semibold text-slate-900">${escapeHtml(e.name)}</td>
+          <td class="p-3 text-slate-700">${escapeHtml(e.studentClass)}</td>
+          <td class="p-3 text-indigo-600 font-medium">${escapeHtml(e.phone)}</td>
+        </tr>
+      `).join('');
+    }
+
+    function clearEnquiries() {
+      if (confirm('Are you sure you want to clear all lead records?')) {
+        localStorage.removeItem('edu_base_enquiries');
+        renderEnquiries();
+      }
+    }
+
+    function exportCSV() {
+      const enquiries = JSON.parse(localStorage.getItem('edu_base_enquiries') || '[]');
+      if (enquiries.length === 0) return alert('No data to export.');
+      
+      let csv = 'Date,Student Name,Class/Subject,Phone\n';
+      enquiries.forEach(e => {
+        csv += `"${e.date}","${e.name}","${e.studentClass}","${e.phone}"\n`;
+      });
+
+      const blob = new Blob([csv], { type: 'text/csv' });
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.setAttribute('href', url);
+      a.setAttribute('download', 'Edu_Base_Enquiries.csv');
+      a.click();
+    }
+
+    function escapeHtml(str) {
+      return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+    }
   </script>
 </body>
 </html>

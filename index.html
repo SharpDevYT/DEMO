@@ -1,44 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Edu. Base (Aman Jain) | Coaching Center in Shahdara, Delhi</title>
+  <title>Edu. Base (Aman Jain) | Premium Coaching Center in Shahdara, Delhi</title>
   <meta name="description" content="Edu. Base by Aman Jain offers personal attention, experienced faculty, regular unit tests, and affordable fees in Navin Shahdara, Delhi.">
   
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Google Fonts & Lucide Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest"></script>
   
   <style>
-    body { font-family: 'Inter', sans-serif; }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .bg-grid-pattern {
+      background-image: radial-gradient(#6366f1 0.75px, transparent 0.75px);
+      background-size: 24px 24px;
+    }
   </style>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased selection:bg-indigo-500 selection:text-white">
+<body class="bg-slate-900 text-slate-100 antialiased selection:bg-indigo-500 selection:text-white">
 
-  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-100">
+  <!-- Top Announcement Bar -->
+  <div class="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white text-xs sm:text-sm font-semibold py-2 px-4 text-center tracking-wide flex items-center justify-center gap-2">
+    <span class="bg-white/20 px-2 py-0.5 rounded-full text-[11px] uppercase tracking-wider font-extrabold">Admissions Open</span>
+    <span>Limited Seats Available for Academic Year 2026–27!</span>
+  </div>
+
+  <!-- Navigation -->
+  <header class="sticky top-0 z-50 bg-slate-900/80 backdrop-blur-xl border-b border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         <div class="flex items-center gap-3">
-          <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-md shadow-indigo-200">
-            EB
+          <div class="w-11 h-11 bg-gradient-to-tr from-indigo-600 to-violet-500 rounded-2xl flex items-center justify-center text-white font-extrabold text-xl shadow-lg shadow-indigo-500/30">
+            <i data-lucide="graduation-cap" class="w-6 h-6"></i>
           </div>
           <div>
-            <span class="text-xl font-bold text-slate-900 block leading-none">Edu. Base</span>
-            <span class="text-xs text-indigo-600 font-medium">Directed by Aman Jain</span>
+            <span class="text-xl font-black text-white block leading-none tracking-tight">Edu. Base</span>
+            <span class="text-xs text-indigo-400 font-semibold">Directed by Aman Jain</span>
           </div>
         </div>
 
-        <nav class="hidden md:flex items-center gap-8 font-medium text-slate-600">
-          <a href="#about" class="hover:text-indigo-600 transition">About Us</a>
-          <a href="#features" class="hover:text-indigo-600 transition">Why Choose Us</a>
-          <a href="#reviews" class="hover:text-indigo-600 transition">Testimonials</a>
-          <a href="#contact" class="hover:text-indigo-600 transition">Contact</a>
+        <nav class="hidden md:flex items-center gap-8 font-medium text-slate-300">
+          <a href="#about" class="hover:text-indigo-400 transition">About Us</a>
+          <a href="#courses" class="hover:text-indigo-400 transition">Courses</a>
+          <a href="#features" class="hover:text-indigo-400 transition">Why Choose Us</a>
+          <a href="#reviews" class="hover:text-indigo-400 transition">Testimonials</a>
+          <a href="#contact" class="hover:text-indigo-400 transition">Contact</a>
         </nav>
 
         <div class="flex items-center gap-3">
-          <a href="tel:09711323246" class="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-5 py-2.5 rounded-xl transition shadow-lg shadow-indigo-200">
-            <i data-lucide="phone" class="w-4 h-4"></i>
+          <a href="tel:09711323246" class="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-500 to-violet-600 hover:from-indigo-600 hover:to-violet-700 text-white font-bold px-5 py-2.5 rounded-xl transition shadow-lg shadow-indigo-500/25">
+            <i data-lucide="phone-call" class="w-4 h-4"></i>
             <span>Call Now</span>
           </a>
         </div>
@@ -46,71 +60,98 @@
     </div>
   </header>
 
-  <section class="relative py-16 md:py-24 overflow-hidden bg-gradient-to-b from-indigo-50/50 to-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <!-- Hero Section -->
+  <section class="relative py-20 lg:py-28 overflow-hidden bg-slate-900 bg-grid-pattern">
+    <div class="absolute inset-0 bg-gradient-to-b from-slate-900/40 via-slate-900/90 to-slate-900 pointer-events-none"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="grid lg:grid-cols-12 gap-12 items-center">
         
-        <div class="lg:col-span-7 space-y-6">
-          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-amber-700 text-sm font-medium">
-            <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
-            <span>5.0 Star Rated Center (49+ Google Reviews)</span>
+        <div class="lg:col-span-7 space-y-8">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 text-sm font-semibold backdrop-blur-md">
+            <i data-lucide="sparkles" class="w-4 h-4 text-amber-400"></i>
+            <span>Shahdara’s #1 Rated Coaching Academy</span>
           </div>
 
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 tracking-tight leading-tight">
-            Building Strong Academic Foundations for Tomorrow
+          <h1 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-[1.1]">
+            Turn Academic Potential Into <span class="bg-gradient-to-r from-indigo-400 via-purple-300 to-pink-400 bg-clip-text text-transparent">Top Marks</span>
           </h1>
 
-          <p class="text-lg text-slate-600 max-w-2xl">
-            At <strong>Edu. Base (Aman jain)</strong>, we nurture academic confidence through individual mentoring, dedicated faculty support, and structured revision tests designed for student success.
+          <p class="text-lg text-slate-400 max-w-2xl leading-relaxed">
+            Personalized mentoring, rigorous unit testing, and dedicated support for every student under the personal direction of <strong>Aman Jain</strong>.
           </p>
 
-          <div class="flex flex-col sm:flex-row gap-4 pt-4">
-            <a href="tel:09711323246" class="inline-flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-8 py-4 rounded-xl shadow-lg shadow-indigo-200 transition">
-              <i data-lucide="phone-call" class="w-5 h-5"></i>
-              <span>Call 097113 23246</span>
+          <div class="flex flex-col sm:flex-row gap-4 pt-2">
+            <a href="#enquire-section" class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-indigo-500 to-violet-600 hover:from-indigo-600 hover:to-violet-700 text-white font-bold px-8 py-4 rounded-2xl shadow-xl shadow-indigo-500/30 transition transform hover:-translate-y-0.5">
+              <i data-lucide="pen-tool" class="w-5 h-5"></i>
+              <span>Book Free Demo Class</span>
             </a>
-            <a href="#contact" class="inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 font-semibold px-8 py-4 rounded-xl transition">
-              <i data-lucide="map-pin" class="w-5 h-5 text-indigo-600"></i>
-              <span>Visit Center</span>
+            <a href="tel:09711323246" class="inline-flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-bold px-8 py-4 rounded-2xl transition">
+              <i data-lucide="phone" class="w-5 h-5 text-indigo-400"></i>
+              <span>097113 23246</span>
             </a>
           </div>
 
-          <div class="grid grid-cols-3 gap-4 pt-8 border-t border-slate-200/80">
-            <div>
-              <p class="text-3xl font-bold text-slate-900">5.0 ★</p>
-              <p class="text-xs text-slate-500 font-medium">Google Rating</p>
+          <!-- Trust Badges -->
+          <div class="grid grid-cols-3 gap-4 pt-6 border-t border-slate-800">
+            <div class="flex items-center gap-3">
+              <div class="p-2.5 bg-slate-800 rounded-xl border border-slate-700 text-indigo-400">
+                <i data-lucide="award" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <p class="text-xl font-bold text-white leading-none">5.0 ★</p>
+                <p class="text-xs text-slate-400 mt-1">49+ Google Reviews</p>
+              </div>
             </div>
-            <div>
-              <p class="text-3xl font-bold text-slate-900">10+ Yrs</p>
-              <p class="text-xs text-slate-500 font-medium">Teaching Legacy</p>
+            <div class="flex items-center gap-3">
+              <div class="p-2.5 bg-slate-800 rounded-xl border border-slate-700 text-indigo-400">
+                <i data-lucide="book-open" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <p class="text-xl font-bold text-white leading-none">10+ Yrs</p>
+                <p class="text-xs text-slate-400 mt-1">Teaching Legacy</p>
+              </div>
             </div>
-            <div>
-              <p class="text-3xl font-bold text-slate-900">Affordable</p>
-              <p class="text-xs text-slate-500 font-medium">Fee Structure</p>
+            <div class="flex items-center gap-3">
+              <div class="p-2.5 bg-slate-800 rounded-xl border border-slate-700 text-indigo-400">
+                <i data-lucide="users" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <p class="text-xl font-bold text-white leading-none">100%</p>
+                <p class="text-xs text-slate-400 mt-1">Personal Focus</p>
+              </div>
             </div>
           </div>
         </div>
 
+        <!-- Direct WhatsApp Form -->
         <div class="lg:col-span-5" id="enquire-section">
-          <div class="bg-white p-8 rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100 space-y-6">
-            <h3 class="text-xl font-bold text-slate-900">Enquire via WhatsApp</h3>
+          <div class="bg-slate-800/90 backdrop-blur-xl p-8 rounded-3xl border border-slate-700 shadow-2xl space-y-6 relative">
+            <div class="absolute -top-3 right-6 bg-emerald-500 text-slate-950 font-black text-xs px-3 py-1 rounded-full uppercase tracking-wider flex items-center gap-1">
+              <i data-lucide="zap" class="w-3.5 h-3.5 fill-slate-950"></i> Instant Response
+            </div>
+            
+            <div class="space-y-1">
+              <h3 class="text-2xl font-bold text-white">Enquire for Admissions</h3>
+              <p class="text-xs text-slate-400">Fill out details to get class schedules & fee structures.</p>
+            </div>
             
             <form id="whatsappForm" class="space-y-4">
               <div>
-                <label class="block text-sm font-medium text-slate-700 mb-1">Student Name *</label>
-                <input type="text" id="studentName" required placeholder="Enter student's full name" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Student Full Name *</label>
+                <input type="text" id="studentName" required placeholder="e.g. Rahul Sharma" class="w-full px-4 py-3.5 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition">
               </div>
               <div>
-                <label class="block text-sm font-medium text-slate-700 mb-1">Class / Subject *</label>
-                <input type="text" id="studentClass" required placeholder="e.g. Class 9th / Mathematics & Science" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Class / Subject *</label>
+                <input type="text" id="studentClass" required placeholder="e.g. Class 10th / Math & Science" class="w-full px-4 py-3.5 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition">
               </div>
               <div>
-                <label class="block text-sm font-medium text-slate-700 mb-1">Mobile Number *</label>
-                <input type="tel" id="studentPhone" required placeholder="Enter 10-digit mobile number" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Mobile Number *</label>
+                <input type="tel" id="studentPhone" required placeholder="Enter 10-digit mobile number" class="w-full px-4 py-3.5 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition">
               </div>
-              <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3.5 rounded-xl shadow-md transition flex items-center justify-center gap-2">
+              <button type="submit" class="w-full bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-bold py-4 rounded-xl shadow-lg shadow-emerald-500/20 transition flex items-center justify-center gap-2 text-base">
                 <i data-lucide="message-square" class="w-5 h-5"></i>
-                <span>Send via WhatsApp</span>
+                <span>Submit via WhatsApp</span>
               </button>
             </form>
           </div>
@@ -120,185 +161,179 @@
     </div>
   </section>
 
-  <section id="about" class="py-20 bg-white border-y border-slate-100">
+  <!-- Courses Offered Section -->
+  <section id="courses" class="py-20 bg-slate-950 border-y border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
-        <div class="space-y-6">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-indigo-50 text-indigo-700 text-xs font-bold uppercase tracking-wider">
-            About Edu. Base
-          </div>
-          <h2 class="text-3xl font-bold text-slate-900 leading-tight">Dedicated to Excellence in Education</h2>
-          <p class="text-slate-600 leading-relaxed">
-            Founded under the direct leadership of <strong>Aman Jain</strong>, <strong>Edu. Base</strong> has grown into one of Navin Shahdara’s most trusted coaching centers. Our institute is built on the philosophy that every student possesses unique learning styles and potential.
-          </p>
-          <p class="text-slate-600 leading-relaxed">
-            From foundational reading and writing skills for young learners (guided by specialized teachers like Srishti Mam) to advanced subject mastery and exam preparations for higher classes, our dedicated team works tirelessly with both high-achieving and academically challenged students.
-          </p>
-          
-          <div class="grid sm:grid-cols-2 gap-4 pt-2">
-            <div class="flex items-start gap-3">
-              <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
-                <i data-lucide="check" class="w-4 h-4"></i>
-              </div>
-              <span class="text-sm font-medium text-slate-700">Personalized attention for weaker students</span>
-            </div>
-            <div class="flex items-start gap-3">
-              <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
-                <i data-lucide="check" class="w-4 h-4"></i>
-              </div>
-              <span class="text-sm font-medium text-slate-700">Continuous evaluation & progress reports</span>
-            </div>
-            <div class="flex items-start gap-3">
-              <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
-                <i data-lucide="check" class="w-4 h-4"></i>
-              </div>
-              <span class="text-sm font-medium text-slate-700">Affordable, transparent fee structures</span>
-            </div>
-            <div class="flex items-start gap-3">
-              <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
-                <i data-lucide="check" class="w-4 h-4"></i>
-              </div>
-              <span class="text-sm font-medium text-slate-700">Experienced & accessible teaching staff</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-indigo-900 text-white p-8 md:p-12 rounded-3xl relative overflow-hidden shadow-2xl">
-          <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-indigo-700/50 rounded-full blur-3xl"></div>
-          <blockquote class="relative z-10 space-y-4">
-            <p class="text-xl italic font-light leading-relaxed">
-              "Our primary objective at Edu. Base is not just teaching syllabus topics, but instilling self-belief in students and ensuring that no child feels left behind."
-            </p>
-            <footer class="pt-4 border-t border-indigo-700">
-              <p class="font-bold text-lg">Aman Jain</p>
-              <p class="text-indigo-300 text-sm">Director & Founder, Edu. Base</p>
-            </footer>
-          </blockquote>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="features" class="py-20 bg-slate-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-2xl mx-auto mb-16">
-        <h2 class="text-3xl font-bold text-slate-900">Why Choose Edu. Base?</h2>
-        <p class="text-slate-600 mt-2">Proven methodology that combines discipline, encouragement, and academic tracking.</p>
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <span class="text-xs font-bold text-indigo-400 uppercase tracking-widest bg-indigo-500/10 px-3 py-1 rounded-full border border-indigo-500/20">Academic Batches</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Programs Designed for Excellence</h2>
+        <p class="text-slate-400">Tailored coaching for foundational learning, middle school, and board preparation.</p>
       </div>
 
       <div class="grid md:grid-cols-3 gap-8">
-        <div class="p-8 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-md transition">
-          <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center mb-6">
-            <i data-lucide="users" class="w-6 h-6"></i>
+        <div class="bg-slate-900 p-8 rounded-3xl border border-slate-800 hover:border-indigo-500/50 transition group space-y-4">
+          <div class="w-12 h-12 bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 rounded-2xl flex items-center justify-center group-hover:scale-110 transition">
+            <i data-lucide="baby" class="w-6 h-6"></i>
           </div>
-          <h3 class="text-xl font-bold text-slate-900 mb-2">Supportive Faculty</h3>
-          <p class="text-slate-600 leading-relaxed">Our teachers invest special effort in weaker students to bring their academic concepts up to standard.</p>
+          <h3 class="text-xl font-bold text-white">Junior Foundation</h3>
+          <p class="text-xs font-semibold text-indigo-400 uppercase">Classes 1st – 5th</p>
+          <p class="text-slate-400 text-sm leading-relaxed">Special attention on reading, handwriting, math basics, and confidence building led by specialized teachers like Srishti Mam.</p>
         </div>
 
-        <div class="p-8 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-md transition">
-          <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center mb-6">
-            <i data-lucide="file-text" class="w-6 h-6"></i>
+        <div class="bg-slate-900 p-8 rounded-3xl border border-slate-800 hover:border-indigo-500/50 transition group space-y-4">
+          <div class="w-12 h-12 bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 rounded-2xl flex items-center justify-center group-hover:scale-110 transition">
+            <i data-lucide="brain-circuit" class="w-6 h-6"></i>
           </div>
-          <h3 class="text-xl font-bold text-slate-900 mb-2">Periodic Unit Testing</h3>
-          <p class="text-slate-600 leading-relaxed">Regular tests allow continuous revision, pinpointing individual weaknesses before school exams.</p>
+          <h3 class="text-xl font-bold text-white">Middle Wing</h3>
+          <p class="text-xs font-semibold text-indigo-400 uppercase">Classes 6th – 8th</p>
+          <p class="text-slate-400 text-sm leading-relaxed">Conceptual clarity in Science, Mathematics, English, and Social Studies to build strong logic before high school.</p>
         </div>
 
-        <div class="p-8 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-md transition">
-          <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center mb-6">
-            <i data-lucide="heart-handshake" class="w-6 h-6"></i>
+        <div class="bg-slate-900 p-8 rounded-3xl border border-slate-800 hover:border-indigo-500/50 transition group space-y-4">
+          <div class="w-12 h-12 bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 rounded-2xl flex items-center justify-center group-hover:scale-110 transition">
+            <i data-lucide="trophy" class="w-6 h-6"></i>
           </div>
-          <h3 class="text-xl font-bold text-slate-900 mb-2">Affordable Coaching</h3>
-          <p class="text-slate-600 leading-relaxed">High-quality coaching designed to remain accessible for families in Shahdara and surrounding areas.</p>
+          <h3 class="text-xl font-bold text-white">Secondary & Boards</h3>
+          <p class="text-xs font-semibold text-indigo-400 uppercase">Classes 9th – 12th</p>
+          <p class="text-slate-400 text-sm leading-relaxed">Rigorous exam-focused training, chapter-wise test series, and past 10-year paper solutions for maximum scoring.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="reviews" class="py-20 bg-white">
+  <!-- Features Section -->
+  <section id="features" class="py-20 bg-slate-900">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-2xl mx-auto mb-16">
-        <div class="flex items-center justify-center gap-1 text-amber-400 mb-2">
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <span class="text-xs font-bold text-indigo-400 uppercase tracking-widest bg-indigo-500/10 px-3 py-1 rounded-full border border-indigo-500/20">Our Pillars</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Why Parents Trust Edu. Base</h2>
+      </div>
+
+      <div class="grid md:grid-cols-4 gap-6">
+        <div class="p-6 rounded-2xl bg-slate-800/50 border border-slate-700/50 hover:bg-slate-800 transition">
+          <div class="w-10 h-10 bg-indigo-500/10 text-indigo-400 rounded-xl flex items-center justify-center mb-4">
+            <i data-lucide="user-check" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Focused Mentoring</h3>
+          <p class="text-slate-400 text-xs leading-relaxed">Special attention for weaker students to improve concepts at their own pace.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-800/50 border border-slate-700/50 hover:bg-slate-800 transition">
+          <div class="w-10 h-10 bg-indigo-500/10 text-indigo-400 rounded-xl flex items-center justify-center mb-4">
+            <i data-lucide="check-square" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Weekly Unit Tests</h3>
+          <p class="text-slate-400 text-xs leading-relaxed">Continuous revision and tracking through structured chapter-wise testing.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-800/50 border border-slate-700/50 hover:bg-slate-800 transition">
+          <div class="w-10 h-10 bg-indigo-500/10 text-indigo-400 rounded-xl flex items-center justify-center mb-4">
+            <i data-lucide="wallet" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Affordable Fees</h3>
+          <p class="text-slate-400 text-xs leading-relaxed">Top-quality educational guidance offered at accessible, transparent fee structures.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-800/50 border border-slate-700/50 hover:bg-slate-800 transition">
+          <div class="w-10 h-10 bg-indigo-500/10 text-indigo-400 rounded-xl flex items-center justify-center mb-4">
+            <i data-lucide="pie-chart" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Parent Updates</h3>
+          <p class="text-slate-400 text-xs leading-relaxed">Regular performance updates to keep parents fully informed of student progress.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Google Reviews Section -->
+  <section id="reviews" class="py-20 bg-slate-950 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <div class="flex items-center justify-center gap-1 text-amber-400">
           <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
           <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
           <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
           <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
           <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
         </div>
-        <h2 class="text-3xl font-bold text-slate-900">What Parents & Students Say</h2>
-        <p class="text-slate-600 mt-1">Authentic feedback from our 5.0-star rated Google Business profile</p>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Loved by Students & Parents</h2>
+        <p class="text-slate-400 text-sm">Verified feedback from our 5.0-star rated Google Business Profile</p>
       </div>
 
       <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 flex flex-col justify-between">
-          <p class="text-slate-600 italic">"Nice way of teaching and behavior of staff. Fees is affordable and unit test helps in revision."</p>
-          <div class="mt-6 pt-4 border-t border-slate-200 flex items-center justify-between">
-            <span class="font-semibold text-slate-900">Rahul Sharma</span>
-            <span class="text-xs text-amber-500 font-bold">5.0 ★</span>
+        <div class="bg-slate-900 p-8 rounded-3xl border border-slate-800 flex flex-col justify-between space-y-6">
+          <p class="text-slate-300 italic text-sm leading-relaxed">"Nice way of teaching and behavior of staff. Fees is affordable and unit test helps in revision."</p>
+          <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
+            <span class="font-bold text-white text-sm">Rahul Sharma</span>
+            <span class="text-xs text-amber-400 font-bold bg-amber-400/10 px-2.5 py-1 rounded-full">5.0 ★</span>
           </div>
         </div>
 
-        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 flex flex-col justify-between">
-          <p class="text-slate-600 italic">"Faculty is so much helpful and support each and every student. Do very hard work and efforts with weak and needy students."</p>
-          <div class="mt-6 pt-4 border-t border-slate-200 flex items-center justify-between">
-            <span class="font-semibold text-slate-900">Rydhum Srivastava</span>
-            <span class="text-xs text-amber-500 font-bold">5.0 ★</span>
+        <div class="bg-slate-900 p-8 rounded-3xl border border-slate-800 flex flex-col justify-between space-y-6">
+          <p class="text-slate-300 italic text-sm leading-relaxed">"Faculty is so much helpful and support each and every student. Do very hard work and efforts with weak and needy students."</p>
+          <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
+            <span class="font-bold text-white text-sm">Rydhum Srivastava</span>
+            <span class="text-xs text-amber-400 font-bold bg-amber-400/10 px-2.5 py-1 rounded-full">5.0 ★</span>
           </div>
         </div>
 
-        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 flex flex-col justify-between">
-          <p class="text-slate-600 italic">"Very good institute in this area... my little one really improved in reading and writing. Thank you Srishti mam!"</p>
-          <div class="mt-6 pt-4 border-t border-slate-200 flex items-center justify-between">
-            <span class="font-semibold text-slate-900">Ankita Dabral</span>
-            <span class="text-xs text-amber-500 font-bold">5.0 ★</span>
+        <div class="bg-slate-900 p-8 rounded-3xl border border-slate-800 flex flex-col justify-between space-y-6">
+          <p class="text-slate-300 italic text-sm leading-relaxed">"Very good institute in this area... my little one really improved in reading and writing. Thank you Srishti mam!"</p>
+          <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
+            <span class="font-bold text-white text-sm">Ankita Dabral</span>
+            <span class="text-xs text-amber-400 font-bold bg-amber-400/10 px-2.5 py-1 rounded-full">5.0 ★</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="py-20 bg-slate-50">
+  <!-- Location Section with Google Maps -->
+  <section id="contact" class="py-20 bg-slate-900">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         
-        <div class="space-y-6">
-          <h2 class="text-3xl font-bold text-slate-900">Location & Contact Details</h2>
-          <p class="text-slate-600">Located conveniently in Panchsheel Garden, Shahdara. Visit our center during working hours or connect with us directly.</p>
+        <div class="space-y-8">
+          <div class="space-y-3">
+            <span class="text-xs font-bold text-indigo-400 uppercase tracking-widest bg-indigo-500/10 px-3 py-1 rounded-full border border-indigo-500/20">Visit Center</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white">We are located in Shahdara</h2>
+          </div>
 
-          <div class="space-y-4">
+          <div class="space-y-6">
             <div class="flex items-start gap-4">
-              <div class="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center shrink-0 mt-1">
-                <i data-lucide="map-pin" class="w-5 h-5"></i>
+              <div class="w-12 h-12 bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 rounded-2xl flex items-center justify-center shrink-0">
+                <i data-lucide="map-pin" class="w-6 h-6"></i>
               </div>
               <div>
-                <h4 class="font-semibold text-slate-900">Address</h4>
-                <p class="text-slate-600 text-sm">A Block, F-111, Panchsheel Garden, Navin Shahdara, Shahdara, New Delhi, Delhi 110032</p>
-                <p class="text-xs text-slate-400 mt-0.5">Plus Code: M7GJ+QG Delhi</p>
+                <h4 class="font-bold text-white text-lg">Address</h4>
+                <p class="text-slate-400 text-sm mt-1">A Block, F-111, Panchsheel Garden, Navin Shahdara, Shahdara, New Delhi, Delhi 110032</p>
+                <p class="text-xs text-indigo-400 font-semibold mt-1">Plus Code: M7GJ+QG Delhi</p>
               </div>
             </div>
 
             <div class="flex items-start gap-4">
-              <div class="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center shrink-0 mt-1">
-                <i data-lucide="phone" class="w-5 h-5"></i>
+              <div class="w-12 h-12 bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 rounded-2xl flex items-center justify-center shrink-0">
+                <i data-lucide="phone" class="w-6 h-6"></i>
               </div>
               <div>
-                <h4 class="font-semibold text-slate-900">Phone</h4>
-                <p class="text-slate-600 text-sm">+91 97113 23246</p>
+                <h4 class="font-bold text-white text-lg">Phone</h4>
+                <p class="text-slate-400 text-sm mt-1">+91 97113 23246</p>
               </div>
             </div>
 
             <div class="flex items-start gap-4">
-              <div class="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center shrink-0 mt-1">
-                <i data-lucide="clock" class="w-5 h-5"></i>
+              <div class="w-12 h-12 bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 rounded-2xl flex items-center justify-center shrink-0">
+                <i data-lucide="clock" class="w-6 h-6"></i>
               </div>
               <div>
-                <h4 class="font-semibold text-slate-900">Opening Hours</h4>
-                <p class="text-slate-600 text-sm">Monday – Saturday: Open until 9:00 PM</p>
+                <h4 class="font-bold text-white text-lg">Opening Hours</h4>
+                <p class="text-slate-400 text-sm mt-1">Monday – Saturday: Open until 9:00 PM</p>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="bg-white p-3 rounded-3xl shadow-sm border border-slate-200 h-96">
+        <div class="bg-slate-800 p-3 rounded-3xl border border-slate-700 shadow-2xl h-96">
           <iframe 
             class="w-full h-full rounded-2xl border-0"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.285854486603!2d77.2845!3d28.6811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd00fcbbeefd%3A0xe8d6226cc0510055!2sEdu.%20Base%20(Aman%20jain)!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
@@ -312,18 +347,18 @@
     </div>
   </section>
 
-  <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+  <!-- Footer -->
+  <footer class="bg-slate-950 text-slate-500 py-12 border-t border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
-      <p class="text-white font-semibold text-lg">Edu. Base (Aman Jain)</p>
+      <p class="text-white font-bold text-lg">Edu. Base (Aman Jain)</p>
       <p class="text-sm">A Block, F-111, Panchsheel Garden, Navin Shahdara, Shahdara, New Delhi</p>
-      <p class="text-xs text-slate-500 pt-4">© 2026 Edu. Base. All Rights Reserved.</p>
+      <p class="text-xs text-slate-600 pt-4">© 2026 Edu. Base. All Rights Reserved.</p>
     </div>
   </footer>
 
   <script>
     lucide.createIcons();
 
-    // --- INSTANT WHATSAPP DIRECT SUBMISSION ---
     document.getElementById('whatsappForm').addEventListener('submit', (e) => {
       e.preventDefault();
       

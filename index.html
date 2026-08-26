@@ -118,7 +118,7 @@
               </button>
             </form>
 
-            <div id="submissionMessage" class="hidden p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-sm font-medium text-center animate-fade-in">
+            <div id="submissionMessage" class="hidden p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-sm font-medium text-center">
               <i data-lucide="check-circle" class="w-6 h-6 text-emerald-600 mx-auto mb-1"></i>
               We will contact you soon!
             </div>
@@ -137,7 +137,7 @@
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-indigo-50 text-indigo-700 text-xs font-bold uppercase tracking-wider">
             About Edu. Base
           </div>
-          <h2 class="text-3xl font-bold text-slate-900 leading-tight">Dedicated to Excellence in Education Since 2014</h2>
+          <h2 class="text-3xl font-bold text-slate-900 leading-tight">Dedicated to Excellence in Education</h2>
           <p class="text-slate-600 leading-relaxed">
             Founded under the direct leadership of <strong>Aman Jain</strong>, <strong>Edu. Base</strong> has grown into one of Navin Shahdara’s most trusted coaching centers. Our institute is built on the philosophy that every student possesses unique learning styles and potential.
           </p>
@@ -305,8 +305,7 @@
               </div>
               <div>
                 <h4 class="font-semibold text-slate-900">Opening Hours</h4>
-                <p class="text-slate-600 text-sm">Monday – Saturday: 9:00 AM – 9:00 PM</p>
-                <p class="text-slate-600 text-sm">Sunday: Closed</p>
+                <p class="text-slate-600 text-sm">Monday – Saturday: Open until 9:00 PM</p>
               </div>
             </div>
           </div>
@@ -334,7 +333,7 @@
       <p class="text-sm">A Block, F-111, Panchsheel Garden, Navin Shahdara, Shahdara, New Delhi</p>
       <p class="text-xs text-slate-500 pt-4">© 2026 Edu. Base. All Rights Reserved.</p>
       
-      <!-- Discreet Admin Link at the very bottom -->
+      <!-- Discreet Admin Link -->
       <div class="pt-8">
         <button onclick="openAdminModal()" class="text-[10px] text-slate-700 hover:text-slate-500 transition">
           Portal Access
@@ -358,13 +357,13 @@
         <form id="adminLoginForm" class="space-y-4">
           <div>
             <label class="block text-sm font-medium text-slate-700 mb-1">Username</label>
-            <input type="text" id="adminUser" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            <input type="text" id="adminUser" required autocomplete="off" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500">
           </div>
           <div>
             <label class="block text-sm font-medium text-slate-700 mb-1">Password</label>
             <input type="password" id="adminPass" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500">
           </div>
-          <p id="loginError" class="text-xs text-red-600 hidden">Invalid credentials.</p>
+          <p id="loginError" class="text-xs text-red-600 hidden">Invalid credentials. Please try again.</p>
           <button type="submit" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-semibold py-3 rounded-xl transition">
             Access Dashboard
           </button>
@@ -399,7 +398,7 @@
               </tr>
             </thead>
             <tbody id="enquiryTableBody">
-              <!-- Dynamically populated -->
+              <!-- Dynamic entries -->
             </tbody>
           </table>
         </div>
@@ -451,12 +450,12 @@
     });
 
     // --- SECURE ADMIN AUTHENTICATION ---
-    // Combined SHA-256 hash of "adminison:199808:edubase_salt"
-    // No plain text username or password exists in source code
+    // SHA-256 hash of "adminison:199808:edubase_salt"
     const TARGET_HASH = "e735a4d4554b79b5b5c9860b73bbf84bdcbca763ddf237efbca006e8976dfbb8";
 
     async function hashCredentials(user, pass) {
-      const msgBuffer = new TextEncoder().encode(user + ":" + pass + ":edubase_salt");
+      const textToHash = user.trim().toLowerCase() + ":" + pass.trim() + ":edubase_salt";
+      const msgBuffer = new TextEncoder().encode(textToHash);
       const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
       const hashArray = Array.from(new Uint8Array(hashBuffer));
       return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
@@ -484,8 +483,8 @@
 
     adminLoginForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const u = document.getElementById('adminUser').value.trim();
-      const p = document.getElementById('adminPass').value.trim();
+      const u = document.getElementById('adminUser').value;
+      const p = document.getElementById('adminPass').value;
       
       const computedHash = await hashCredentials(u, p);
 

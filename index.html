@@ -3,201 +3,203 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shama Professional Unisex Salon | Premium Beauty & Hair Salon in New Seelampur, Delhi</title>
-    <meta name="description" content="Book your appointment at Shama Professional Unisex Salon in Brahmpuri, New Seelampur. Haircuts, styling, bridal makeover, and skin care by Kamran Salmani.">
+    <title>Shama Professional Unisex Salon | Premium Hair & Beauty in New Seelampur</title>
+    <meta name="description" content="Experience top-tier hair styling, beauty, and grooming services by Mr. Kamran Salmani at Shama Professional Unisex Salon in New Seelampur, Delhi. Book via WhatsApp!">
     
     <script src="https://cdn.tailwindcss.com"></script>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <script src="https://unpkg.com/lucide@latest"></script>
-
+    
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        brand: {
-                            50: '#fdf8f6',
-                            100: '#f2e8e5',
-                            200: '#e8d5d0',
-                            500: '#c59b27', // Luxury Warm Gold
-                            600: '#b0871e',
-                            800: '#1c1917', // Deep Charcoal
-                            900: '#0c0a09', // Near Black
+                        salon: {
+                            bg: '#0F0913',
+                            surface: '#1A1021',
+                            card: '#24172E',
+                            gold: '#D4AF37',
+                            goldLight: '#F3E5AB',
+                            plum: '#4A154B',
+                            accent: '#E0A96D'
                         }
                     },
                     fontFamily: {
-                        heading: ['Cormorant Garamond', 'serif'],
-                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        heading: ['Cinzel', 'serif'],
+                        body: ['Plus Jakarta Sans', 'sans-serif']
                     }
                 }
             }
         }
     </script>
-    
     <style>
         .bg-grid-pattern {
             background-size: 30px 30px;
-            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-                              linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-image: 
+                linear-gradient(to right, rgba(212, 175, 55, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(212, 175, 55, 0.05) 1px, transparent 1px);
         }
-        .glass-card {
-            background: rgba(28, 25, 23, 0.7);
+        .glass-panel {
+            background: rgba(26, 16, 33, 0.75);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(197, 155, 39, 0.2);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        .glass-card {
+            background: rgba(36, 23, 46, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.15);
         }
         .gold-gradient-text {
-            background: linear-gradient(135deg, #f6e099 0%, #c59b27 50%, #8a6810 100%);
+            background: linear-gradient(135deg, #FFF 0%, #D4AF37 50%, #E0A96D 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+        .gold-button {
+            background: linear-gradient(135deg, #D4AF37 0%, #AA7C11 100%);
+            transition: all 0.3s ease;
+        }
+        .gold-button:hover {
+            background: linear-gradient(135deg, #E0A96D 0%, #D4AF37 100%);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+        }
     </style>
 </head>
-<body class="font-sans bg-brand-900 text-stone-200 antialiased selection:bg-brand-500 selection:text-white">
+<body class="bg-salon-bg text-gray-200 font-body antialiased bg-grid-pattern selection:bg-salon-gold selection:text-salon-bg">
 
-    <div class="bg-gradient-to-r from-brand-600 via-yellow-600 to-brand-600 text-brand-900 text-xs sm:text-sm font-bold py-2 px-4 text-center tracking-wide shadow-md">
-        <span class="inline-flex items-center gap-2">
-            <i data-lucide="sparkles" class="w-4 h-4">="inline"></i>
-            10+ Years of Excellence in New Seelampur! Book Today & Get Instant Priority Service
-            <i data-lucide="sparkles" class="w-4 h-4">="inline"></i>
-        </span>
+    <div class="bg-gradient-to-r from-salon-plum via-salon-gold to-salon-plum text-white text-xs md:text-sm font-medium py-2 px-4 text-center tracking-wide shadow-lg relative z-50">
+        <div class="container mx-auto flex items-center justify-center gap-2">
+            <span class="inline-block w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+            <span>Open Today till 10:00 PM | Professional Unisex Hair Cut & Beauty Services</span>
+            <a href="tel:09899385688" class="underline hover:text-salon-goldLight ml-2 font-bold flex items-center inline-flex gap-1"><i data-lucide="phone" class="w-3 h-3"></i> 098993 85688</a>
+        </div>
     </div>
 
-    <header class="sticky top-0 z-50 bg-brand-900/80 backdrop-blur-md border-b border-stone-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <a href="#" class="flex items-center gap-3 group">
-                <div class="w-10 h-10 rounded-full bg-brand-500/10 border border-brand-500/40 flex items-center justify-center text-brand-500 group-hover:bg-brand-500 group-hover:text-brand-900 transition-all duration-300">
-                    <i data-lucide="scissors" class="w-5 h-5"></i>
+    <nav class="sticky top-0 z-40 glass-panel border-b border-salon-gold/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-salon-gold to-salon-plum flex items-center justify-center text-salon-bg font-heading font-bold text-xl border border-salon-goldLight shadow-md">
+                        S
+                    </div>
+                    <div>
+                        <span class="font-heading text-lg sm:text-xl font-bold tracking-wider text-white block leading-tight">SHAMA</span>
+                        <span class="text-[10px] tracking-widest text-salon-gold uppercase block font-semibold">Professional Salon</span>
+                    </div>
                 </div>
-                <div>
-                    <span class="font-heading text-xl sm:text-2xl font-bold tracking-wider text-white block uppercase leading-none">SHAMA</span>
-                    <span class="text-[10px] tracking-widest text-brand-500 uppercase font-semibold">Professional Unisex Salon</span>
+                
+                <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                    <a href="#services" class="hover:text-salon-gold transition-colors duration-200">Services</a>
+                    <a href="#why-us" class="hover:text-salon-gold transition-colors duration-200">Why Choose Us</a>
+                    <a href="#reviews" class="hover:text-salon-gold transition-colors duration-200">Testimonials</a>
+                    <a href="#location" class="hover:text-salon-gold transition-colors duration-200">Find Us</a>
                 </div>
-            </a>
-            
-            <nav class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide">
-                <a href="#about" class="hover:text-brand-500 transition-colors">About Us</a>
-                <a href="#services" class="hover:text-brand-500 transition-colors">Services</a>
-                <a href="#why-us" class="hover:text-brand-500 transition-colors">Why Choose Us</a>
-                <a href="#reviews" class="hover:text-brand-500 transition-colors">Reviews</a>
-                <a href="#location" class="hover:text-brand-500 transition-colors">Location</a>
-            </nav>
 
-            <div class="flex items-center gap-4">
-                <a href="tel:09899385688" class="hidden sm:inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-stone-300 hover:text-brand-500 border border-stone-700 hover:border-brand-500 px-4 py-2.5 rounded-full transition-all">
-                    <i data-lucide="phone" class="w-3.5 h-3.5 text-brand-500"></i>
-                    098993 85688
-                </a>
-                <a href="#book" class="inline-flex items-center gap-2 bg-brand-500 hover:bg-brand-600 text-brand-900 font-bold text-xs uppercase tracking-wider px-5 py-2.5 rounded-full transition-all shadow-lg shadow-brand-500/20">
-                    <span>Book Now</span>
-                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                </a>
+                <div>
+                    <a href="https://wa.me/919899385688?text=Hi%20Shama%20Salon,%20I%20want%20to%20book%20an%20appointment." target="_blank" class="gold-button text-salon-bg font-bold px-5 py-2.5 rounded-full text-xs sm:text-sm flex items-center gap-2 shadow-md hover:scale-105 transition-transform">
+                        <i data-lucide="message-circle" class="w-4 h-4 fill-salon-bg">="</i> Book Appointment
+                    </a>
+                </div>
             </div>
         </div>
-    </header>
+    </nav>
 
-    <section class="relative min-h-[calc(100vh-5rem)] bg-grid-pattern flex items-center py-12 lg:py-20 overflow-hidden">
-        <div class="absolute top-1/4 left-10 w-96 h-96 bg-brand-500/10 rounded-full filter blur-[120px] pointer-events-none"></div>
-        <div class="absolute bottom-10 right-10 w-80 h-80 bg-amber-600/10 rounded-full filter blur-[100px] pointer-events-none"></div>
+    <section class="relative py-12 lg:py-24 overflow-hidden">
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-salon-plum/30 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-80 h-80 bg-salon-gold/10 rounded-full blur-[100px] pointer-events-none"></div>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
-            <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 
                 <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-stone-800/80 border border-brand-500/30 text-brand-500 text-xs font-semibold uppercase tracking-wider">
-                        <i data-lucide="star" class="w-3.5 h-3.5 fill-brand-500"></i>
-                        <span>Rated 4.3/5 Stars (67+ Verified Reviews)</span>
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-salon-gold/10 border border-salon-gold/30 text-salon-gold text-xs font-semibold tracking-wider uppercase">
+                        <i data-lucide="star" class="w-3.5 h-3.5 fill-salon-gold"></i>
+                        <span>4.3 ★ Rated Unisex Salon (67+ Reviews)</span>
                     </div>
                     
-                    <h1 class="font-heading text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.1]">
-                        Unveil Your Best Look at <span class="gold-gradient-text">Shama Salon</span>
+                    <h1 class="font-heading text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                        Redefining Your Style with <span class="gold-gradient-text">Master Precision</span>
                     </h1>
                     
-                    <p class="text-stone-400 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed">
-                        Led by master stylist <strong>Mr. Kamran Salmani</strong>, we deliver premium hair design, modern styling, and revitalizing skin treatments tailored for both men and women in New Seelampur.
+                    <p class="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Led by master hairdresser <strong class="text-white font-semibold">Mr. Kamran Salmani</strong>, offering over a decade of benchmark beauty, styling, and grooming excellence in Brahmpuri & New Seelampur.
                     </p>
 
-                    <div class="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs sm:text-sm text-stone-300">
-                        <div class="flex items-center gap-2">
-                            <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-500"></i>
-                            <span>10+ Years Experience</span>
+                    <div class="grid grid-cols-3 gap-4 pt-4 border-t border-gray-800/80 max-w-lg mx-auto lg:mx-0">
+                        <div class="text-center lg:text-left">
+                            <p class="font-heading text-2xl sm:text-3xl font-bold text-salon-gold">10+ Years</p>
+                            <p class="text-xs text-gray-400">Serving Clients</p>
                         </div>
-                        <div class="flex items-center gap-2">
-                            <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-500"></i>
-                            <span>Unisex Experts</span>
+                        <div class="text-center lg:text-left">
+                            <p class="font-heading text-2xl sm:text-3xl font-bold text-salon-gold">4.3 / 5</p>
+                            <p class="text-xs text-gray-400">Customer Rating</p>
                         </div>
-                        <div class="flex items-center gap-2">
-                            <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-500"></i>
-                            <span>Open Till 10 PM</span>
+                        <div class="text-center lg:text-left">
+                            <p class="font-heading text-2xl sm:text-3xl font-bold text-salon-gold">100%</p>
+                            <p class="text-xs text-gray-400">Unisex Styling</p>
                         </div>
-                    </div>
-
-                    <div class="pt-6 grid grid-cols-3 gap-3 max-w-lg mx-auto lg:mx-0">
-                        <img src="https://picsum.photos/seed/shama-hair-1/400/300" alt="Salon styling" class="rounded-lg object-cover h-24 w-full border border-stone-800 opacity-80 hover:opacity-100 transition-opacity">
-                        <img src="https://picsum.photos/seed/shama-beard-2/400/300" alt="Beard trimming" class="rounded-lg object-cover h-24 w-full border border-stone-800 opacity-80 hover:opacity-100 transition-opacity">
-                        <img src="https://picsum.photos/seed/shama-facial-3/400/300" alt="Facial treatment" class="rounded-lg object-cover h-24 w-full border border-stone-800 opacity-80 hover:opacity-100 transition-opacity">
                     </div>
                 </div>
 
-                <div id="book" class="lg:col-span-5">
-                    <div class="glass-card p-6 sm:p-8 rounded-2xl shadow-2xl relative overflow-hidden">
-                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-500 via-amber-400 to-brand-600"></div>
+                <div class="lg:col-span-5">
+                    <div class="glass-panel rounded-3xl p-6 sm:p-8 shadow-2xl relative overflow-hidden">
+                        <div class="absolute -top-12 -right-12 w-32 h-32 bg-salon-gold/20 rounded-full blur-2xl"></div>
                         
                         <div class="mb-6">
-                            <h2 class="font-heading text-2xl font-bold text-white tracking-wide">Instant WhatsApp Booking</h2>
-                            <p class="text-xs text-stone-400 mt-1">Select your service & lock in your slot directly with Kamran Salmani.</p>
+                            <h2 class="font-heading text-xl sm:text-2xl font-bold text-white mb-1">Quick Appointment</h2>
+                            <p class="text-xs text-gray-300">Book directly via WhatsApp instantly without payment.</p>
                         </div>
 
-                        <form id="whatsappForm" class="space-y-4">
+                        <form id="appointmentForm" class="space-y-4">
                             <div>
-                                <label for="name" class="block text-xs font-semibold text-stone-300 uppercase tracking-wider mb-1">Your Full Name</label>
+                                <label for="fullName" class="block text-xs font-medium text-gray-300 mb-1">Full Name</label>
                                 <div class="relative">
-                                    <i data-lucide="user" class="w-4 h-4 absolute left-3.5 top-3 text-stone-500"></i>
-                                    <input type="text" id="name" required placeholder="e.g. Rahul Sharma" class="w-full bg-stone-900/90 border border-stone-700 rounded-lg pl-10 pr-4 py-2.5 text-sm text-white placeholder-stone-600 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all">
+                                    <input type="text" id="fullName" required placeholder="e.g. Rahul Sharma" class="w-full bg-salon-bg/80 border border-salon-gold/30 rounded-xl px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-salon-gold transition-colors pl-10">
+                                    <i data-lucide="user" class="w-4 h-4 text-salon-gold absolute left-3.5 top-3.5"></i>
                                 </div>
                             </div>
 
                             <div>
-                                <label for="phone" class="block text-xs font-semibold text-stone-300 uppercase tracking-wider mb-1">Mobile / WhatsApp Number</label>
+                                <label for="phoneNumber" class="block text-xs font-medium text-gray-300 mb-1">Mobile Number</label>
                                 <div class="relative">
-                                    <i data-lucide="phone-call" class="w-4 h-4 absolute left-3.5 top-3 text-stone-500"></i>
-                                    <input type="tel" id="phone" required placeholder="e.g. 9899385688" class="w-full bg-stone-900/90 border border-stone-700 rounded-lg pl-10 pr-4 py-2.5 text-sm text-white placeholder-stone-600 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all">
+                                    <input type="tel" id="phoneNumber" required placeholder="e.g. 9899385688" class="w-full bg-salon-bg/80 border border-salon-gold/30 rounded-xl px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-salon-gold transition-colors pl-10">
+                                    <i data-lucide="phone" class="w-4 h-4 text-salon-gold absolute left-3.5 top-3.5"></i>
                                 </div>
                             </div>
 
                             <div>
-                                <label for="service" class="block text-xs font-semibold text-stone-300 uppercase tracking-wider mb-1">Required Service</label>
+                                <label for="serviceType" class="block text-xs font-medium text-gray-300 mb-1">Select Service</label>
                                 <div class="relative">
-                                    <i data-lucide="scissors" class="w-4 h-4 absolute left-3.5 top-3 text-stone-500"></i>
-                                    <select id="service" class="w-full bg-stone-900/90 border border-stone-700 rounded-lg pl-10 pr-4 py-2.5 text-sm text-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all">
-                                        <option value="Haircut & Styling">Haircut & Styling</option>
-                                        <option value="Beard Trim & Grooming">Beard Trim & Grooming</option>
-                                        <option value="Facial & Skin Care">Facial & Skin Care</option>
-                                        <option value="Bridal / Groom Makeover">Bridal / Groom Makeover</option>
-                                        <option value="Hair Spa & Color Treatment">Hair Spa & Color Treatment</option>
-                                        <option value="Other Consultation">Other Consultation</option>
+                                    <select id="serviceType" required class="w-full bg-salon-bg/80 border border-salon-gold/30 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-salon-gold transition-colors pl-10 appearance-none">
+                                        <option value="Haircut & Hair Styling">Haircut & Hair Styling</option>
+                                        <option value="Beard Grooming & Styling">Beard Grooming & Styling</option>
+                                        <option value="Facial & Skin Care Care">Facial & Skin Care</option>
+                                        <option value="Hair Coloring & Highlights">Hair Coloring & Highlights</option>
+                                        <option value="Bridal / Groom Makeup Package">Bridal / Groom Makeup</option>
                                     </select>
+                                    <i data-lucide="scissors" class="w-4 h-4 text-salon-gold absolute left-3.5 top-3.5"></i>
+                                    <i data-lucide="chevron-down" class="w-4 h-4 text-gray-400 absolute right-3.5 top-3.5 pointer-events-none"></i>
                                 </div>
                             </div>
 
                             <div>
-                                <label for="date" class="block text-xs font-semibold text-stone-300 uppercase tracking-wider mb-1">Preferred Date & Time</label>
+                                <label for="preferredDate" class="block text-xs font-medium text-gray-300 mb-1">Preferred Time / Notes</label>
                                 <div class="relative">
-                                    <i data-lucide="calendar" class="w-4 h-4 absolute left-3.5 top-3 text-stone-500"></i>
-                                    <input type="text" id="date" placeholder="e.g. Tomorrow at 5 PM" class="w-full bg-stone-900/90 border border-stone-700 rounded-lg pl-10 pr-4 py-2.5 text-sm text-white placeholder-stone-600 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all">
+                                    <input type="text" id="preferredDate" placeholder="e.g. Today around 5 PM" class="w-full bg-salon-bg/80 border border-salon-gold/30 rounded-xl px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-salon-gold transition-colors pl-10">
+                                    <i data-lucide="clock" class="w-4 h-4 text-salon-gold absolute left-3.5 top-3.5"></i>
                                 </div>
                             </div>
 
-                            <button type="submit" class="w-full mt-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3.5 px-6 rounded-lg transition-all flex items-center justify-center gap-2 shadow-lg shadow-emerald-900/30 tracking-wider uppercase text-xs">
-                                <i data-lucide="message-square" class="w-4 h-4 fill-white"></i>
-                                <span>Send Appointment Request</span>
+                            <button type="submit" class="w-full gold-button text-salon-bg font-extrabold py-3.5 rounded-xl shadow-lg flex items-center justify-center gap-2 text-sm tracking-wider uppercase mt-2">
+                                <i data-lucide="send" class="w-4 h-4 fill-salon-bg"></i> Send WhatsApp Booking
                             </button>
                         </form>
-                        <p class="text-[11px] text-center text-stone-500 mt-3">Directly connects you via WhatsApp • Instant Confirmation</p>
                     </div>
                 </div>
 
@@ -205,278 +207,256 @@
         </div>
     </section>
 
-    <section id="services" class="py-20 bg-stone-950 relative border-t border-stone-800">
+    <section id="services" class="py-16 lg:py-24 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-2xl mx-auto mb-14">
-                <span class="text-brand-500 text-xs font-bold uppercase tracking-widest block mb-2">Our Specialty</span>
-                <h2 class="font-heading text-3xl sm:text-5xl font-bold text-white">Signature Salon Services</h2>
-                <div class="w-16 h-0.5 bg-brand-500 mx-auto mt-4"></div>
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="text-salon-gold text-xs font-bold tracking-widest uppercase">Our Signature Offerings</span>
+                <h2 class="font-heading text-3xl sm:text-4xl font-bold text-white">Curated Beauty & Grooming Services</h2>
+                <div class="w-16 h-1 bg-salon-gold mx-auto rounded-full"></div>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-stone-900 border border-stone-800 rounded-xl overflow-hidden hover:border-brand-500/50 transition-all duration-300 group">
-                    <div class="h-48 overflow-hidden relative">
-                        <img src="https://picsum.photos/seed/shama-haircut-card/600/400" alt="Haircut & Hair Styling" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-transparent to-transparent"></div>
-                    </div>
-                    <div class="p-6">
-                        <div class="w-10 h-10 rounded-lg bg-brand-500/10 border border-brand-500/30 flex items-center justify-center text-brand-500 mb-4">
-                            <i data-lucide="scissors" class="w-5 h-5"></i>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="glass-card rounded-2xl overflow-hidden hover:border-salon-gold/50 transition-all duration-300 group flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-56 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80" alt="Hair Styling" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-salon-surface to-transparent"></div>
+                            <span class="absolute top-4 right-4 bg-salon-bg/80 backdrop-blur-md text-salon-gold text-xs font-bold px-3 py-1 rounded-full border border-salon-gold/30">Popular</span>
                         </div>
-                        <h3 class="font-heading text-2xl font-bold text-white mb-2">Precision Haircut & Styling</h3>
-                        <p class="text-stone-400 text-sm leading-relaxed mb-4">From modern fades and trendy layered cuts to timeless classic trims. Tailored to suit your unique face shape and personality.</p>
-                        <ul class="text-xs text-stone-300 space-y-2 mb-6">
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-500"></i> Men & Women Custom Haircuts</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-500"></i> Blowdry & Event Styling</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-500"></i> Beard Shaping & Hot Towel Shave</li>
-                        </ul>
-                        <a href="#book" class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-brand-500 hover:text-brand-400">
-                            Book Hair Session <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                        <div class="p-6">
+                            <h3 class="font-heading text-xl font-bold text-white mb-2 group-hover:text-salon-gold transition-colors">Precision Haircut & Styling</h3>
+                            <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                                Tailored haircuts, hair spa, modern fades, and signature blow-outs crafted to match your distinct facial structure and vibe.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <a href="https://wa.me/919899385688?text=Hi,%20I%20am%20interested%20in%20Haircut%20%26%20Styling" class="text-salon-gold font-semibold text-xs tracking-wider uppercase flex items-center gap-1 hover:gap-2 transition-all">
+                            Book Haircut <i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </a>
                     </div>
                 </div>
 
-                <div class="bg-stone-900 border border-stone-800 rounded-xl overflow-hidden hover:border-brand-500/50 transition-all duration-300 group">
-                    <div class="h-48 overflow-hidden relative">
-                        <img src="https://picsum.photos/seed/shama-color-card/600/400" alt="Hair Spa & Chemical Work" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-transparent to-transparent"></div>
-                    </div>
-                    <div class="p-6">
-                        <div class="w-10 h-10 rounded-lg bg-brand-500/10 border border-brand-500/30 flex items-center justify-center text-brand-500 mb-4">
-                            <i data-lucide="sparkle" class="w-5 h-5"></i>
+                <div class="glass-card rounded-2xl overflow-hidden hover:border-salon-gold/50 transition-all duration-300 group flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-56 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80" alt="Beard Grooming" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-salon-surface to-transparent"></div>
                         </div>
-                        <h3 class="font-heading text-2xl font-bold text-white mb-2">Hair Coloring & Spa Treatments</h3>
-                        <p class="text-stone-400 text-sm leading-relaxed mb-4">Revitalize damaged hair and experiment with modern color trends using top-tier professional products for lasting shine.</p>
-                        <ul class="text-xs text-stone-300 space-y-2 mb-6">
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-500"></i> Global Hair Coloring & Highlights</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-500"></i> Keratin & Smoothening Treatments</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-500"></i> Deep Conditioning Hair Spa</li>
-                        </ul>
-                        <a href="#book" class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-brand-500 hover:text-brand-400">
-                            Book Color/Spa <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                        <div class="p-6">
+                            <h3 class="font-heading text-xl font-bold text-white mb-2 group-hover:text-salon-gold transition-colors">Beard Crafting & Shaving</h3>
+                            <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                                Sharp beard trims, royal hot-towel treatments, and detailed beard shaping for a polished, suave look.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <a href="https://wa.me/919899385688?text=Hi,%20I%20am%20interested%20in%20Beard%20Grooming" class="text-salon-gold font-semibold text-xs tracking-wider uppercase flex items-center gap-1 hover:gap-2 transition-all">
+                            Book Grooming <i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </a>
                     </div>
                 </div>
 
-                <div class="bg-stone-900 border border-stone-800 rounded-xl overflow-hidden hover:border-brand-500/50 transition-all duration-300 group">
-                    <div class="h-48 overflow-hidden relative">
-                        <img src="https://picsum.photos/seed/shama-facial-card/600/400" alt="Facial & Skin Care" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-transparent to-transparent"></div>
-                    </div>
-                    <div class="p-6">
-                        <div class="w-10 h-10 rounded-lg bg-brand-500/10 border border-brand-500/30 flex items-center justify-center text-brand-500 mb-4">
-                            <i data-lucide="smile" class="w-5 h-5"></i>
+                <div class="glass-card rounded-2xl overflow-hidden hover:border-salon-gold/50 transition-all duration-300 group flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-56 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80" alt="Facial & Skin Care" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-salon-surface to-transparent"></div>
                         </div>
-                        <h3 class="font-heading text-2xl font-bold text-white mb-2">Facial Care & Skin Glow</h3>
-                        <p class="text-stone-400 text-sm leading-relaxed mb-4">Deep cleansing, anti-tan, and instant radiance facials designed to rejuvenate skin tone and restore original natural glow.</p>
-                        <ul class="text-xs text-stone-300 space-y-2 mb-6">
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-500"></i> Organic & Gold Glow Facials</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-500"></i> De-Tan & Skin Cleaning</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-500"></i> Groom & Bridal Makeover Packages</li>
-                        </ul>
-                        <a href="#book" class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-brand-500 hover:text-brand-400">
-                            Book Skin Care <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                        <div class="p-6">
+                            <h3 class="font-heading text-xl font-bold text-white mb-2 group-hover:text-salon-gold transition-colors">Skin Spa & Radiance Facials</h3>
+                            <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                                Rejuvenating gold facials, deep-cleaning scrub procedures, and skin-brightening therapies for men & women.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <a href="https://wa.me/919899385688?text=Hi,%20I%20am%20interested%20in%20Facial%20%26%20Skin%20Care" class="text-salon-gold font-semibold text-xs tracking-wider uppercase flex items-center gap-1 hover:gap-2 transition-all">
+                            Book Facial <i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </a>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <section id="why-us" class="py-16 bg-brand-900 border-t border-stone-800">
+    <section id="why-us" class="py-16 bg-salon-surface/50 border-y border-salon-gold/10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="p-6 rounded-xl bg-stone-900/50 border border-stone-800 text-center lg:text-left">
-                    <div class="w-12 h-12 rounded-full bg-brand-500/10 text-brand-500 flex items-center justify-center mx-auto lg:mx-0 mb-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <div class="p-6 rounded-xl bg-salon-card/40 border border-salon-gold/10 flex flex-col items-start">
+                    <div class="w-12 h-12 rounded-lg bg-salon-gold/10 border border-salon-gold/30 flex items-center justify-center text-salon-gold mb-4">
                         <i data-lucide="award" class="w-6 h-6"></i>
                     </div>
-                    <h4 class="font-heading text-xl font-bold text-white mb-1">10+ Years Trust</h4>
-                    <p class="text-stone-400 text-xs leading-relaxed">Serving the Brahmpuri & Seelampur community with reliable, highly praised salon craftsmanship since 2014.</p>
+                    <h4 class="font-heading text-lg font-bold text-white mb-2">Expert Hairdresser</h4>
+                    <p class="text-xs text-gray-400 leading-relaxed">Direct care under Mr. Kamran Salmani, guaranteeing skilled hands for every cut and treatment.</p>
                 </div>
 
-                <div class="p-6 rounded-xl bg-stone-900/50 border border-stone-800 text-center lg:text-left">
-                    <div class="w-12 h-12 rounded-full bg-brand-500/10 text-brand-500 flex items-center justify-center mx-auto lg:mx-0 mb-4">
-                        <i data-lucide="user-check" class="w-6 h-6"></i>
+                <div class="p-6 rounded-xl bg-salon-card/40 border border-salon-gold/10 flex flex-col items-start">
+                    <div class="w-12 h-12 rounded-lg bg-salon-gold/10 border border-salon-gold/30 flex items-center justify-center text-salon-gold mb-4">
+                        <i data-lucide="sparkles" class="w-6 h-6"></i>
                     </div>
-                    <h4 class="font-heading text-xl font-bold text-white mb-1">Expert Hairdressers</h4>
-                    <p class="text-stone-400 text-xs leading-relaxed">Under lead expert Mr. Kamran Salmani, experienced barbers deliver precise hair styling every time.</p>
+                    <h4 class="font-heading text-lg font-bold text-white mb-2">Unisex Expertise</h4>
+                    <p class="text-xs text-gray-400 leading-relaxed">Fully equipped salon structure catering equally to both women's and men's specialized beauty needs.</p>
                 </div>
 
-                <div class="p-6 rounded-xl bg-stone-900/50 border border-stone-800 text-center lg:text-left">
-                    <div class="w-12 h-12 rounded-full bg-brand-500/10 text-brand-500 flex items-center justify-center mx-auto lg:mx-0 mb-4">
-                        <i data-lucide="users" class="w-6 h-6"></i>
+                <div class="p-6 rounded-xl bg-salon-card/40 border border-salon-gold/10 flex flex-col items-start">
+                    <div class="w-12 h-12 rounded-lg bg-salon-gold/10 border border-salon-gold/30 flex items-center justify-center text-salon-gold mb-4">
+                        <i data-lucide="heart-handshake" class="w-6 h-6"></i>
                     </div>
-                    <h4 class="font-heading text-xl font-bold text-white mb-1">Unisex Salon</h4>
-                    <p class="text-stone-400 text-xs leading-relaxed">Dedicated services for both men and women in a comfortable, clean, and modern parlor atmosphere.</p>
+                    <h4 class="font-heading text-lg font-bold text-white mb-2">10+ Yrs Loyalty</h4>
+                    <p class="text-xs text-gray-400 leading-relaxed">Trusted by local residents for over a decade due to warm hospitality and consistent results.</p>
                 </div>
 
-                <div class="p-6 rounded-xl bg-stone-900/50 border border-stone-800 text-center lg:text-left">
-                    <div class="w-12 h-12 rounded-full bg-brand-500/10 text-brand-500 flex items-center justify-center mx-auto lg:mx-0 mb-4">
-                        <i data-lucide="clock" class="w-6 h-6"></i>
+                <div class="p-6 rounded-xl bg-salon-card/40 border border-salon-gold/10 flex flex-col items-start">
+                    <div class="w-12 h-12 rounded-lg bg-salon-gold/10 border border-salon-gold/30 flex items-center justify-center text-salon-gold mb-4">
+                        <i data-lucide="shield-check" class="w-6 h-6"></i>
                     </div>
-                    <h4 class="font-heading text-xl font-bold text-white mb-1">Open Till 10 PM</h4>
-                    <p class="text-stone-400 text-xs leading-relaxed">Convenient operating hours so you can easily drop in after work or on weekends without hassle.</p>
+                    <h4 class="font-heading text-lg font-bold text-white mb-2">Hygienic Ambience</h4>
+                    <p class="text-xs text-gray-400 leading-relaxed">Clean equipment, sanitized stations, and comfortable modern seating for relaxing treatments.</p>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <section id="reviews" class="py-20 bg-stone-950 border-t border-stone-800 relative">
+    <section id="reviews" class="py-16 lg:py-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-2xl mx-auto mb-14">
-                <div class="inline-flex items-center gap-1 text-amber-400 mb-2">
-                    <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
-                    <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
-                    <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
-                    <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
-                    <i data-lucide="star-half" class="w-5 h-5 fill-amber-400"></i>
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <div class="flex items-center justify-center gap-1 text-salon-gold mb-2">
+                    <i data-lucide="star" class="w-5 h-5 fill-salon-gold"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-salon-gold"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-salon-gold"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-salon-gold"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-salon-gold"></i>
                 </div>
-                <h2 class="font-heading text-3xl sm:text-5xl font-bold text-white">What Our Clients Say</h2>
-                <p class="text-stone-400 text-sm mt-2">Real feedback from Google Local Guides & long-time regulars</p>
+                <h2 class="font-heading text-3xl sm:text-4xl font-bold text-white">Loved by 67+ Local Clients</h2>
+                <p class="text-gray-400 text-sm">Real feedback from our regular customers in New Seelampur</p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="bg-stone-900 p-6 rounded-xl border border-stone-800 flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center gap-1 text-amber-400 mb-4">
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                        </div>
-                        <p class="text-stone-300 text-sm italic mb-6">
-                            "Wonderful 👍 Shama Professional unisex Salon is one of the best salon near Brahampuri road Delhi. Mr. Kamran Salmani owner of the salon is very professional and friendly."
-                        </p>
-                    </div>
-                    <div class="flex items-center gap-3 pt-4 border-t border-stone-800">
-                        <div class="w-10 h-10 rounded-full bg-stone-700 flex items-center justify-center text-white font-bold text-sm">
-                            KA
-                        </div>
-                        <div>
-                            <h5 class="text-sm font-bold text-white">Khwaja Alam</h5>
-                            <span class="text-[11px] text-stone-500 block">Local Guide • 24 reviews</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-stone-900 p-6 rounded-xl border border-stone-800 flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center gap-1 text-amber-400 mb-4">
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                        </div>
-                        <p class="text-stone-300 text-sm italic mb-6">
-                            "I am coming to this salon for the last 10 years and I am really satisfied with their service. Good ambience and very skilled professional hair dressers."
-                        </p>
-                    </div>
-                    <div class="flex items-center gap-3 pt-4 border-t border-stone-800">
-                        <div class="w-10 h-10 rounded-full bg-stone-700 flex items-center justify-center text-white font-bold text-sm">
-                            OT
-                        </div>
-                        <div>
-                            <h5 class="text-sm font-bold text-white">Osama Turky</h5>
-                            <span class="text-[11px] text-stone-500 block">Local Guide • 22 reviews</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-stone-900 p-6 rounded-xl border border-stone-800 flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center gap-1 text-amber-400 mb-4">
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                        </div>
-                        <p class="text-stone-300 text-sm italic mb-6">
-                            "I love this parlour and work also (happy)😊. Excellent behavior by staff and clean environment. Highly recommended for haircut and facial!"
-                        </p>
-                    </div>
-                    <div class="flex items-center gap-3 pt-4 border-t border-stone-800">
-                        <div class="w-10 h-10 rounded-full bg-stone-700 flex items-center justify-center text-white font-bold text-sm">
-                            AJ
-                        </div>
-                        <div>
-                            <h5 class="text-sm font-bold text-white">Amber Jahan</h5>
-                            <span class="text-[11px] text-stone-500 block">Local Guide • 13 reviews</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="location" class="py-20 bg-brand-900 border-t border-stone-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-12 gap-8 items-stretch">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 
-                <div class="lg:col-span-5 bg-stone-900 p-8 rounded-2xl border border-stone-800 flex flex-col justify-between">
+                <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
                     <div>
-                        <span class="text-brand-500 text-xs font-bold uppercase tracking-widest block mb-2">Visit Salon</span>
-                        <h3 class="font-heading text-3xl font-bold text-white mb-6">Location & Hours</h3>
+                        <div class="flex items-center gap-1 text-salon-gold mb-3">
+                            <i data-lucide="star" class="w-4 h-4 fill-salon-gold"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-salon-gold"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-salon-gold"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-salon-gold"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-salon-gold"></i>
+                        </div>
+                        <p class="text-gray-300 text-sm italic mb-6">
+                            "Wonderful 👍 Shama Professional unisex Salon is one of the best salon near Brahampuri road Delhi. Mr. Kamran Salmani owner of the salon is very professionally and friendly."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 border-t border-gray-800 pt-4">
+                        <div class="w-10 h-10 rounded-full bg-salon-plum flex items-center justify-center text-salon-gold font-bold text-sm">KA</div>
+                        <div>
+                            <p class="font-semibold text-white text-sm">Khwaja Alam</p>
+                            <p class="text-[11px] text-gray-400">Local Guide · 24 reviews</p>
+                        </div>
+                    </div>
+                </div>
 
-                        <div class="space-y-6 text-sm">
-                            <div class="flex items-start gap-4">
-                                <div class="w-10 h-10 rounded-lg bg-stone-800 flex items-center justify-center text-brand-500 shrink-0">
-                                    <i data-lucide="map-pin" class="w-5 h-5"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-white mb-1">Address</h4>
-                                    <p class="text-stone-400 leading-relaxed text-xs">
-                                        Main Road Brahmpuri, Chauhan Banger,<br>
-                                        Street No. 14/2, Shop No. C44/27,<br>
-                                        New Seelampur, Delhi - 110053
-                                    </p>
-                                    <p class="text-[11px] text-stone-500 mt-1">Plus Code: M7J9+F6 New Seelampur</p>
-                                </div>
+                <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-salon-gold mb-3">
+                            <i data-lucide="star" class="w-4 h-4 fill-salon-gold"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-salon-gold"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-salon-gold"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-salon-gold"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-salon-gold"></i>
+                        </div>
+                        <p class="text-gray-300 text-sm italic mb-6">
+                            "I am coming to this salon for the last 10 years and I am really satisfied with his service. Nice place to have a clean haircut."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 border-t border-gray-800 pt-4">
+                        <div class="w-10 h-10 rounded-full bg-salon-gold/20 flex items-center justify-center text-salon-gold font-bold text-sm">OT</div>
+                        <div>
+                            <p class="font-semibold text-white text-sm">Osama Turky</p>
+                            <p class="text-[11px] text-gray-400">Regular Client (10+ Yrs)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-salon-gold mb-3">
+                            <i data-lucide="star" class="w-4 h-4 fill-salon-gold"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-salon-gold"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-salon-gold"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-salon-gold"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-salon-gold"></i>
+                        </div>
+                        <p class="text-gray-300 text-sm italic mb-6">
+                            "I love this parlour and work also (happy)😊 Good ambience and very polite professional hairdressers."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 border-t border-gray-800 pt-4">
+                        <div class="w-10 h-10 rounded-full bg-salon-plum flex items-center justify-center text-salon-gold font-bold text-sm">AJ</div>
+                        <div>
+                            <p class="font-semibold text-white text-sm">Amber Jahan</p>
+                            <p class="text-[11px] text-gray-400">Local Guide · 13 reviews</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="location" class="py-16 lg:py-24 bg-salon-surface/40 border-t border-salon-gold/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-5 space-y-6">
+                    <div>
+                        <span class="text-salon-gold text-xs font-bold tracking-widest uppercase">Visit Us Today</span>
+                        <h2 class="font-heading text-3xl font-bold text-white mt-1">Salon Address & Timing</h2>
+                    </div>
+
+                    <div class="space-y-4 text-sm">
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-salon-card/50 border border-salon-gold/10">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-salon-gold shrink-0 mt-0.5"></i>
+                            <div>
+                                <strong class="text-white block font-semibold">Address</strong>
+                                <p class="text-gray-300">Main Road Brahmpuri, Chauhan Banger, Street No 14/2, Shop No C44_27, New Seelampur, Delhi 110053</p>
+                                <p class="text-xs text-gray-500 mt-1">Plus Code: M7J9+F6 New Seelampur, Shahdara</p>
                             </div>
+                        </div>
 
-                            <div class="flex items-start gap-4">
-                                <div class="w-10 h-10 rounded-lg bg-stone-800 flex items-center justify-center text-brand-500 shrink-0">
-                                    <i data-lucide="phone" class="w-5 h-5"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-white mb-1">Phone / WhatsApp</h4>
-                                    <p class="text-stone-400 text-xs">098993 85688</p>
-                                    <p class="text-stone-400 text-xs mt-0.5">Kamran Salmani (Owner)</p>
-                                </div>
+                        <div class="flex items-center gap-4 p-4 rounded-xl bg-salon-card/50 border border-salon-gold/10">
+                            <i data-lucide="clock" class="w-5 h-5 text-salon-gold shrink-0"></i>
+                            <div>
+                                <strong class="text-white block font-semibold">Opening Hours</strong>
+                                <p class="text-gray-300">Open Daily · Closes at 10:00 PM</p>
                             </div>
+                        </div>
 
-                            <div class="flex items-start gap-4">
-                                <div class="w-10 h-10 rounded-lg bg-stone-800 flex items-center justify-center text-brand-500 shrink-0">
-                                    <i data-lucide="clock" class="w-5 h-5"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-white mb-1">Working Hours</h4>
-                                    <p class="text-stone-400 text-xs">Monday - Sunday: 09:00 AM – 10:00 PM</p>
-                                    <span class="inline-block mt-2 px-2.5 py-0.5 rounded text-[10px] font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-                                        Open Today
-                                    </span>
-                                </div>
+                        <div class="flex items-center gap-4 p-4 rounded-xl bg-salon-card/50 border border-salon-gold/10">
+                            <i data-lucide="phone-call" class="w-5 h-5 text-salon-gold shrink-0"></i>
+                            <div>
+                                <strong class="text-white block font-semibold">Direct Call</strong>
+                                <a href="tel:09899385688" class="text-salon-gold font-bold hover:underline">098993 85688</a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="pt-8 border-t border-stone-800 mt-6 flex gap-3">
-                        <a href="https://maps.google.com/?q=28.68126112446001,77.26803408461208" target="_blank" rel="noopener" class="flex-1 text-center bg-brand-500 hover:bg-brand-600 text-brand-900 font-bold py-3 px-4 rounded-lg text-xs uppercase tracking-wider transition-all">
-                            Get Directions
-                        </a>
-                        <a href="tel:09899385688" class="flex-1 text-center bg-stone-800 hover:bg-stone-700 text-white font-bold py-3 px-4 rounded-lg text-xs uppercase tracking-wider border border-stone-700 transition-all">
-                            Call Salon
-                        </a>
-                    </div>
+                    <a href="https://maps.google.com/?q=28.68126112446001,77.26803408461208" target="_blank" class="inline-flex items-center justify-center gap-2 w-full py-3.5 rounded-xl border border-salon-gold text-salon-gold font-bold text-sm hover:bg-salon-gold hover:text-salon-bg transition-colors">
+                        <i data-lucide="navigation" class="w-4 h-4"></i> Get Directions on Google Maps
+                    </a>
                 </div>
 
-                <div class="lg:col-span-7 bg-stone-900 rounded-2xl border border-stone-800 overflow-hidden min-h-[350px]">
+                <div class="lg:col-span-7 h-[420px] rounded-3xl overflow-hidden border border-salon-gold/20 shadow-2xl relative">
                     <iframe 
-                        title="Shama Professional Unisex Salon Map Location"
-                        src="https://maps.google.com/maps?q=28.68126112446001,77.26803408461208&z=17&output=embed" 
-                        class="w-full h-full min-h-[350px] border-0 filter grayscale opacity-90 contrast-125" 
+                        title="Shama Professional Unisex Salon Location"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.417088998066!2d77.26803408461208!3d28.68126112446001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfc87f2e1a3b1%3A0x0!2zMjLCsDQwJzecOC41Ik4gNzfCsDE2JzA0LjkiRQ!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0; filter: grayscale(0.8) contrast(1.2) opacity(0.85);" 
                         allowfullscreen="" 
                         loading="lazy" 
                         referrerpolicy="no-referrer-when-downgrade">
@@ -487,20 +467,13 @@
         </div>
     </section>
 
-    <footer class="bg-stone-950 border-t border-stone-800 py-10 text-xs text-stone-500">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+    <footer class="bg-salon-bg py-10 border-t border-gray-900 text-xs text-gray-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div class="flex items-center gap-2">
-                <i data-lucide="scissors" class="w-4 h-4 text-brand-500"></i>
-                <span class="font-heading font-bold text-white text-base">Shama Professional Unisex Salon</span>
+                <span class="font-heading font-bold text-white tracking-widest">SHAMA SALON</span>
+                <span>© 2026. All rights reserved.</span>
             </div>
-            
-            <p>© 2026 Shama Salon. All rights reserved. Brahmpuri, New Seelampur, Delhi.</p>
-
-            <div class="flex gap-6 text-stone-400">
-                <a href="#services" class="hover:text-brand-500 transition-colors">Services</a>
-                <a href="#book" class="hover:text-brand-500 transition-colors">Book</a>
-                <a href="tel:09899385688" class="hover:text-brand-500 transition-colors">Call Us</a>
-            </div>
+            <p>Managed by Mr. Kamran Salmani · Brahmpuri Road, New Seelampur, Delhi</p>
         </div>
     </footer>
 
@@ -509,25 +482,18 @@
         lucide.createIcons();
 
         // Form handling logic
-        document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+        document.getElementById('appointmentForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
-            const name = document.getElementById('name').value.trim();
-            const phone = document.getElementById('phone').value.trim();
-            const service = document.getElementById('service').value;
-            const date = document.getElementById('date').value.trim();
+            const name = document.getElementById('fullName').value;
+            const phone = document.getElementById('phoneNumber').value;
+            const service = document.getElementById('serviceType').value;
+            const time = document.getElementById('preferredDate').value || 'Flexible';
             
-            // Build structured WhatsApp message
-            const message = `Hello Shama Salon! I would like to book an appointment.\n\n` +
-                            `*Client Name:* ${name}\n` +
-                            `*Phone Number:* ${phone}\n` +
-                            `*Service Required:* ${service}\n` +
-                            `*Preferred Time:* ${date || 'As soon as available'}`;
-                            
-            const encodedMessage = encodeURIComponent(message);
-            const whatsappNumber = '919899385688'; // Clean format with country code
+            const text = `Hello Shama Salon!%0A%0AI would like to book an appointment:%0A- *Name:* ${encodeURIComponent(name)}%0A- *Phone:* ${encodeURIComponent(phone)}%0A- *Service:* ${encodeURIComponent(service)}%0A- *Preferred Time:* ${encodeURIComponent(time)}`;
             
-            window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank');
+            const whatsappUrl = `https://wa.me/919899385688?text=${text}`;
+            window.open(whatsappUrl, '_blank');
         });
     </script>
 </body>

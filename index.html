@@ -1,835 +1,657 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Edu. Base — Coaching Centre in Shahdara, Delhi | एडु. बेस (अमन जैन)</title>
-<meta name="description" content="Edu. Base (अमन जैन) — 5.0★ rated coaching centre in Panchsheel Garden, Shahdara, Delhi. Weekly unit tests, affordable fees, personal attention. Call 097113 23246 for admissions." />
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mega Rock Fitness Club — Gym in Shahdara, Delhi | 4.6★ Rated</title>
+<meta name="description" content="Mega Rock Fitness Club, Shahdara Delhi. Pocket-friendly strength & cardio gym with two training zones, personal coaching, proper hygiene, ladies & gents facilities. Open daily till 9:30 PM. Call 099991 57710.">
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 <script src="https://unpkg.com/lucide@latest"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-
-<style type="text/tailwindcss">
-@theme {
-  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
-  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --color-brand-50:#eef2ff; --color-brand-100:#e0e7ff; --color-brand-200:#c7d2fe;
-  --color-brand-300:#a5b4fc; --color-brand-400:#818cf8; --color-brand-500:#6366f1;
-  --color-brand-600:#4f46e5; --color-brand-700:#4338ca; --color-brand-800:#3730a3;
-  --color-brand-900:#1e1b4b; --color-brand-950:#141136;
-  --color-sun-300:#fcd34d; --color-sun-400:#fbbf24; --color-sun-500:#f59e0b;
-}
-</style>
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@500;700&display=swap" rel="stylesheet">
 <style>
-  html { font-family: "Inter", sans-serif; }
-  .font-display { font-family: "Space Grotesk", sans-serif; }
+  :root{
+    --ink:#0a0a0c; --panel:#101014; --panel2:#15151b; --line:#26262e;
+    --bone:#f2efe8; --mut:#a2a2ad; --red:#ff3131; --red-d:#c31818; --wa:#22c35e;
+  }
+  *{ -webkit-tap-highlight-color:transparent; }
+  html{ scroll-behavior:smooth; }
+  body{ background:var(--ink); color:var(--bone); font-family:'Archivo','Noto Sans Devanagari',sans-serif; overflow-x:hidden; }
+  ::selection{ background:var(--red); color:#fff; }
+  ::-webkit-scrollbar{ width:10px; } ::-webkit-scrollbar-track{ background:#0a0a0c; }
+  ::-webkit-scrollbar-thumb{ background:#2b2b33; border-radius:99px; } ::-webkit-scrollbar-thumb:hover{ background:var(--red); }
 
-  /* subtle grid background treatment */
-  .bg-grid {
+  .font-display{ font-family:'Anton','Noto Sans Devanagari',sans-serif; letter-spacing:.01em; }
+  .hindi{ font-family:'Noto Sans Devanagari','Archivo',sans-serif; }
+
+  .grid-bg{
     background-image:
-      linear-gradient(to right, rgba(79,70,229,.07) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(79,70,229,.07) 1px, transparent 1px);
-    background-size: 44px 44px;
+      linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+    background-size:52px 52px;
   }
-  .bg-grid-dark {
-    background-image:
-      linear-gradient(to right, rgba(255,255,255,.05) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(255,255,255,.05) 1px, transparent 1px);
-    background-size: 44px 44px;
+  .glow-red{ background:radial-gradient(closest-side, rgba(255,49,49,.16), transparent 72%); }
+
+  .glass{
+    background:linear-gradient(160deg, rgba(255,255,255,.09), rgba(255,255,255,.03));
+    backdrop-filter:blur(22px) saturate(1.4);
+    -webkit-backdrop-filter:blur(22px) saturate(1.4);
+    border:1px solid rgba(255,255,255,.14);
+    box-shadow:0 30px 80px -20px rgba(0,0,0,.75), inset 0 1px 0 rgba(255,255,255,.12);
   }
+  .bcard{ background:var(--panel); border:1px solid var(--line); transition:transform .45s cubic-bezier(.2,.8,.2,1), border-color .3s, box-shadow .45s; }
+  .bcard:hover{ transform:translateY(-6px); border-color:rgba(255,49,49,.55); box-shadow:0 24px 60px -24px rgba(255,49,49,.28), 0 12px 40px -18px rgba(0,0,0,.8); }
 
-  /* hero tab panel fade */
-  .tab-panel { display:none; }
-  .tab-panel.active { display:block; animation: panelIn .45s cubic-bezier(.22,1,.36,1) both; }
-  @keyframes panelIn {
-    from { opacity:0; transform: translateY(14px); }
-    to   { opacity:1; transform: translateY(0); }
-  }
+  .btn-red{ background:var(--red); color:#fff; box-shadow:0 10px 30px -8px rgba(255,49,49,.5); transition:.3s; }
+  .btn-red:hover{ background:var(--red-d); box-shadow:0 14px 38px -8px rgba(255,49,49,.65); transform:translateY(-2px); }
+  .btn-ghost{ border:1px solid var(--line); color:var(--bone); transition:.3s; background:rgba(255,255,255,.02); }
+  .btn-ghost:hover{ border-color:rgba(255,255,255,.4); background:rgba(255,255,255,.06); transform:translateY(-2px); }
 
-  /* marquee */
-  .marquee-track { display:flex; width:max-content; animation: marquee 26s linear infinite; }
-  @keyframes marquee { from { transform:translateX(0);} to { transform:translateX(-50%);} }
+  .marquee-track{ display:flex; width:max-content; animation:marq 34s linear infinite; }
+  @keyframes marq{ to{ transform:translateX(-50%); } }
 
-  /* animated sheen on result counters (CSS only) */
-  .counter-sheen {
-    background: linear-gradient(110deg, #fcd34d 20%, #fff7ed 40%, #fbbf24 55%, #f59e0b 75%);
-    background-size: 220% 100%;
-    -webkit-background-clip: text; background-clip: text; color: transparent;
-    animation: sheen 3.6s ease-in-out infinite;
-  }
-  @keyframes sheen { 0%,100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+  .img-zoom img{ transition:transform 1s cubic-bezier(.2,.8,.2,1), filter .6s; filter:saturate(.85) contrast(1.05); }
+  .img-zoom:hover img{ transform:scale(1.07); filter:saturate(1.05) contrast(1.08); }
 
-  /* floating pulse for CTA */
-  .pulse-ring::before {
-    content:""; position:absolute; inset:-6px; border-radius:9999px;
-    border:2px solid rgba(245,158,11,.55); animation: pulseRing 1.8s ease-out infinite;
-  }
-  @keyframes pulseRing { 0% { transform:scale(.9); opacity:1; } 100% { transform:scale(1.35); opacity:0; } }
+  .rv{ opacity:0; transform:translateY(34px); transition:opacity .8s cubic-bezier(.2,.8,.2,1), transform .8s cubic-bezier(.2,.8,.2,1); }
+  .rv.in{ opacity:1; transform:none; }
+  .rv-d1{ transition-delay:.08s } .rv-d2{ transition-delay:.16s } .rv-d3{ transition-delay:.24s } .rv-d4{ transition-delay:.32s }
 
-  /* scroll reveal */
-  .reveal { opacity:0; transform: translateY(28px); transition: opacity .7s cubic-bezier(.22,1,.36,1), transform .7s cubic-bezier(.22,1,.36,1); }
-  .reveal.in { opacity:1; transform:none; }
+  input,select{ color-scheme:dark; }
+  .field{ background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.12); color:var(--bone); transition:.25s; }
+  .field:focus{ outline:none; border-color:var(--red); box-shadow:0 0 0 3px rgba(255,49,49,.22); background:rgba(255,255,255,.08); }
+  .field::placeholder{ color:#71717c; }
 
-  /* hide scrollbar for snap rows */
-  .no-scrollbar::-webkit-scrollbar { display:none; }
-  .no-scrollbar { -ms-overflow-style:none; scrollbar-width:none; }
+  .map-dark iframe{ filter:grayscale(1) invert(.92) contrast(.88) brightness(.92); }
 
-  /* ticket shine on countdown */
-  .ticket { position:relative; }
-  .ticket::after {
-    content:""; position:absolute; inset:0; border-radius:inherit; pointer-events:none;
-    background:linear-gradient(120deg, transparent 30%, rgba(255,255,255,.14) 45%, transparent 60%);
-    background-size:250% 100%; animation: ticketShine 4s ease-in-out infinite;
-  }
-  @keyframes ticketShine { 0%,100% { background-position:120% 0; } 50% { background-position:-20% 0; } }
+  #progress{ position:fixed; top:0; left:0; height:3px; width:0%; background:linear-gradient(90deg,var(--red),#ff7a5c); z-index:100; }
 
-  .float-slow { animation: floatSlow 5s ease-in-out infinite; }
-  .float-slower { animation: floatSlow 6.5s ease-in-out infinite reverse; }
-  @keyframes floatSlow { 0%,100% { transform: translateY(0);} 50% { transform: translateY(-10px);} }
+  @keyframes floaty{ 0%,100%{ transform:translateY(0) } 50%{ transform:translateY(-10px) } }
+  .floaty{ animation:floaty 5s ease-in-out infinite; }
+  @keyframes ping-slow{ 0%{ transform:scale(1); opacity:.7 } 80%,100%{ transform:scale(1.9); opacity:0 } }
+  .ping-slow{ animation:ping-slow 2.2s cubic-bezier(0,0,.2,1) infinite; }
+
+  .stat-num{ font-variant-numeric:tabular-nums; }
+  .navlink{ position:relative; }
+  .navlink::after{ content:""; position:absolute; left:0; bottom:-4px; height:2px; width:0; background:var(--red); transition:width .3s; }
+  .navlink:hover::after{ width:100%; }
 </style>
 </head>
+<body class="grid-bg antialiased">
 
-<body class="bg-white text-slate-800 font-body antialiased overflow-x-hidden">
+<div id="progress"></div>
 
-<!-- ══════════ ANNOUNCEMENT BAR ══════════ -->
-<div class="bg-brand-950 text-white text-xs sm:text-sm">
-  <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-center gap-2 sm:gap-4 flex-wrap">
-    <span class="inline-flex items-center gap-1.5 font-medium">
-      <i data-lucide="megaphone" class="w-3.5 h-3.5 text-sun-400"></i>
-      Open now · Closes 9 PM · Panchsheel Garden, Shahdara
-    </span>
-    <span class="hidden sm:inline text-brand-300">|</span>
-    <a href="tel:+919711323246" class="inline-flex items-center gap-1.5 text-sun-300 hover:text-sun-400 font-semibold transition">
-      <i data-lucide="phone-call" class="w-3.5 h-3.5"></i> 097113 23246
-    </a>
+<div class="bg-[var(--red)] text-white text-[12px] sm:text-[13px] font-semibold tracking-wide overflow-hidden select-none">
+  <div class="marquee-track py-2">
+    <div class="flex items-center gap-8 pr-8 shrink-0">
+      <span class="flex items-center gap-2"><i data-lucide="clock" class="w-3.5 h-3.5"></i> OPEN TODAY · CLOSES 9:30 PM</span>
+      <span class="opacity-60">◆</span>
+      <span class="flex items-center gap-2"><i data-lucide="flame" class="w-3.5 h-3.5"></i> FIRST TRIAL WORKOUT FREE</span>
+      <span class="opacity-60">◆</span>
+      <span class="flex items-center gap-2"><i data-lucide="phone" class="w-3.5 h-3.5"></i> CALL 099991 57710</span>
+      <span class="opacity-60">◆</span>
+      <span class="flex items-center gap-2"><i data-lucide="indian-rupee" class="w-3.5 h-3.5"></i> POCKET-FRIENDLY MEMBERSHIPS</span>
+      <span class="opacity-60">◆</span>
+      <span class="hindi flex items-center gap-2">शाहदरा दिल्ली · २ ट्रेनिंग ज़ोन</span>
+      <span class="opacity-60">◆</span>
+    </div>
+    <div class="flex items-center gap-8 pr-8 shrink-0" aria-hidden="true">
+      <span class="flex items-center gap-2"><i data-lucide="clock" class="w-3.5 h-3.5"></i> OPEN TODAY · CLOSES 9:30 PM</span>
+      <span class="opacity-60">◆</span>
+      <span class="flex items-center gap-2"><i data-lucide="flame" class="w-3.5 h-3.5"></i> FIRST TRIAL WORKOUT FREE</span>
+      <span class="opacity-60">◆</span>
+      <span class="flex items-center gap-2"><i data-lucide="phone" class="w-3.5 h-3.5"></i> CALL 099991 57710</span>
+      <span class="opacity-60">◆</span>
+      <span class="flex items-center gap-2"><i data-lucide="indian-rupee" class="w-3.5 h-3.5"></i> POCKET-FRIENDLY MEMBERSHIPS</span>
+      <span class="opacity-60">◆</span>
+      <span class="hindi flex items-center gap-2">शाहदरा दिल्ली · २ ट्रेनिंग ज़ोन</span>
+      <span class="opacity-60">◆</span>
+    </div>
   </div>
 </div>
 
-<!-- ══════════ NAVBAR ══════════ -->
-<header class="sticky top-0 z-40 bg-white/85 backdrop-blur-xl border-b border-brand-100">
-  <nav class="max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-18 flex items-center justify-between">
-    <a href="#home" class="flex items-center gap-3 group">
-      <span class="w-10 h-10 rounded-2xl bg-brand-600 text-white grid place-items-center shadow-lg shadow-brand-200 group-hover:rotate-6 transition-transform">
-        <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+<header class="sticky top-0 z-50 border-b border-[var(--line)] bg-[rgba(10,10,12,.72)] backdrop-blur-xl">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 h-[72px] flex items-center justify-between gap-4">
+    <a href="#top" class="flex items-center gap-3 group">
+      <span class="w-10 h-10 grid place-items-center bg-[var(--red)] shadow-[0_8px_24px_-6px_rgba(255,49,49,.6)] group-hover:rotate-6 transition-transform">
+        <i data-lucide="dumbbell" class="w-5 h-5 text-white"></i>
       </span>
-      <span class="leading-tight">
-        <span class="font-display font-bold text-lg text-brand-950 block">Edu. Base</span>
-        <span class="text-[11px] text-slate-500 font-medium tracking-wide">एडु. बेस · Since 2014</span>
+      <span class="leading-none">
+        <span class="font-display text-xl sm:text-2xl tracking-wide block">MEGA ROCK</span>
+        <span class="text-[10px] tracking-[.35em] text-[var(--mut)] font-semibold">FITNESS CLUB</span>
       </span>
     </a>
-
-    <div class="hidden md:flex items-center gap-7 text-sm font-semibold text-slate-600">
-      <a href="#why" class="hover:text-brand-600 transition">Why Edu. Base</a>
-      <a href="#results" class="hover:text-brand-600 transition">Results</a>
-      <a href="#faculty" class="hover:text-brand-600 transition">Faculty</a>
-      <a href="#reviews" class="hover:text-brand-600 transition">Reviews</a>
-      <a href="#visit" class="hover:text-brand-600 transition">Visit Us</a>
-    </div>
-
-    <div class="flex items-center gap-2.5">
-      <span class="hidden lg:inline-flex items-center gap-1 text-sm font-bold text-brand-950 bg-sun-400/20 border border-sun-400/50 rounded-full px-3 py-1.5">
-        <i data-lucide="star" class="w-4 h-4 text-sun-500 fill-current"></i> 5.0 · 49 Reviews
-      </span>
-      <button data-open-modal class="hidden sm:inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white text-sm font-bold rounded-full px-5 py-2.5 shadow-lg shadow-brand-200 transition-all hover:-translate-y-0.5">
-        Enquire Now <i data-lucide="arrow-right" class="w-4 h-4"></i>
-      </button>
-      <button id="menuBtn" class="md:hidden w-10 h-10 grid place-items-center rounded-xl border border-brand-100 text-brand-700" aria-label="Open menu">
+    <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-[var(--mut)]">
+      <a href="#services" class="navlink hover:text-white transition-colors">Training</a>
+      <a href="#why" class="navlink hover:text-white transition-colors">Why Us</a>
+      <a href="#reviews" class="navlink hover:text-white transition-colors">Reviews</a>
+      <a href="#contact" class="navlink hover:text-white transition-colors">Location</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="tel:+919999157710" class="hidden sm:flex btn-red items-center gap-2 px-5 py-2.5 text-sm font-bold">
+        <i data-lucide="phone" class="w-4 h-4"></i> 099991 57710
+      </a>
+      <button id="menuBtn" class="lg:hidden w-11 h-11 grid place-items-center border border-[var(--line)] bg-[var(--panel)]" aria-label="Menu">
         <i data-lucide="menu" class="w-5 h-5"></i>
       </button>
     </div>
-  </nav>
-
-  <!-- mobile drawer -->
-  <div id="mobileMenu" class="md:hidden hidden border-t border-brand-100 bg-white px-4 py-4 space-y-1 text-sm font-semibold text-slate-700">
-    <a href="#why" class="block px-3 py-2.5 rounded-xl hover:bg-brand-50">Why Edu. Base</a>
-    <a href="#results" class="block px-3 py-2.5 rounded-xl hover:bg-brand-50">Results</a>
-    <a href="#faculty" class="block px-3 py-2.5 rounded-xl hover:bg-brand-50">Faculty</a>
-    <a href="#reviews" class="block px-3 py-2.5 rounded-xl hover:bg-brand-50">Reviews</a>
-    <a href="#visit" class="block px-3 py-2.5 rounded-xl hover:bg-brand-50">Visit Us</a>
-    <button data-open-modal class="mt-2 w-full inline-flex items-center justify-center gap-2 bg-brand-600 text-white font-bold rounded-xl px-5 py-3">
-      Enquire Now <i data-lucide="arrow-right" class="w-4 h-4"></i>
-    </button>
+  </div>
+  <div id="mobMenu" class="hidden lg:hidden border-t border-[var(--line)] bg-[rgba(16,16,20,.96)] backdrop-blur-xl px-6 py-5 space-y-4 text-base font-semibold">
+    <a href="#services" class="block text-[var(--mut)] hover:text-white">Training</a>
+    <a href="#why" class="block text-[var(--mut)] hover:text-white">Why Us</a>
+    <a href="#reviews" class="block text-[var(--mut)] hover:text-white">Reviews</a>
+    <a href="#contact" class="block text-[var(--mut)] hover:text-white">Location</a>
+    <a href="tel:+919999157710" class="btn-red flex items-center justify-center gap-2 px-5 py-3 text-sm font-bold"><i data-lucide="phone" class="w-4 h-4"></i> Call 099991 57710</a>
   </div>
 </header>
 
-<!-- ══════════ TABBED HERO ══════════ -->
-<section id="home" class="relative bg-grid bg-[#fafaff] overflow-hidden">
-  <div class="pointer-events-none absolute -top-32 -right-32 w-96 h-96 rounded-full bg-sun-400/10 blur-3xl"></div>
-  <div class="pointer-events-none absolute top-40 -left-40 w-[28rem] h-[28rem] rounded-full bg-brand-300/15 blur-3xl"></div>
+<main id="top">
 
-  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 pt-10 pb-16 sm:pt-16 sm:pb-24 grid lg:grid-cols-2 gap-12 lg:gap-10 items-center">
+<section class="relative overflow-hidden">
+  <img src="https://images.pexels.com/photos/19025674/pexels-photo-19025674.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200" alt="Dumbbell rack at Mega Rock Fitness Club" class="absolute inset-0 w-full h-full object-cover opacity-30">
+  <div class="absolute inset-0 bg-gradient-to-b from-[rgba(10,10,12,.55)] via-[rgba(10,10,12,.72)] to-[var(--ink)]"></div>
+  <div class="absolute -top-32 -right-32 w-[560px] h-[560px] glow-red pointer-events-none"></div>
+  <div class="absolute inset-0 grid-bg opacity-60 pointer-events-none"></div>
 
-    <!-- LEFT : tabs + copy -->
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 pt-16 pb-20 lg:pt-24 lg:pb-28 grid lg:grid-cols-[1.15fr_.85fr] gap-14 lg:gap-10 items-center">
+
     <div>
-      <div class="inline-flex items-center gap-2 bg-white border border-brand-100 rounded-full pl-1.5 pr-4 py-1.5 shadow-sm mb-6">
-        <span class="bg-sun-400 text-brand-950 text-[11px] font-extrabold tracking-wide rounded-full px-2.5 py-0.5 font-display">5.0★ RATED</span>
-        <span class="text-xs sm:text-sm font-semibold text-slate-600">Shahdara's most-loved coaching centre</span>
-      </div>
-
-      <!-- TAB SWITCHER -->
-      <div class="flex flex-wrap gap-2 mb-7" role="tablist" aria-label="Choose your class group">
-        <button class="hero-tab active" data-tab="t1" role="tab">Class I–V · Primary</button>
-        <button class="hero-tab" data-tab="t2" role="tab">Class VI–VIII</button>
-        <button class="hero-tab" data-tab="t3" role="tab">Class IX–X · Boards</button>
-      </div>
-
-      <!-- TAB PANELS -->
-      <div id="t1" class="tab-panel active">
-        <p class="font-display font-bold text-sun-500 text-sm tracking-[0.18em] uppercase mb-3">Primary Wing · Reading, Writing &amp; Basics</p>
-        <h1 class="font-display font-bold text-4xl sm:text-5xl xl:text-[3.4rem] leading-[1.05] text-brand-950">
-          Little readers become<br />
-          <span class="relative inline-block text-brand-600">confident kids.
-            <svg class="absolute -bottom-2 left-0 w-full" height="10" viewBox="0 0 200 10" preserveAspectRatio="none"><path d="M2 8 Q100 -4 198 8" stroke="#f59e0b" stroke-width="5" fill="none" stroke-linecap="round"/></svg>
+      <div class="rv flex flex-wrap items-center gap-3 mb-7">
+        <span class="flex items-center gap-2 border border-[var(--line)] bg-[rgba(255,255,255,.04)] backdrop-blur px-3.5 py-2 text-xs font-bold tracking-wide">
+          <span class="flex text-amber-400">
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i><i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i><i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i><i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i><i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
           </span>
-        </h1>
-        <p class="mt-6 text-slate-600 text-base sm:text-lg leading-relaxed max-w-lg">
-          Parents tell us the same story again and again: a child who struggled with reading and writing, now improving every result. That's the patient, one-on-one attention <strong class="text-brand-800">Shrishti Ma'am</strong> is loved for.
-        </p>
-        <ul class="mt-6 space-y-3 text-sm sm:text-base font-medium text-slate-700">
-          <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-5 h-5 mt-0.5 text-white bg-brand-600 rounded-full p-1 shrink-0"></i> Patient help with reading, writing &amp; everyday schoolwork</li>
-          <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-5 h-5 mt-0.5 text-white bg-brand-600 rounded-full p-1 shrink-0"></i> A friendly environment where small kids feel safe to ask</li>
-          <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-5 h-5 mt-0.5 text-white bg-brand-600 rounded-full p-1 shrink-0"></i> Visible improvement parents can see in school results</li>
-        </ul>
-      </div>
-
-      <div id="t2" class="tab-panel">
-        <p class="font-display font-bold text-sun-500 text-sm tracking-[0.18em] uppercase mb-3">Middle School · All Subjects</p>
-        <h1 class="font-display font-bold text-4xl sm:text-5xl xl:text-[3.4rem] leading-[1.05] text-brand-950">
-          Strong basics today.<br />
-          <span class="relative inline-block text-brand-600">Toppers tomorrow.
-            <svg class="absolute -bottom-2 left-0 w-full" height="10" viewBox="0 0 200 10" preserveAspectRatio="none"><path d="M2 8 Q100 -4 198 8" stroke="#f59e0b" stroke-width="5" fill="none" stroke-linecap="round"/></svg>
-          </span>
-        </h1>
-        <p class="mt-6 text-slate-600 text-base sm:text-lg leading-relaxed max-w-lg">
-          The middle years decide how a child handles Class 10 boards later. Regular practice, weekly unit tests and teachers who notice when a student is quietly falling behind.
-        </p>
-        <ul class="mt-6 space-y-3 text-sm sm:text-base font-medium text-slate-700">
-          <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-5 h-5 mt-0.5 text-white bg-brand-600 rounded-full p-1 shrink-0"></i> School syllabus covered with extra practice at the centre</li>
-          <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-5 h-5 mt-0.5 text-white bg-brand-600 rounded-full p-1 shrink-0"></i> Weekly unit tests that make revision a habit</li>
-          <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-5 h-5 mt-0.5 text-white bg-brand-600 rounded-full p-1 shrink-0"></i> Extra effort on weak students — it's what we're known for</li>
-        </ul>
-      </div>
-
-      <div id="t3" class="tab-panel">
-        <p class="font-display font-bold text-sun-500 text-sm tracking-[0.18em] uppercase mb-3">Board Years · Class 9 &amp; 10</p>
-        <h1 class="font-display font-bold text-4xl sm:text-5xl xl:text-[3.4rem] leading-[1.05] text-brand-950">
-          Board years,<br />
-          <span class="relative inline-block text-brand-600">handled with care.
-            <svg class="absolute -bottom-2 left-0 w-full" height="10" viewBox="0 0 200 10" preserveAspectRatio="none"><path d="M2 8 Q100 -4 198 8" stroke="#f59e0b" stroke-width="5" fill="none" stroke-linecap="round"/></svg>
-          </span>
-        </h1>
-        <p class="mt-6 text-slate-600 text-base sm:text-lg leading-relaxed max-w-lg">
-          Class 9 and 10 need structure — a test every week, revision after every chapter, and a teacher who checks on your child personally. Reviewers say our unit tests make the difference.
-        </p>
-        <ul class="mt-6 space-y-3 text-sm sm:text-base font-medium text-slate-700">
-          <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-5 h-5 mt-0.5 text-white bg-brand-600 rounded-full p-1 shrink-0"></i> Weekly unit tests — "helps in revision", say our reviewers</li>
-          <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-5 h-5 mt-0.5 text-white bg-brand-600 rounded-full p-1 shrink-0"></i> Support for each and every student, not just toppers</li>
-          <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-5 h-5 mt-0.5 text-white bg-brand-600 rounded-full p-1 shrink-0"></i> Encouraging teachers who push students to do their best</li>
-        </ul>
-      </div>
-
-      <!-- CTA ROW -->
-      <div class="mt-8 flex flex-wrap items-center gap-3.5">
-        <button data-open-modal class="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-full px-7 py-3.5 shadow-xl shadow-brand-600/25 transition-all hover:-translate-y-0.5 text-sm sm:text-base">
-          Book a Free Visit <i data-lucide="arrow-right" class="w-4.5 h-4.5"></i>
-        </button>
-        <a href="tel:+919711323246" class="inline-flex items-center gap-2 bg-white hover:bg-brand-50 text-brand-700 font-bold rounded-full px-6 py-3.5 border-2 border-brand-200 transition-all text-sm sm:text-base">
-          <i data-lucide="phone" class="w-4.5 h-4.5"></i> Call 097113 23246
-        </a>
-      </div>
-
-      <!-- COUNTDOWN -->
-      <div class="ticket mt-8 inline-flex flex-wrap items-center gap-4 bg-brand-950 text-white rounded-3xl px-6 py-5 shadow-2xl shadow-brand-900/30">
-        <div class="flex items-center gap-3">
-          <span class="w-11 h-11 rounded-2xl bg-sun-400 grid place-items-center shrink-0">
-            <i data-lucide="timer" class="w-5.5 h-5.5 text-brand-950"></i>
-          </span>
-          <p class="text-sm leading-snug font-medium text-brand-100">New admissions open<br /><span class="font-display font-bold text-white text-base">enquire today</span></p>
-        </div>
-        <div class="flex items-center gap-2 font-display">
-          <span class="text-center"><span id="cd-d" class="block bg-white/10 rounded-xl px-3 py-1.5 text-2xl font-bold min-w-[3.2rem]">00</span><span class="text-[10px] text-brand-300 tracking-widest uppercase">Days</span></span>
-          <span class="text-sun-400 text-xl font-bold pb-4">:</span>
-          <span class="text-center"><span id="cd-h" class="block bg-white/10 rounded-xl px-3 py-1.5 text-2xl font-bold min-w-[3.2rem]">00</span><span class="text-[10px] text-brand-300 tracking-widest uppercase">Hrs</span></span>
-          <span class="text-sun-400 text-xl font-bold pb-4">:</span>
-          <span class="text-center"><span id="cd-m" class="block bg-white/10 rounded-xl px-3 py-1.5 text-2xl font-bold min-w-[3.2rem]">00</span><span class="text-[10px] text-brand-300 tracking-widest uppercase">Min</span></span>
-          <span class="text-sun-400 text-xl font-bold pb-4">:</span>
-          <span class="text-center"><span id="cd-s" class="block bg-white/10 rounded-xl px-3 py-1.5 text-2xl font-bold min-w-[3.2rem] text-sun-300">00</span><span class="text-[10px] text-brand-300 tracking-widest uppercase">Sec</span></span>
-        </div>
-      </div>
-    </div>
-
-    <!-- RIGHT : imagery -->
-    <div class="relative reveal">
-      <div class="absolute -inset-3 sm:-inset-4 bg-sun-400 rounded-[2.2rem] rotate-2"></div>
-      <img src="https://images.pexels.com/photos/8617995/pexels-photo-8617995.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=900&w=1200" alt="Students studying in a classroom" class="relative rounded-[2rem] w-full h-[420px] sm:h-[520px] object-cover shadow-2xl" loading="eager" />
-
-      <!-- float : unit tests -->
-      <div class="float-slow absolute -left-3 sm:-left-8 top-8 bg-white rounded-2xl shadow-xl shadow-brand-900/10 px-4 py-3 flex items-center gap-3 border border-brand-100">
-        <span class="w-10 h-10 rounded-xl bg-brand-100 grid place-items-center"><i data-lucide="clipboard-check" class="w-5 h-5 text-brand-600"></i></span>
-        <div><p class="font-display font-bold text-brand-950 text-sm">Weekly Unit Tests</p><p class="text-xs text-slate-500">"Helps in revision" — review</p></div>
-      </div>
-
-      <!-- float : affordable -->
-      <div class="float-slower absolute -right-2 sm:-right-6 bottom-24 bg-white rounded-2xl shadow-xl shadow-brand-900/10 px-4 py-3 flex items-center gap-3 border border-brand-100">
-        <span class="w-10 h-10 rounded-xl bg-sun-400/25 grid place-items-center"><i data-lucide="wallet" class="w-5 h-5 text-sun-500"></i></span>
-        <div><p class="font-display font-bold text-brand-950 text-sm">Affordable Fees</p><p class="text-xs text-slate-500">Mentioned in Google reviews</p></div>
-      </div>
-
-      <!-- float : rating -->
-      <div class="absolute left-4 -bottom-6 bg-brand-950 text-white rounded-2xl shadow-2xl px-5 py-4 flex items-center gap-4">
-        <div class="flex -space-x-2.5">
-          <span class="w-9 h-9 rounded-full bg-brand-500 border-2 border-brand-950 grid place-items-center text-xs font-bold">RS</span>
-          <span class="w-9 h-9 rounded-full bg-sun-400 text-brand-950 border-2 border-brand-950 grid place-items-center text-xs font-bold">AD</span>
-          <span class="w-9 h-9 rounded-full bg-emerald-400 text-brand-950 border-2 border-brand-950 grid place-items-center text-xs font-bold">RY</span>
-        </div>
-        <div>
-          <p class="flex items-center gap-0.5">
-            <i data-lucide="star" class="w-4 h-4 text-sun-400 fill-current"></i><i data-lucide="star" class="w-4 h-4 text-sun-400 fill-current"></i><i data-lucide="star" class="w-4 h-4 text-sun-400 fill-current"></i><i data-lucide="star" class="w-4 h-4 text-sun-400 fill-current"></i><i data-lucide="star" class="w-4 h-4 text-sun-400 fill-current"></i>
-          </p>
-          <p class="text-xs text-brand-200 font-medium mt-0.5">5.0 on Google · 49 reviews</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- subjects / offerings marquee -->
-  <div class="relative border-y border-brand-100 bg-white py-4 overflow-hidden">
-    <div class="marquee-track items-center gap-8 text-brand-950 font-display font-semibold text-sm sm:text-base">
-      <span class="flex items-center gap-8 shrink-0 pr-8" id="marqueeA"></span>
-      <span class="flex items-center gap-8 shrink-0 pr-8" id="marqueeB"></span>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════ WHY EDU BASE (all claims review-backed) ══════════ -->
-<section id="why" class="py-16 sm:py-24 bg-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6">
-    <div class="max-w-2xl reveal">
-      <p class="font-display font-bold text-sun-500 text-sm tracking-[0.18em] uppercase mb-3">Why Edu. Base</p>
-      <h2 class="font-display font-bold text-3xl sm:text-4xl text-brand-950 leading-tight">Don't take our word for it — <span class="text-brand-600">take our reviewers'.</span></h2>
-      <p class="mt-4 text-slate-600">Everything on this card wall comes straight from what parents and students wrote in their Google reviews.</p>
-    </div>
-
-    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-      <div class="reveal group bg-brand-50/60 hover:bg-white border border-brand-100 hover:border-brand-300 rounded-3xl p-7 transition-all hover:shadow-xl hover:shadow-brand-100 hover:-translate-y-1.5">
-        <span class="w-12 h-12 rounded-2xl bg-brand-600 grid place-items-center mb-5 group-hover:rotate-6 transition-transform"><i data-lucide="clipboard-check" class="w-6 h-6 text-white"></i></span>
-        <h3 class="font-display font-bold text-lg text-brand-950">Weekly Unit Tests</h3>
-        <p class="mt-2 text-sm text-slate-600 leading-relaxed">"Unit test helps in revision." Regular testing keeps chapters fresh long before exam season begins.</p>
-      </div>
-      <div class="reveal group bg-brand-50/60 hover:bg-white border border-brand-100 hover:border-brand-300 rounded-3xl p-7 transition-all hover:shadow-xl hover:shadow-brand-100 hover:-translate-y-1.5">
-        <span class="w-12 h-12 rounded-2xl bg-sun-400 grid place-items-center mb-5 group-hover:rotate-6 transition-transform"><i data-lucide="wallet" class="w-6 h-6 text-brand-950"></i></span>
-        <h3 class="font-display font-bold text-lg text-brand-950">Affordable Fees</h3>
-        <p class="mt-2 text-sm text-slate-600 leading-relaxed">"Fees is affordable." Good teaching that families in the neighbourhood can actually manage. Visit the centre for current details.</p>
-      </div>
-      <div class="reveal group bg-brand-50/60 hover:bg-white border border-brand-100 hover:border-brand-300 rounded-3xl p-7 transition-all hover:shadow-xl hover:shadow-brand-100 hover:-translate-y-1.5">
-        <span class="w-12 h-12 rounded-2xl bg-brand-600 grid place-items-center mb-5 group-hover:rotate-6 transition-transform"><i data-lucide="user-check" class="w-6 h-6 text-white"></i></span>
-        <h3 class="font-display font-bold text-lg text-brand-950">Extra Effort on Weak Students</h3>
-        <p class="mt-2 text-sm text-slate-600 leading-relaxed">"They do very hard work and efforts with weak and needy students." No child is left behind here.</p>
-      </div>
-      <div class="reveal group bg-brand-50/60 hover:bg-white border border-brand-100 hover:border-brand-300 rounded-3xl p-7 transition-all hover:shadow-xl hover:shadow-brand-100 hover:-translate-y-1.5">
-        <span class="w-12 h-12 rounded-2xl bg-sun-400 grid place-items-center mb-5 group-hover:rotate-6 transition-transform"><i data-lucide="heart-handshake" class="w-6 h-6 text-brand-950"></i></span>
-        <h3 class="font-display font-bold text-lg text-brand-950">Friendly Environment</h3>
-        <p class="mt-2 text-sm text-slate-600 leading-relaxed">Reviewers mention a "friendly environment" and "nice behavior of staff" again and again. Kids learn better where they feel safe.</p>
-      </div>
-      <div class="reveal group bg-brand-50/60 hover:bg-white border border-brand-100 hover:border-brand-300 rounded-3xl p-7 transition-all hover:shadow-xl hover:shadow-brand-100 hover:-translate-y-1.5">
-        <span class="w-12 h-12 rounded-2xl bg-brand-600 grid place-items-center mb-5 group-hover:rotate-6 transition-transform"><i data-lucide="book-open" class="w-6 h-6 text-white"></i></span>
-        <h3 class="font-display font-bold text-lg text-brand-950">Reading &amp; Writing Focus</h3>
-        <p class="mt-2 text-sm text-slate-600 leading-relaxed">"She really helped her in reading n writing." Small kids get patient, personal attention till the basics are rock solid.</p>
-      </div>
-      <div class="reveal group bg-brand-50/60 hover:bg-white border border-brand-100 hover:border-brand-300 rounded-3xl p-7 transition-all hover:shadow-xl hover:shadow-brand-100 hover:-translate-y-1.5">
-        <span class="w-12 h-12 rounded-2xl bg-sun-400 grid place-items-center mb-5 group-hover:rotate-6 transition-transform"><i data-lucide="trending-up" class="w-6 h-6 text-brand-950"></i></span>
-        <h3 class="font-display font-bold text-lg text-brand-950">Visible Improvement</h3>
-        <p class="mt-2 text-sm text-slate-600 leading-relaxed">"Very much improved by last results." The goal is simple: better marks, every term, for every student.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════ RESULTS STRIP (evidence-based stats) ══════════ -->
-<section id="results" class="relative bg-brand-950 bg-grid-dark text-white overflow-hidden">
-  <div class="pointer-events-none absolute -top-24 left-1/3 w-96 h-96 rounded-full bg-brand-600/30 blur-3xl"></div>
-  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
-    <div class="flex flex-wrap items-center justify-between gap-6 mb-12 reveal">
-      <h2 class="font-display font-bold text-3xl sm:text-4xl leading-tight">The numbers<br />Google can <span class="text-sun-400">verify.</span></h2>
-      <p class="text-brand-200 text-sm max-w-xs">Coaching from the same Panchsheel Garden classroom since 2014 — and a public review record anyone can check.</p>
-    </div>
-    <div class="grid grid-cols-2 lg:grid-cols-4 gap-y-12 gap-x-6 text-center reveal">
-      <div>
-        <p class="counter-sheen font-display font-bold text-6xl sm:text-7xl lg:text-8xl leading-none">5.0<span class="text-4xl sm:text-5xl align-top">★</span></p>
-        <p class="mt-3 font-display font-semibold text-brand-100">Google Rating</p>
-        <p class="text-xs text-brand-300 mt-1">perfect score, publicly listed</p>
-      </div>
-      <div class="lg:border-l lg:border-white/10">
-        <p class="counter-sheen font-display font-bold text-6xl sm:text-7xl lg:text-8xl leading-none">49<span class="text-4xl sm:text-5xl align-top">★</span></p>
-        <p class="mt-3 font-display font-semibold text-brand-100">Five-Star Reviews</p>
-        <p class="text-xs text-brand-300 mt-1">every review is 5 stars</p>
-      </div>
-      <div class="lg:border-l lg:border-white/10">
-        <p class="counter-sheen font-display font-bold text-6xl sm:text-7xl lg:text-8xl leading-none">12<span class="text-4xl sm:text-5xl align-top">+</span></p>
-        <p class="mt-3 font-display font-semibold text-brand-100">Years Teaching</p>
-        <p class="text-xs text-brand-300 mt-1">one address, since 2014</p>
-      </div>
-      <div class="lg:border-l lg:border-white/10">
-        <p class="counter-sheen font-display font-bold text-6xl sm:text-7xl lg:text-8xl leading-none">I–X</p>
-        <p class="mt-3 font-display font-semibold text-brand-100">Classes Coached</p>
-        <p class="text-xs text-brand-300 mt-1">primary kids to board years</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════ GALLERY ══════════ -->
-<section class="py-16 sm:py-24 bg-white overflow-hidden">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6">
-    <div class="max-w-2xl reveal">
-      <p class="font-display font-bold text-sun-500 text-sm tracking-[0.18em] uppercase mb-3">A Typical Day at the Centre</p>
-      <h2 class="font-display font-bold text-3xl sm:text-4xl text-brand-950 leading-tight">Regular classes. <span class="text-brand-600">Real focus.</span></h2>
-    </div>
-    <div class="mt-10 grid grid-cols-2 lg:grid-cols-4 gap-4 reveal">
-      <figure class="col-span-2 row-span-2 relative rounded-3xl overflow-hidden group h-64 lg:h-auto">
-        <img src="https://images.pexels.com/photos/31864438/pexels-photo-31864438.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=900&w=1200" alt="Students focused on writing exercises" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
-        <figcaption class="absolute bottom-4 left-4 bg-white/90 backdrop-blur rounded-full px-4 py-2 text-xs font-bold text-brand-950 font-display">Daily practice</figcaption>
-      </figure>
-      <figure class="relative rounded-3xl overflow-hidden group h-40 sm:h-48">
-        <img src="https://images.pexels.com/photos/30058879/pexels-photo-30058879.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200" alt="Student writing in class" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
-        <figcaption class="absolute bottom-3 left-3 bg-white/90 backdrop-blur rounded-full px-3 py-1.5 text-xs font-bold text-brand-950 font-display">Written work</figcaption>
-      </figure>
-      <figure class="relative rounded-3xl overflow-hidden group h-40 sm:h-48">
-        <img src="https://images.pexels.com/photos/5905558/pexels-photo-5905558.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200" alt="Classmates doing written exercises" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
-        <figcaption class="absolute bottom-3 left-3 bg-white/90 backdrop-blur rounded-full px-3 py-1.5 text-xs font-bold text-brand-950 font-display">Unit tests</figcaption>
-      </figure>
-      <figure class="relative rounded-3xl overflow-hidden group h-40 sm:h-48">
-        <img src="https://images.pexels.com/photos/29659893/pexels-photo-29659893.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200" alt="Students in a study session" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
-        <figcaption class="absolute bottom-3 left-3 bg-white/90 backdrop-blur rounded-full px-3 py-1.5 text-xs font-bold text-brand-950 font-display">Group learning</figcaption>
-      </figure>
-      <figure class="relative rounded-3xl overflow-hidden group h-40 sm:h-48">
-        <img src="https://images.pexels.com/photos/37758542/pexels-photo-37758542.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200" alt="Focused students studying at desks" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
-        <figcaption class="absolute bottom-3 left-3 bg-white/90 backdrop-blur rounded-full px-3 py-1.5 text-xs font-bold text-brand-950 font-display">Revision time</figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════ FACULTY (names only — no stock portraits) ══════════ -->
-<section id="faculty" class="py-16 sm:py-24 bg-grid bg-[#fafaff] border-y border-brand-100 overflow-hidden">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6">
-    <div class="max-w-2xl reveal">
-      <p class="font-display font-bold text-sun-500 text-sm tracking-[0.18em] uppercase mb-3">Meet Your Mentors</p>
-      <h2 class="font-display font-bold text-3xl sm:text-4xl text-brand-950 leading-tight">Teachers students <span class="text-brand-600">thank by name.</span></h2>
-      <p class="mt-4 text-slate-600">Both names below appear in the institute's public Google listing and its five-star reviews.</p>
-    </div>
-
-    <div id="facRow" class="mt-10 flex gap-5 overflow-x-auto snap-x snap-mandatory no-scrollbar pb-4 -mx-4 px-4 sm:mx-0 sm:px-0 lg:overflow-visible reveal">
-
-      <!-- Aman Jain -->
-      <article class="snap-start shrink-0 w-full sm:w-[26rem] lg:flex-1 bg-white rounded-3xl border border-brand-100 shadow-lg shadow-brand-100/60 overflow-hidden group hover:-translate-y-1.5 transition-transform duration-300">
-        <div class="bg-brand-950 bg-grid-dark px-7 pt-8 pb-7 relative overflow-hidden">
-          <span class="absolute -right-6 -top-6 w-32 h-32 rounded-full bg-brand-600/40 blur-2xl"></span>
-          <div class="flex items-center gap-4 relative">
-            <span class="w-16 h-16 rounded-2xl bg-sun-400 text-brand-950 grid place-items-center font-display font-bold text-2xl shadow-lg">AJ</span>
-            <div>
-              <span class="bg-sun-400 text-brand-950 text-[10px] font-extrabold rounded-full px-2.5 py-1 font-display tracking-widest">FOUNDER &amp; HEAD FACULTY</span>
-              <h3 class="font-display font-bold text-2xl text-white mt-2">Aman Jain</h3>
-            </div>
-          </div>
-        </div>
-        <div class="p-7">
-          <p class="text-sm text-slate-600 leading-relaxed">The name behind Edu. Base. Aman Sir runs the centre personally from the Panchsheel Garden classroom, teaching and mentoring students batch after batch since 2014.</p>
-          <div class="mt-5 bg-brand-50 border border-brand-100 rounded-2xl p-4 flex gap-3">
-            <i data-lucide="quote" class="w-5 h-5 text-sun-500 shrink-0 mt-0.5"></i>
-            <p class="text-xs text-slate-600 leading-relaxed">"Nice way of teaching and behavior of staff" — what reviewers consistently say about the teaching style he sets.</p>
-          </div>
-          <div class="mt-5 flex flex-wrap gap-2">
-            <span class="text-[11px] font-bold bg-brand-50 text-brand-700 rounded-full px-3 py-1">Since 2014</span>
-            <span class="text-[11px] font-bold bg-brand-50 text-brand-700 rounded-full px-3 py-1"> personally mentors students</span>
-          </div>
-        </div>
-      </article>
-
-      <!-- Shrishti Ma'am -->
-      <article class="snap-start shrink-0 w-full sm:w-[26rem] lg:flex-1 bg-white rounded-3xl border border-brand-100 shadow-lg shadow-brand-100/60 overflow-hidden group hover:-translate-y-1.5 transition-transform duration-300">
-        <div class="bg-sun-400 px-7 pt-8 pb-7 relative overflow-hidden">
-          <span class="absolute -right-6 -top-6 w-32 h-32 rounded-full bg-white/40 blur-2xl"></span>
-          <div class="flex items-center gap-4 relative">
-            <span class="w-16 h-16 rounded-2xl bg-brand-950 text-sun-400 grid place-items-center font-display font-bold text-2xl shadow-lg">SM</span>
-            <div>
-              <span class="bg-brand-950 text-white text-[10px] font-extrabold rounded-full px-2.5 py-1 font-display tracking-widest">NAMED IN PARENT REVIEWS</span>
-              <h3 class="font-display font-bold text-2xl text-brand-950 mt-2">Shrishti Ma'am</h3>
-            </div>
-          </div>
-        </div>
-        <div class="p-7">
-          <p class="text-sm text-slate-600 leading-relaxed">The teacher parents thank by name. She works patiently with younger children on their reading and writing — and parents report seeing the difference in school results.</p>
-          <div class="mt-5 bg-brand-50 border border-brand-100 rounded-2xl p-4 flex gap-3">
-            <i data-lucide="quote" class="w-5 h-5 text-sun-500 shrink-0 mt-0.5"></i>
-            <p class="text-xs text-slate-600 leading-relaxed">"My little one is studying from Shrishti mam… she really helped her in reading n writing… very much improved by last results." — Ankita Dabral, parent</p>
-          </div>
-          <div class="mt-5 flex flex-wrap gap-2">
-            <span class="text-[11px] font-bold bg-brand-50 text-brand-700 rounded-full px-3 py-1">Primary wing</span>
-            <span class="text-[11px] font-bold bg-brand-50 text-brand-700 rounded-full px-3 py-1">Reading &amp; writing</span>
-          </div>
-        </div>
-      </article>
-    </div>
-
-    <p class="mt-4 text-xs text-slate-500 flex items-center gap-2 reveal"><i data-lucide="info" class="w-3.5 h-3.5 shrink-0"></i> Meet the full teaching team in person at the centre — open daily till 9 PM.</p>
-  </div>
-</section>
-
-<!-- ══════════ REVIEWS ══════════ -->
-<section id="reviews" class="py-16 sm:py-24 bg-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6">
-    <div class="grid lg:grid-cols-[1fr_2fr] gap-10 items-start">
-      <!-- left : rating summary -->
-      <div class="reveal lg:sticky lg:top-28">
-        <p class="font-display font-bold text-sun-500 text-sm tracking-[0.18em] uppercase mb-3">Google Reviews</p>
-        <h2 class="font-display font-bold text-3xl sm:text-4xl text-brand-950 leading-tight">49 reviews.<br /><span class="text-brand-600">Every single one, 5 stars.</span></h2>
-        <div class="mt-6 bg-brand-50 border border-brand-100 rounded-3xl p-6">
-          <p class="font-display font-bold text-6xl text-brand-950">5.0<span class="text-sun-500 text-3xl align-top">★</span></p>
-          <div class="mt-3 space-y-1.5">
-            <div class="flex items-center gap-2 text-xs font-semibold text-slate-600"><span class="w-3">5</span><div class="h-2 flex-1 bg-brand-100 rounded-full overflow-hidden"><div class="h-full w-full bg-sun-400 rounded-full"></div></div><span>49</span></div>
-            <div class="flex items-center gap-2 text-xs font-semibold text-slate-400"><span class="w-3">4</span><div class="h-2 flex-1 bg-brand-100 rounded-full"></div><span>0</span></div>
-            <div class="flex items-center gap-2 text-xs font-semibold text-slate-400"><span class="w-3">3</span><div class="h-2 flex-1 bg-brand-100 rounded-full"></div><span>0</span></div>
-            <div class="flex items-center gap-2 text-xs font-semibold text-slate-400"><span class="w-3">2</span><div class="h-2 flex-1 bg-brand-100 rounded-full"></div><span>0</span></div>
-            <div class="flex items-center gap-2 text-xs font-semibold text-slate-400"><span class="w-3">1</span><div class="h-2 flex-1 bg-brand-100 rounded-full"></div><span>0</span></div>
-          </div>
-          <div class="mt-5 flex flex-wrap gap-2">
-            <span class="text-[11px] font-bold bg-white border border-brand-100 text-brand-800 rounded-full px-3 py-1">teachers · 7</span>
-            <span class="text-[11px] font-bold bg-white border border-brand-100 text-brand-800 rounded-full px-3 py-1">teaching methods · 3</span>
-            <span class="text-[11px] font-bold bg-white border border-brand-100 text-brand-800 rounded-full px-3 py-1">environment · 2</span>
-            <span class="text-[11px] font-bold bg-white border border-brand-100 text-brand-800 rounded-full px-3 py-1">affordable fees</span>
-            <span class="text-[11px] font-bold bg-white border border-brand-100 text-brand-800 rounded-full px-3 py-1">unit tests</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- right : review cards -->
-      <div class="space-y-5">
-        <figure class="reveal bg-white border border-brand-100 rounded-3xl p-6 sm:p-7 shadow-lg shadow-brand-100/50 hover:shadow-xl hover:-translate-y-1 transition-all">
-          <i data-lucide="quote" class="w-8 h-8 text-sun-400 mb-4"></i>
-          <blockquote class="text-slate-700 leading-relaxed">"Nice way of teaching and behavior of staff. Fees is affordable and unit test helps in revision."</blockquote>
-          <figcaption class="mt-5 flex items-center justify-between flex-wrap gap-3">
-            <div class="flex items-center gap-3">
-              <span class="w-11 h-11 rounded-full bg-brand-600 text-white grid place-items-center font-display font-bold">RS</span>
-              <div>
-                <p class="font-display font-bold text-brand-950">Rahul Sharma</p>
-                <p class="text-xs text-slate-500">Google review · 3 months ago</p>
-              </div>
-            </div>
-            <p class="flex gap-0.5"><i data-lucide="star" class="w-4 h-4 text-sun-400 fill-current"></i><i data-lucide="star" class="w-4 h-4 text-sun-400 fill-current"></i><i data-lucide="star" class="w-4 h-4 text-sun-400 fill-current"></i><i data-lucide="star" class="w-4 h-4 text-sun-400 fill-current"></i><i data-lucide="star" class="w-4 h-4 text-sun-400 fill-current"></i></p>
-          </figcaption>
-        </figure>
-
-        <figure class="reveal bg-white border border-brand-100 rounded-3xl p-6 sm:p-7 shadow-lg shadow-brand-100/50 hover:shadow-xl hover:-translate-y-1 transition-all">
-          <i data-lucide="quote" class="w-8 h-8 text-sun-400 mb-4"></i>
-          <blockquote class="text-slate-700 leading-relaxed">"Faculty is so much helpful and supports each and every student. They do very hard work and put in extra effort with weak and needy students. Very obliged and thankful to my teachers."</blockquote>
-          <figcaption class="mt-5 flex items-center justify-between flex-wrap gap-3">
-            <div class="flex items-center gap-3">
-              <span class="w-11 h-11 rounded-full bg-sun-400 text-brand-950 grid place-items-center font-display font-bold">RY</span>
-              <div>
-                <p class="font-display font-bold text-brand-950">Rydhum Srivastava</p>
-                <p class="text-xs text-slate-500">Google review · alumni</p>
-              </div>
-            </div>
-            <p class="flex gap-0.5"><i data-lucide="star" class="w-4 h-4 text-sun-400 fill-current"></i><i data-lucide="star" class="w-4 h-4 text-sun-400 fill-current"></i><i data-lucide="star" class="w-4 h-4 text-sun-400 fill-current"></i><i data-lucide="star" class="w-4 h-4 text-sun-400 fill-current"></i><i data-lucide="star" class="w-4 h-4 text-sun-400 fill-current"></i></p>
-          </figcaption>
-        </figure>
-
-        <figure class="reveal bg-white border border-brand-100 rounded-3xl p-6 sm:p-7 shadow-lg shadow-brand-100/50 hover:shadow-xl hover:-translate-y-1 transition-all">
-          <i data-lucide="quote" class="w-8 h-8 text-sun-400 mb-4"></i>
-          <blockquote class="text-slate-700 leading-relaxed">"Very good institute in this area. My little one has been studying from Shrishti ma'am — she really helped her in reading and writing, and she improved a lot in her last results. Thank you Shrishti ma'am!"</blockquote>
-          <figcaption class="mt-5 flex items-center justify-between flex-wrap gap-3">
-            <div class="flex items-center gap-3">
-              <span class="w-11 h-11 rounded-full bg-emerald-500 text-white grid place-items-center font-display font-bold">AD</span>
-              <div>
-                <p class="font-display font-bold text-brand-950">Ankita Dabral</p>
-                <p class="text-xs text-slate-500">Google review · parent</p>
-              </div>
-            </div>
-            <p class="flex gap-0.5"><i data-lucide="star" class="w-4 h-4 text-sun-400 fill-current"></i><i data-lucide="star" class="w-4 h-4 text-sun-400 fill-current"></i><i data-lucide="star" class="w-4 h-4 text-sun-400 fill-current"></i><i data-lucide="star" class="w-4 h-4 text-sun-400 fill-current"></i><i data-lucide="star" class="w-4 h-4 text-sun-400 fill-current"></i></p>
-          </figcaption>
-        </figure>
-
-        <button data-open-modal class="reveal w-full inline-flex items-center justify-center gap-2 border-2 border-dashed border-brand-300 hover:border-brand-600 hover:bg-brand-50 text-brand-700 font-bold rounded-3xl px-6 py-5 transition-all">
-          Join Shahdara's happiest classroom — visit once, then decide <i data-lucide="arrow-right" class="w-4.5 h-4.5"></i>
-        </button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════ VISIT / CONTACT ══════════ -->
-<section id="visit" class="py-16 sm:py-24 bg-grid bg-[#fafaff] border-t border-brand-100">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6">
-    <div class="max-w-2xl reveal">
-      <p class="font-display font-bold text-sun-500 text-sm tracking-[0.18em] uppercase mb-3">Visit the Centre</p>
-      <h2 class="font-display font-bold text-3xl sm:text-4xl text-brand-950 leading-tight">One classroom. <span class="text-brand-600">Easy to find.</span></h2>
-    </div>
-
-    <div class="mt-10 grid lg:grid-cols-2 gap-8 items-stretch">
-      <div class="reveal bg-white border border-brand-100 rounded-3xl p-7 sm:p-9 shadow-xl shadow-brand-100/60 flex flex-col justify-between gap-8">
-        <div class="space-y-6">
-          <div class="flex items-start gap-4">
-            <span class="w-12 h-12 rounded-2xl bg-brand-600 grid place-items-center shrink-0"><i data-lucide="map-pin" class="w-6 h-6 text-white"></i></span>
-            <div>
-              <p class="font-display font-bold text-brand-950">Address</p>
-              <p class="text-sm text-slate-600 mt-1 leading-relaxed">A Block, F-111, Panchsheel Garden, Navin Shahdara,<br />Shahdara, New Delhi, Delhi — 110032</p>
-              <p class="text-xs text-brand-600 font-semibold mt-1.5">Plus Code: M7GJ+QG Delhi</p>
-            </div>
-          </div>
-          <div class="flex items-start gap-4">
-            <span class="w-12 h-12 rounded-2xl bg-sun-400 grid place-items-center shrink-0"><i data-lucide="clock" class="w-6 h-6 text-brand-950"></i></span>
-            <div>
-              <p class="font-display font-bold text-brand-950">Timings</p>
-              <p class="text-sm text-slate-600 mt-1">Open · Closes 9:00 PM<br />Walk in any evening to meet the faculty</p>
-            </div>
-          </div>
-          <div class="flex items-start gap-4">
-            <span class="w-12 h-12 rounded-2xl bg-brand-100 grid place-items-center shrink-0"><i data-lucide="phone" class="w-6 h-6 text-brand-600"></i></span>
-            <div>
-              <p class="font-display font-bold text-brand-950">Admissions Helpline</p>
-              <a href="tel:+919711323246" class="text-sm font-bold text-brand-600 hover:text-brand-700 mt-1 inline-block">097113 23246</a>
-              <a href="https://www.instagram.com/edubase2014" target="_blank" rel="noopener" class="mt-1 flex items-center gap-1.5 text-sm font-semibold text-slate-600 hover:text-brand-600 transition"><i data-lucide="instagram" class="w-4 h-4"></i> @edubase2014</a>
-            </div>
-          </div>
-        </div>
-        <div class="flex flex-wrap gap-3">
-          <a href="https://www.google.com/maps/search/?api=1&query=Edu+Base+F-111+Panchsheel+Garden+Shahdara+Delhi+110032" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-full px-6 py-3 text-sm shadow-lg shadow-brand-200 transition-all hover:-translate-y-0.5">
-            <i data-lucide="navigation" class="w-4 h-4"></i> Get Directions
-          </a>
-          <a href="https://wa.me/919711323246?text=Hello%20Edu.%20Base!%20I%20want%20to%20know%20about%20admissions." target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white font-bold rounded-full px-6 py-3 text-sm shadow-lg shadow-emerald-200 transition-all hover:-translate-y-0.5">
-            <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp Us
-          </a>
-        </div>
-      </div>
-
-      <div class="reveal rounded-3xl overflow-hidden border border-brand-100 shadow-xl shadow-brand-100/60 min-h-[380px]">
-        <iframe title="Edu. Base location map — Panchsheel Garden, Shahdara" src="https://www.google.com/maps?q=Edu%20Base%20F-111%20Panchsheel%20Garden%20Navin%20Shahdara%20Delhi%20110032&output=embed" class="w-full h-full min-h-[380px]" style="border:0" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════ FINAL CTA ══════════ -->
-<section class="relative bg-brand-950 bg-grid-dark text-white overflow-hidden">
-  <div class="pointer-events-none absolute -bottom-32 -right-20 w-[30rem] h-[30rem] rounded-full bg-sun-400/15 blur-3xl"></div>
-  <div class="relative max-w-4xl mx-auto px-4 sm:px-6 py-16 sm:py-24 text-center">
-    <div class="reveal">
-      <p class="font-display font-bold text-sun-400 text-sm tracking-[0.2em] uppercase mb-4">Admissions open · Walk in till 9 PM</p>
-      <h2 class="font-display font-bold text-4xl sm:text-5xl lg:text-6xl leading-[1.05]">Your child's comeback story<br />starts in <span class="text-sun-400">Shahdara.</span></h2>
-      <p class="mt-6 text-brand-200 max-w-xl mx-auto">One visit is all it takes to see the difference. No fees to look around, no forms — just come meet the teachers parents keep writing about.</p>
-      <div class="mt-9 flex flex-wrap justify-center gap-4">
-        <button data-open-modal class="inline-flex items-center gap-2 bg-sun-400 hover:bg-sun-300 text-brand-950 font-extrabold rounded-full px-8 py-4 shadow-2xl shadow-sun-400/25 transition-all hover:-translate-y-1 font-display">
-          Enquire About Admission <i data-lucide="arrow-right" class="w-5 h-5"></i>
-        </button>
-        <a href="tel:+919711323246" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold rounded-full px-8 py-4 transition-all font-display">
-          <i data-lucide="phone-call" class="w-5 h-5"></i> 097113 23246
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════ FOOTER ══════════ -->
-<footer class="bg-brand-950 text-brand-200 border-t border-white/10">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
-    <div>
-      <div class="flex items-center gap-3">
-        <span class="w-10 h-10 rounded-2xl bg-sun-400 text-brand-950 grid place-items-center"><i data-lucide="graduation-cap" class="w-5 h-5"></i></span>
-        <span class="leading-tight">
-          <span class="font-display font-bold text-lg text-white block">Edu. Base</span>
-          <span class="text-[11px] text-brand-300">एडु. बेस · Since 2014</span>
+          4.6 · 27 Google Reviews
+        </span>
+        <span class="flex items-center gap-2 border border-[var(--line)] bg-[rgba(255,255,255,.04)] backdrop-blur px-3.5 py-2 text-xs font-bold tracking-wide text-[var(--mut)]">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5 text-[var(--red)]"></i> Shahdara, Delhi 110032
         </span>
       </div>
-      <p class="mt-4 text-sm leading-relaxed">Shahdara's 5.0★ rated coaching centre — school support from primary classes up to Class 10 boards.</p>
-      <p class="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-sun-300"><i data-lucide="star" class="w-4 h-4 fill-current"></i> 5.0 · 49 Google Reviews</p>
+
+      <p class="rv rv-d1 hindi text-[var(--red)] font-bold tracking-[.2em] text-sm mb-4">मेगा रॉक फिटनेस क्लब · शाहदरा</p>
+      <h1 class="rv rv-d1 font-display uppercase leading-[.92] text-[clamp(3.2rem,8.5vw,7rem)]">
+        Train like<br>a <span class="text-[var(--red)]" style="text-shadow:0 0 60px rgba(255,49,49,.4)">Rock.</span>
+      </h1>
+      <p class="rv rv-d2 mt-6 max-w-xl text-[var(--mut)] text-lg leading-relaxed">
+        Shahdara's no-nonsense strength &amp; cardio club — <span class="text-white font-semibold">two dedicated training zones</span>, serious machines, honest pocket-friendly prices and trainers who actually coach. Proper hygiene, separate ladies &amp; gents facilities.
+      </p>
+
+      <div class="rv rv-d3 mt-9 flex flex-wrap gap-4">
+        <a href="#book" class="btn-red flex items-center gap-2.5 px-7 py-4 font-bold text-base uppercase tracking-wide">
+          <i data-lucide="message-circle" class="w-5 h-5"></i> Book Free Trial
+        </a>
+        <a href="tel:+919999157710" class="btn-ghost flex items-center gap-2.5 px-7 py-4 font-bold text-base uppercase tracking-wide">
+          <i data-lucide="phone" class="w-5 h-5 text-[var(--red)]"></i> Call Now
+        </a>
+      </div>
+
+      <div class="rv rv-d4 mt-12 grid grid-cols-2 sm:grid-cols-4 gap-px bg-[var(--line)] border border-[var(--line)] max-w-2xl">
+        <div class="bg-[rgba(16,16,20,.85)] backdrop-blur px-5 py-4">
+          <p class="font-display text-2xl stat-num">4.6<span class="text-[var(--red)]">★</span></p>
+          <p class="text-[11px] tracking-[.18em] text-[var(--mut)] font-semibold mt-1">GOOGLE RATING</p>
+        </div>
+        <div class="bg-[rgba(16,16,20,.85)] backdrop-blur px-5 py-4">
+          <p class="font-display text-2xl stat-num">2</p>
+          <p class="text-[11px] tracking-[.18em] text-[var(--mut)] font-semibold mt-1">TRAINING ZONES</p>
+        </div>
+        <div class="bg-[rgba(16,16,20,.85)] backdrop-blur px-5 py-4">
+          <p class="font-display text-2xl stat-num">9:30</p>
+          <p class="text-[11px] tracking-[.18em] text-[var(--mut)] font-semibold mt-1">OPEN TILL PM</p>
+        </div>
+        <div class="bg-[rgba(16,16,20,.85)] backdrop-blur px-5 py-4">
+          <p class="font-display text-2xl stat-num">4TH</p>
+          <p class="text-[11px] tracking-[.18em] text-[var(--mut)] font-semibold mt-1">FLOOR · GORAKH PARK E.</p>
+        </div>
+      </div>
     </div>
-    <div>
-      <p class="font-display font-bold text-white mb-4">Who We Teach</p>
-      <ul class="space-y-2.5 text-sm">
-        <li><a href="#home" class="hover:text-sun-300 transition">Class I–V · Primary Wing</a></li>
-        <li><a href="#home" class="hover:text-sun-300 transition">Class VI–VIII · Middle School</a></li>
-        <li><a href="#home" class="hover:text-sun-300 transition">Class IX–X · Board Years</a></li>
-      </ul>
-    </div>
-    <div>
-      <p class="font-display font-bold text-white mb-4">Quick Links</p>
-      <ul class="space-y-2.5 text-sm">
-        <li><a href="#why" class="hover:text-sun-300 transition">Why Edu. Base</a></li>
-        <li><a href="#results" class="hover:text-sun-300 transition">Our Numbers</a></li>
-        <li><a href="#faculty" class="hover:text-sun-300 transition">Faculty</a></li>
-        <li><a href="#reviews" class="hover:text-sun-300 transition">Reviews</a></li>
-        <li><a href="https://www.instagram.com/edubase2014" target="_blank" rel="noopener" class="hover:text-sun-300 transition">Instagram</a></li>
-      </ul>
-    </div>
-    <div>
-      <p class="font-display font-bold text-white mb-4">Contact</p>
-      <ul class="space-y-3 text-sm">
-        <li class="flex items-start gap-2.5"><i data-lucide="map-pin" class="w-4 h-4 mt-0.5 text-sun-400 shrink-0"></i> F-111, A Block, Panchsheel Garden, Navin Shahdara, Delhi 110032</li>
-        <li class="flex items-center gap-2.5"><i data-lucide="phone" class="w-4 h-4 text-sun-400 shrink-0"></i><a href="tel:+919711323246" class="hover:text-sun-300 transition">097113 23246</a></li>
-        <li class="flex items-center gap-2.5"><i data-lucide="clock" class="w-4 h-4 text-sun-400 shrink-0"></i> Closes 9 PM daily</li>
-      </ul>
+
+    <div id="book" class="rv rv-d2 relative">
+      <div class="absolute -inset-4 glow-red pointer-events-none"></div>
+      <form id="leadForm" class="glass relative p-7 sm:p-9">
+        <div class="flex items-start justify-between gap-4 mb-1">
+          <div>
+            <p class="hindi text-[13px] font-bold text-[var(--red)] tracking-widest mb-1.5">फ्री ट्रायल बुक करें</p>
+            <h2 class="font-display uppercase text-3xl leading-tight">Claim your<br>free trial</h2>
+          </div>
+          <span class="w-12 h-12 grid place-items-center bg-[var(--red)] shrink-0 floaty">
+            <i data-lucide="zap" class="w-6 h-6 text-white"></i>
+          </span>
+        </div>
+        <p class="text-[var(--mut)] text-sm mb-7 mt-3">Fill this in — WhatsApp opens with your details ready to send. Takes 20 seconds.</p>
+
+        <label class="block mb-4">
+          <span class="text-xs font-bold tracking-[.15em] text-[var(--mut)] uppercase">Your Name</span>
+          <input id="fName" type="text" required placeholder="e.g. Rahul Sharma" class="field mt-1.5 w-full px-4 py-3.5 text-[15px] font-medium">
+        </label>
+        <label class="block mb-4">
+          <span class="text-xs font-bold tracking-[.15em] text-[var(--mut)] uppercase">Phone Number</span>
+          <input id="fPhone" type="tel" required inputmode="tel" placeholder="10-digit mobile number" class="field mt-1.5 w-full px-4 py-3.5 text-[15px] font-medium">
+        </label>
+        <label class="block mb-6">
+          <span class="text-xs font-bold tracking-[.15em] text-[var(--mut)] uppercase">I'm Interested In</span>
+          <select id="fService" required class="field mt-1.5 w-full px-4 py-3.5 text-[15px] font-medium appearance-none bg-[rgba(255,255,255,.05)]">
+            <option value="Strength & Weight Training">Strength &amp; Weight Training</option>
+            <option value="Cardio Zone">Cardio Zone (Fat Loss / Stamina)</option>
+            <option value="Personal Training">Personal Training (1-on-1)</option>
+            <option value="Weight Loss Program">Weight Loss Program</option>
+            <option value="General Membership">General Membership — Plans &amp; Pricing</option>
+          </select>
+        </label>
+
+        <button type="submit" id="submitBtn" class="w-full flex items-center justify-center gap-2.5 px-6 py-4 font-bold text-base uppercase tracking-wide text-white bg-[#1fae54] hover:bg-[#189a48] transition-all hover:-translate-y-0.5 shadow-[0_12px_32px_-10px_rgba(34,197,94,.55)]">
+          <i data-lucide="message-circle" class="w-5 h-5"></i>
+          <span id="btnText">Send on WhatsApp</span>
+        </button>
+        <p class="flex items-center gap-2 mt-5 text-xs text-[var(--mut)]">
+          <i data-lucide="shield-check" class="w-4 h-4 text-[var(--wa)]"></i>
+          No spam. No advance payment. Just a proper workout.
+        </p>
+      </form>
+      <div class="flex items-center justify-center gap-2 mt-5 text-xs text-[var(--mut)]">
+        <i data-lucide="clock" class="w-3.5 h-3.5 text-[var(--red)]"></i> Open now · Closes 9:30 PM · Balbir Nagar Main Rd
+      </div>
     </div>
   </div>
-  <div class="border-t border-white/10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-5 flex flex-wrap items-center justify-between gap-3 text-xs text-brand-300">
-      <p>© 2026 Edu. Base (अमन जैन), Shahdara. All rights reserved.</p>
-      <p class="flex items-center gap-1.5">Teaching with heart since 2014 <i data-lucide="heart" class="w-3.5 h-3.5 text-sun-400 fill-current"></i></p>
+</section>
+
+<section id="services" class="relative py-20 lg:py-28 border-t border-[var(--line)]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="flex flex-wrap items-end justify-between gap-6 mb-14">
+      <div>
+        <p class="rv flex items-center gap-3 text-xs font-bold tracking-[.3em] text-[var(--red)] uppercase mb-4"><span class="w-8 h-px bg-[var(--red)]"></span>01 — What's Inside</p>
+        <h2 class="rv rv-d1 font-display uppercase leading-[.95] text-[clamp(2.4rem,5.5vw,4.5rem)]">Two zones.<br>One <span class="text-[var(--red)]">goal.</span></h2>
+      </div>
+      <p class="rv rv-d2 max-w-md text-[var(--mut)] leading-relaxed">The floor is split into dedicated cardio and workout sections — so you never wait for a bench or fight for a treadmill. Pick your path.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <article class="rv bcard group flex flex-col">
+        <div class="img-zoom relative overflow-hidden h-56">
+          <img src="https://images.pexels.com/photos/6628962/pexels-photo-6628962.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200" alt="Strength training with barbell and kettlebell" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-[var(--panel)] via-transparent to-transparent"></div>
+          <span class="absolute top-4 left-4 font-display text-5xl text-white/15 group-hover:text-[var(--red)] transition-colors">01</span>
+        </div>
+        <div class="p-7 flex flex-col flex-1">
+          <div class="flex items-center gap-3 mb-3">
+            <i data-lucide="dumbbell" class="w-5 h-5 text-[var(--red)]"></i>
+            <h3 class="font-display uppercase text-2xl tracking-wide">Strength &amp; Weight Zone</h3>
+          </div>
+          <p class="text-[var(--mut)] text-[15px] leading-relaxed mb-6">A dedicated workout section with heavy-duty machines, free weights, racks and benches — separated from cardio so you lift without the wait.</p>
+          <div class="flex flex-wrap gap-2 mb-7">
+            <span class="text-[11px] font-bold tracking-wide px-3 py-1.5 border border-[var(--line)] text-[var(--mut)]">FREE WEIGHTS</span>
+            <span class="text-[11px] font-bold tracking-wide px-3 py-1.5 border border-[var(--line)] text-[var(--mut)]">MACHINES</span>
+            <span class="text-[11px] font-bold tracking-wide px-3 py-1.5 border border-[var(--line)] text-[var(--mut)]">RACKS &amp; BENCHES</span>
+          </div>
+          <a href="#book" data-service="Strength & Weight Training" class="svc-cta mt-auto flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-white hover:text-[var(--red)] transition-colors">Start here <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+        </div>
+      </article>
+
+      <article class="rv rv-d1 bcard group flex flex-col">
+        <div class="img-zoom relative overflow-hidden h-56">
+          <img src="https://images.pexels.com/photos/3757938/pexels-photo-3757938.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200" alt="Cardio training on treadmill" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-[var(--panel)] via-transparent to-transparent"></div>
+          <span class="absolute top-4 left-4 font-display text-5xl text-white/15 group-hover:text-[var(--red)] transition-colors">02</span>
+        </div>
+        <div class="p-7 flex flex-col flex-1">
+          <div class="flex items-center gap-3 mb-3">
+            <i data-lucide="heart-pulse" class="w-5 h-5 text-[var(--red)]"></i>
+            <h3 class="font-display uppercase text-2xl tracking-wide">Cardio Studio</h3>
+          </div>
+          <p class="text-[var(--mut)] text-[15px] leading-relaxed mb-6">A full cardio section built for fat loss, stamina and warm-ups — treadmills, cycles and cross-trainers in their own dedicated zone.</p>
+          <div class="flex flex-wrap gap-2 mb-7">
+            <span class="text-[11px] font-bold tracking-wide px-3 py-1.5 border border-[var(--line)] text-[var(--mut)]">TREADMILLS</span>
+            <span class="text-[11px] font-bold tracking-wide px-3 py-1.5 border border-[var(--line)] text-[var(--mut)]">FAT-LOSS PLANS</span>
+            <span class="text-[11px] font-bold tracking-wide px-3 py-1.5 border border-[var(--line)] text-[var(--mut)]">STAMINA BUILDING</span>
+          </div>
+          <a href="#book" data-service="Cardio Zone" class="svc-cta mt-auto flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-white hover:text-[var(--red)] transition-colors">Start here <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+        </div>
+      </article>
+
+      <article class="rv rv-d2 bcard group flex flex-col">
+        <div class="img-zoom relative overflow-hidden h-56">
+          <img src="https://images.pexels.com/photos/6455906/pexels-photo-6455906.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200" alt="Personal trainer coaching with dumbbells" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-[var(--panel)] via-transparent to-transparent"></div>
+          <span class="absolute top-4 left-4 font-display text-5xl text-white/15 group-hover:text-[var(--red)] transition-colors">03</span>
+        </div>
+        <div class="p-7 flex flex-col flex-1">
+          <div class="flex items-center gap-3 mb-3">
+            <i data-lucide="user-check" class="w-5 h-5 text-[var(--red)]"></i>
+            <h3 class="font-display uppercase text-2xl tracking-wide">Personal Coaching</h3>
+          </div>
+          <p class="text-[var(--mut)] text-[15px] leading-relaxed mb-6">One-on-one guidance from our trainers: form correction, custom routines, diet basics and structured weight-loss or muscle-gain plans.</p>
+          <div class="flex flex-wrap gap-2 mb-7">
+            <span class="text-[11px] font-bold tracking-wide px-3 py-1.5 border border-[var(--line)] text-[var(--mut)]">FORM CHECKS</span>
+            <span class="text-[11px] font-bold tracking-wide px-3 py-1.5 border border-[var(--line)] text-[var(--mut)]">CUSTOM ROUTINES</span>
+            <span class="text-[11px] font-bold tracking-wide px-3 py-1.5 border border-[var(--line)] text-[var(--mut)]">DIET BASICS</span>
+          </div>
+          <a href="#book" data-service="Personal Training" class="svc-cta mt-auto flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-white hover:text-[var(--red)] transition-colors">Start here <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="why" class="relative py-20 lg:py-28 border-t border-[var(--line)] bg-[var(--panel)]/40">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="text-center max-w-2xl mx-auto mb-14">
+      <p class="rv flex items-center justify-center gap-3 text-xs font-bold tracking-[.3em] text-[var(--red)] uppercase mb-4"><span class="w-8 h-px bg-[var(--red)]"></span>02 — Why Mega Rock<span class="w-8 h-px bg-[var(--red)]"></span></p>
+      <h2 class="rv rv-d1 font-display uppercase leading-[.95] text-[clamp(2.4rem,5.5vw,4.5rem)]">Local club energy.<br><span class="text-[var(--red)]">Big gym standards.</span></h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="rv bcard p-7">
+        <span class="w-12 h-12 grid place-items-center border border-[rgba(255,49,49,.4)] bg-[rgba(255,49,49,.1)] mb-6"><i data-lucide="shield-check" class="w-6 h-6 text-[var(--red)]"></i></span>
+        <h3 class="font-display uppercase text-xl tracking-wide mb-3">Hygiene First</h3>
+        <p class="text-[var(--mut)] text-sm leading-relaxed">Post-COVID protocols still in force — sanitized machines, clean floors and fresh air. Members call it out in review after review.</p>
+      </div>
+      <div class="rv rv-d1 bcard p-7">
+        <span class="w-12 h-12 grid place-items-center border border-[rgba(255,49,49,.4)] bg-[rgba(255,49,49,.1)] mb-6"><i data-lucide="shower-head" class="w-6 h-6 text-[var(--red)]"></i></span>
+        <h3 class="font-display uppercase text-xl tracking-wide mb-3">Ladies &amp; Gents Facilities</h3>
+        <p class="text-[var(--mut)] text-sm leading-relaxed">Separate washrooms for ladies and gents, plus a dedicated changing room — comfort built in, not bolted on.</p>
+      </div>
+      <div class="rv rv-d2 bcard p-7">
+        <span class="w-12 h-12 grid place-items-center border border-[rgba(255,49,49,.4)] bg-[rgba(255,49,49,.1)] mb-6"><i data-lucide="indian-rupee" class="w-6 h-6 text-[var(--red)]"></i></span>
+        <h3 class="font-display uppercase text-xl tracking-wide mb-3">Pocket-Friendly Plans</h3>
+        <p class="text-[var(--mut)] text-sm leading-relaxed">Serious equipment and real coaching at honest, neighbourhood prices. No franchise markup, no hidden charges.</p>
+      </div>
+      <div class="rv rv-d3 bcard p-7">
+        <span class="w-12 h-12 grid place-items-center border border-[rgba(255,49,49,.4)] bg-[rgba(255,49,49,.1)] mb-6"><i data-lucide="heart-handshake" class="w-6 h-6 text-[var(--red)]"></i></span>
+        <h3 class="font-display uppercase text-xl tracking-wide mb-3">Everyone Trains Here</h3>
+        <p class="text-[var(--mut)] text-sm leading-relaxed">A proud LGBTQ+ friendly space with an amazing, supportive crowd. Beginners to beasts — all levels welcome.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="relative overflow-hidden border-t border-[var(--line)]">
+  <img src="https://images.pexels.com/photos/5327451/pexels-photo-5327451.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200" alt="Dumbbells on rack" class="absolute inset-0 w-full h-full object-cover opacity-25">
+  <div class="absolute inset-0 bg-gradient-to-r from-[var(--ink)] via-[rgba(10,10,12,.85)] to-[rgba(10,10,12,.6)]"></div>
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 py-20 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
+    <div>
+      <p class="rv hindi text-[var(--red)] font-bold tracking-widest text-sm mb-3">पहला वर्कआउट हमारी तरफ से</p>
+      <h2 class="rv rv-d1 font-display uppercase leading-[.95] text-[clamp(2.2rem,5vw,4rem)]">Your first workout<br>is <span class="text-[var(--red)]">free.</span></h2>
+    </div>
+    <div class="rv rv-d2 flex flex-wrap gap-4">
+      <a href="#book" class="btn-red flex items-center gap-2.5 px-7 py-4 font-bold uppercase tracking-wide"><i data-lucide="zap" class="w-5 h-5"></i> Claim Free Trial</a>
+      <a href="https://wa.me/919999157710?text=Hi%20Mega%20Rock%20Fitness%20Club!%20I%20want%20to%20claim%20my%20free%20trial%20workout." target="_blank" rel="noopener" class="btn-ghost flex items-center gap-2.5 px-7 py-4 font-bold uppercase tracking-wide bg-[rgba(10,10,12,.6)]"><i data-lucide="message-circle" class="w-5 h-5 text-[#25D366]"></i> WhatsApp Us</a>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="relative py-20 lg:py-28 border-t border-[var(--line)]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="flex flex-wrap items-end justify-between gap-6 mb-14">
+      <div>
+        <p class="rv flex items-center gap-3 text-xs font-bold tracking-[.3em] text-[var(--red)] uppercase mb-4"><span class="w-8 h-px bg-[var(--red)]"></span>03 — Proof From The Floor</p>
+        <h2 class="rv rv-d1 font-display uppercase leading-[.95] text-[clamp(2.4rem,5.5vw,4.5rem)]">Rated by people<br>who <span class="text-[var(--red)]">train here.</span></h2>
+      </div>
+      <div class="rv rv-d2 flex flex-wrap gap-2">
+        <span class="flex items-center gap-2 text-xs font-bold px-3.5 py-2 border border-[var(--line)] text-[var(--mut)]"><i data-lucide="sparkles" class="w-3.5 h-3.5 text-[var(--red)]"></i> hygiene</span>
+        <span class="flex items-center gap-2 text-xs font-bold px-3.5 py-2 border border-[var(--line)] text-[var(--mut)]"><i data-lucide="settings-2" class="w-3.5 h-3.5 text-[var(--red)]"></i> equipment</span>
+        <span class="flex items-center gap-2 text-xs font-bold px-3.5 py-2 border border-[var(--line)] text-[var(--mut)]"><i data-lucide="dumbbell" class="w-3.5 h-3.5 text-[var(--red)]"></i> gym</span>
+      </div>
+    </div>
+
+    <div class="grid lg:grid-cols-[380px_1fr] gap-6">
+      <div class="rv bcard p-8 flex flex-col">
+        <p class="text-xs font-bold tracking-[.25em] text-[var(--mut)] uppercase mb-6">Google Review Summary</p>
+        <div class="flex items-end gap-4">
+          <span class="font-display text-[6rem] leading-[.8] stat-num">4.6</span>
+          <div class="pb-1">
+            <div class="relative inline-flex text-[#3a3a42]">
+              <i data-lucide="star" class="w-6 h-6 fill-current"></i><i data-lucide="star" class="w-6 h-6 fill-current"></i><i data-lucide="star" class="w-6 h-6 fill-current"></i><i data-lucide="star" class="w-6 h-6 fill-current"></i><i data-lucide="star" class="w-6 h-6 fill-current"></i>
+              <div class="absolute inset-0 overflow-hidden text-amber-400" style="width:92%">
+                <div class="flex w-max"><i data-lucide="star" class="w-6 h-6 fill-current shrink-0"></i><i data-lucide="star" class="w-6 h-6 fill-current shrink-0"></i><i data-lucide="star" class="w-6 h-6 fill-current shrink-0"></i><i data-lucide="star" class="w-6 h-6 fill-current shrink-0"></i><i data-lucide="star" class="w-6 h-6 fill-current shrink-0"></i></div>
+              </div>
+            </div>
+            <p class="text-[var(--mut)] text-sm mt-2 font-semibold">27 verified reviews</p>
+          </div>
+        </div>
+        <div class="space-y-2.5 mt-8">
+          <div class="flex items-center gap-3 text-xs font-bold text-[var(--mut)]"><span class="w-3">5</span><div class="flex-1 h-2 bg-[var(--panel2)] overflow-hidden"><div class="h-full bg-[var(--red)]" style="width:78%"></div></div></div>
+          <div class="flex items-center gap-3 text-xs font-bold text-[var(--mut)]"><span class="w-3">4</span><div class="flex-1 h-2 bg-[var(--panel2)] overflow-hidden"><div class="h-full bg-[var(--red)]/70" style="width:11%"></div></div></div>
+          <div class="flex items-center gap-3 text-xs font-bold text-[var(--mut)]"><span class="w-3">3</span><div class="flex-1 h-2 bg-[var(--panel2)] overflow-hidden"><div class="h-full bg-[var(--red)]/50" style="width:7%"></div></div></div>
+          <div class="flex items-center gap-3 text-xs font-bold text-[var(--mut)]"><span class="w-3">2</span><div class="flex-1 h-2 bg-[var(--panel2)] overflow-hidden"><div class="h-full bg-[var(--red)]/30" style="width:2%"></div></div></div>
+          <div class="flex items-center gap-3 text-xs font-bold text-[var(--mut)]"><span class="w-3">1</span><div class="flex-1 h-2 bg-[var(--panel2)] overflow-hidden"><div class="h-full bg-[var(--red)]/30" style="width:4%"></div></div></div>
+        </div>
+        <div class="grid grid-cols-2 gap-3 mt-8 pt-8 border-t border-[var(--line)]">
+          <div class="border border-[var(--line)] bg-[var(--panel2)] p-4">
+            <i data-lucide="quote" class="w-4 h-4 text-[var(--red)] mb-2"></i>
+            <p class="text-sm font-semibold leading-snug">"Best place for work out"</p>
+            <p class="text-[11px] text-[var(--mut)] mt-1.5">Google review</p>
+          </div>
+          <div class="border border-[var(--line)] bg-[var(--panel2)] p-4">
+            <i data-lucide="quote" class="w-4 h-4 text-[var(--red)] mb-2"></i>
+            <p class="text-sm font-semibold leading-snug">"I regularly go at this place. Very nice staff"</p>
+            <p class="text-[11px] text-[var(--mut)] mt-1.5">Google review</p>
+          </div>
+        </div>
+        <a href="https://wa.me/919999157710?text=Hi%20Mega%20Rock%20Fitness%20Club!%20I%20saw%20your%20Google%20reviews%20and%20want%20to%20visit%20for%20a%20trial." target="_blank" rel="noopener" class="mt-8 btn-red flex items-center justify-center gap-2.5 px-6 py-3.5 font-bold uppercase tracking-wide text-sm">Join them <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <article class="rv rv-d1 bcard p-7 flex flex-col">
+          <div class="flex items-center gap-4 mb-5">
+            <span class="w-12 h-12 rounded-full grid place-items-center font-display text-xl bg-[#7c3aed] text-white shrink-0">G</span>
+            <div>
+              <p class="font-bold flex items-center gap-1.5">Gaurav Rathi <i data-lucide="badge-check" class="w-4 h-4 text-sky-400"></i></p>
+              <p class="text-xs text-[var(--mut)]">Local Guide · 15 reviews · 30 photos</p>
+            </div>
+          </div>
+          <div class="flex text-amber-400 mb-4">
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
+          </div>
+          <p class="text-[15px] leading-relaxed text-[#d6d3cb]">"Amazing crowd, good workout machines, pocket friendly. Separated into 2 sections — 1 for cardio, 1 for workout. Proper hygiene is being maintained after COVID-19 &amp; all precautions are being measured. They also have separate bathrooms for ladies &amp; gents and changing room also."</p>
+          <div class="mt-6 pt-5 border-t border-[var(--line)] flex items-start gap-3">
+            <span class="w-7 h-7 grid place-items-center bg-[var(--red)] shrink-0 mt-0.5"><i data-lucide="dumbbell" class="w-3.5 h-3.5 text-white"></i></span>
+            <p class="text-xs text-[var(--mut)] leading-relaxed"><span class="text-white font-bold">Response from the owner</span> — "Thank you Gaurav Rathi for amazing ratings."</p>
+          </div>
+        </article>
+
+        <article class="rv rv-d2 bcard p-7 flex flex-col">
+          <div class="flex items-center gap-4 mb-5">
+            <span class="w-12 h-12 rounded-full grid place-items-center font-display text-xl bg-[#0e7490] text-white shrink-0">D</span>
+            <div>
+              <p class="font-bold flex items-center gap-1.5">Dhruv Gupta</p>
+              <p class="text-xs text-[var(--mut)]">2 reviews</p>
+            </div>
+          </div>
+          <div class="flex text-amber-400 mb-4">
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
+          </div>
+          <p class="text-[15px] leading-relaxed text-[#d6d3cb]">"I had joined this gym two months back and since then I am absolutely satisfied because of proper hygiene, good infrastructure, great equipment and amazing trainer. If anybody lives near Babarpur then surely give it a try."</p>
+          <div class="mt-6 pt-5 border-t border-[var(--line)] flex items-start gap-3">
+            <span class="w-7 h-7 grid place-items-center bg-[var(--red)] shrink-0 mt-0.5"><i data-lucide="dumbbell" class="w-3.5 h-3.5 text-white"></i></span>
+            <p class="text-xs text-[var(--mut)] leading-relaxed"><span class="text-white font-bold">Response from the owner</span> — "Thank you Dhruv Gupta."</p>
+          </div>
+        </article>
+
+        <div class="rv rv-d3 md:col-span-2 border border-[rgba(255,49,49,.35)] bg-gradient-to-r from-[rgba(255,49,49,.1)] to-transparent p-7 flex flex-col sm:flex-row sm:items-center gap-5">
+          <span class="w-12 h-12 grid place-items-center bg-[var(--red)] shrink-0"><i data-lucide="message-circle" class="w-6 h-6 text-white"></i></span>
+          <div class="flex-1">
+            <h3 class="font-display uppercase text-2xl tracking-wide">Trained here? Tell the next member.</h3>
+            <p class="text-[var(--mut)] text-sm mt-1">Your review helps neighbours in Shahdara &amp; Babarpur find a gym that actually delivers.</p>
+          </div>
+          <a href="https://wa.me/919999157710?text=Hi%20Mega%20Rock%20Fitness%20Club!%20Sharing%20feedback%20about%20my%20training%20experience." target="_blank" rel="noopener" class="btn-ghost flex items-center gap-2 px-6 py-3.5 text-sm font-bold uppercase tracking-widest shrink-0">Share feedback <i data-lucide="arrow-up-right" class="w-4 h-4"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="relative py-20 lg:py-28 border-t border-[var(--line)] bg-[var(--panel)]/40">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="mb-14">
+      <p class="rv flex items-center gap-3 text-xs font-bold tracking-[.3em] text-[var(--red)] uppercase mb-4"><span class="w-8 h-px bg-[var(--red)]"></span>04 — Find Us</p>
+      <h2 class="rv rv-d1 font-display uppercase leading-[.95] text-[clamp(2.4rem,5.5vw,4.5rem)]">4th floor, Balbir Nagar<br><span class="text-[var(--red)]">Main Road.</span></h2>
+    </div>
+
+    <div class="grid lg:grid-cols-[420px_1fr] gap-6">
+      <div class="rv bcard p-8 flex flex-col gap-7">
+        <div class="flex items-start gap-4">
+          <span class="w-11 h-11 grid place-items-center border border-[rgba(255,49,49,.4)] bg-[rgba(255,49,49,.1)] shrink-0"><i data-lucide="map-pin" class="w-5 h-5 text-[var(--red)]"></i></span>
+          <div>
+            <p class="text-xs font-bold tracking-[.2em] text-[var(--mut)] uppercase mb-1.5">Address</p>
+            <p class="leading-relaxed text-[15px]">1/7778, 4th Floor, Balbir Nagar Main Rd,<br>Gorakh Park East, Shahdara,<br>Delhi — 110032</p>
+            <span class="inline-flex items-center gap-1.5 mt-2.5 text-xs font-bold px-2.5 py-1.5 border border-[var(--line)] text-[var(--mut)]"><i data-lucide="locate-fixed" class="w-3.5 h-3.5 text-[var(--red)]"></i> Plus Code: M7MM+J8 Delhi</span>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <span class="w-11 h-11 grid place-items-center border border-[rgba(255,49,49,.4)] bg-[rgba(255,49,49,.1)] shrink-0"><i data-lucide="phone" class="w-5 h-5 text-[var(--red)]"></i></span>
+          <div>
+            <p class="text-xs font-bold tracking-[.2em] text-[var(--mut)] uppercase mb-1.5">Call / WhatsApp</p>
+            <a href="tel:+919999157710" class="font-display text-2xl tracking-wide hover:text-[var(--red)] transition-colors">099991 57710</a>
+            <p class="text-xs text-[var(--mut)] mt-1">Tap to call · WhatsApp for plans &amp; trial slots</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <span class="w-11 h-11 grid place-items-center border border-[rgba(255,49,49,.4)] bg-[rgba(255,49,49,.1)] shrink-0"><i data-lucide="clock" class="w-5 h-5 text-[var(--red)]"></i></span>
+          <div>
+            <p class="text-xs font-bold tracking-[.2em] text-[var(--mut)] uppercase mb-1.5">Hours</p>
+            <p class="text-[15px] font-semibold flex items-center gap-2"><span class="relative flex w-2.5 h-2.5"><span class="absolute inline-flex w-full h-full rounded-full bg-[var(--wa)] ping-slow"></span><span class="relative inline-flex w-2.5 h-2.5 rounded-full bg-[var(--wa)]"></span></span> Open · Closes 9:30 PM</p>
+            <p class="text-xs text-[var(--mut)] mt-1">Call to confirm morning &amp; evening batch timings</p>
+          </div>
+        </div>
+        <div class="grid grid-cols-3 gap-3 pt-2 mt-auto">
+          <a href="https://www.google.com/maps/dir/?api=1&destination=Mega+Rock+Fitness+Club,+Balbir+Nagar+Main+Rd,+Shahdara,+Delhi+110032" target="_blank" rel="noopener" class="btn-red flex flex-col items-center gap-1.5 px-3 py-4 text-[11px] font-bold tracking-widest uppercase"><i data-lucide="navigation" class="w-5 h-5"></i>Directions</a>
+          <a href="tel:+919999157710" class="btn-ghost flex flex-col items-center gap-1.5 px-3 py-4 text-[11px] font-bold tracking-widest uppercase"><i data-lucide="phone" class="w-5 h-5 text-[var(--red)]"></i>Call</a>
+          <a href="https://wa.me/919999157710" target="_blank" rel="noopener" class="btn-ghost flex flex-col items-center gap-1.5 px-3 py-4 text-[11px] font-bold tracking-widest uppercase"><i data-lucide="message-circle" class="w-5 h-5 text-[#25D366]"></i>WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="rv rv-d1 relative border border-[var(--line)] bg-[var(--panel)] map-dark overflow-hidden min-h-[420px]">
+        <iframe title="Mega Rock Fitness Club location map" src="https://www.google.com/maps?q=Mega%20Rock%20Fitness%20Club%2C%20Balbir%20Nagar%20Main%20Rd%2C%20Gorakh%20Park%20East%2C%20Shahdara%2C%20Delhi%20110032&z=16&output=embed" class="absolute inset-0 w-full h-full" style="border:0" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="absolute top-4 left-4 glass px-4 py-3 flex items-center gap-3 pointer-events-none">
+          <span class="w-9 h-9 grid place-items-center bg-[var(--red)]"><i data-lucide="dumbbell" class="w-4 h-4 text-white"></i></span>
+          <div class="leading-tight">
+            <p class="font-display text-sm tracking-wide">MEGA ROCK FITNESS CLUB</p>
+            <p class="text-[11px] text-[var(--mut)]">Near Babarpur · Gorakh Park East</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="border-t border-[var(--line)] bg-[#08080a]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-16 grid md:grid-cols-3 gap-12">
+    <div>
+      <div class="flex items-center gap-3 mb-5">
+        <span class="w-11 h-11 grid place-items-center bg-[var(--red)]"><i data-lucide="dumbbell" class="w-5 h-5 text-white"></i></span>
+        <span class="leading-none">
+          <span class="font-display text-2xl tracking-wide block">MEGA ROCK</span>
+          <span class="text-[10px] tracking-[.35em] text-[var(--mut)] font-semibold">FITNESS CLUB</span>
+        </span>
+      </div>
+      <p class="hindi text-[var(--mut)] text-sm mb-3">मेगा रॉक फिटनेस क्लब — शाहदरा, दिल्ली</p>
+      <p class="text-[var(--mut)] text-sm leading-relaxed max-w-xs">Shahdara's pocket-friendly strength &amp; cardio club. Two training zones, real coaching, honest prices. Rated 4.6★ on Google.</p>
+      <span class="inline-flex items-center gap-2 mt-5 text-xs font-bold px-3.5 py-2 border border-[var(--line)] text-[var(--mut)]"><i data-lucide="heart-handshake" class="w-4 h-4 text-[var(--red)]"></i> LGBTQ+ friendly space</span>
+    </div>
+    <div>
+      <p class="text-xs font-bold tracking-[.25em] text-[var(--mut)] uppercase mb-6">Quick Links</p>
+      <ul class="space-y-3.5 text-sm font-semibold">
+        <li><a href="#services" class="flex items-center gap-2 text-[#d6d3cb] hover:text-[var(--red)] transition-colors"><i data-lucide="chevron-right" class="w-4 h-4 text-[var(--red)]"></i> Training Zones</a></li>
+        <li><a href="#why" class="flex items-center gap-2 text-[#d6d3cb] hover:text-[var(--red)] transition-colors"><i data-lucide="chevron-right" class="w-4 h-4 text-[var(--red)]"></i> Why Mega Rock</a></li>
+        <li><a href="#reviews" class="flex items-center gap-2 text-[#d6d3cb] hover:text-[var(--red)] transition-colors"><i data-lucide="chevron-right" class="w-4 h-4 text-[var(--red)]"></i> Member Reviews</a></li>
+        <li><a href="#book" class="flex items-center gap-2 text-[#d6d3cb] hover:text-[var(--red)] transition-colors"><i data-lucide="chevron-right" class="w-4 h-4 text-[var(--red)]"></i> Book Free Trial</a></li>
+        <li><a href="#contact" class="flex items-center gap-2 text-[#d6d3cb] hover:text-[var(--red)] transition-colors"><i data-lucide="chevron-right" class="w-4 h-4 text-[var(--red)]"></i> Location &amp; Hours</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-xs font-bold tracking-[.25em] text-[var(--mut)] uppercase mb-6">Get In Touch</p>
+      <ul class="space-y-4 text-sm">
+        <li class="flex items-start gap-3"><i data-lucide="map-pin" class="w-4 h-4 text-[var(--red)] mt-0.5 shrink-0"></i><span class="text-[var(--mut)]">1/7778, 4th Floor, Balbir Nagar Main Rd, Gorakh Park East, Shahdara, Delhi 110032</span></li>
+        <li><a href="tel:+919999157710" class="flex items-center gap-3 hover:text-[var(--red)] transition-colors"><i data-lucide="phone" class="w-4 h-4 text-[var(--red)] shrink-0"></i> 099991 57710</a></li>
+        <li class="flex items-center gap-3"><i data-lucide="clock" class="w-4 h-4 text-[var(--red)] shrink-0"></i><span class="text-[var(--mut)]">Open · Closes 9:30 PM</span></li>
+      </ul>
+      <a href="https://wa.me/919999157710?text=Hi%20Mega%20Rock%20Fitness%20Club!%20Please%20share%20membership%20plans." target="_blank" rel="noopener" class="mt-7 btn-red inline-flex items-center gap-2.5 px-6 py-3.5 text-sm font-bold uppercase tracking-wide"><i data-lucide="message-circle" class="w-4 h-4"></i> Message on WhatsApp</a>
+    </div>
+  </div>
+  <div class="border-t border-[var(--line)]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[var(--mut)]">
+      <p>© 2026 Mega Rock Fitness Club, Shahdara, Delhi. All rights reserved.</p>
+      <p class="flex items-center gap-2"><i data-lucide="star" class="w-3.5 h-3.5 text-amber-400 fill-current"></i> 4.6 rated fitness center · M7MM+J8 Delhi</p>
     </div>
   </div>
 </footer>
 
-<!-- ══════════ FLOATING ENQUIRE BUTTON ══════════ -->
-<button data-open-modal class="pulse-ring fixed bottom-5 right-5 sm:bottom-7 sm:right-7 z-50 inline-flex items-center gap-2.5 bg-sun-400 hover:bg-sun-300 text-brand-950 font-extrabold font-display rounded-full pl-4 pr-6 py-4 shadow-2xl shadow-sun-500/40 transition-all hover:-translate-y-1">
-  <i data-lucide="message-circle" class="w-5.5 h-5.5"></i>
-  <span class="text-sm sm:text-base">Enquire Now</span>
-</button>
-
-<!-- ══════════ ENQUIRY MODAL ══════════ -->
-<div id="enquiryModal" class="fixed inset-0 z-[60] hidden items-center justify-center p-4">
-  <div id="modalOverlay" class="absolute inset-0 bg-brand-950/70 backdrop-blur-sm"></div>
-  <div id="modalCard" class="relative bg-white w-full max-w-md rounded-[2rem] shadow-2xl overflow-hidden">
-    <div class="bg-brand-950 bg-grid-dark text-white px-7 py-6 relative">
-      <button id="modalClose" class="absolute top-5 right-5 w-9 h-9 grid place-items-center rounded-full bg-white/10 hover:bg-white/25 transition" aria-label="Close">
-        <i data-lucide="x" class="w-4.5 h-4.5"></i>
-      </button>
-      <p class="font-display font-bold text-sun-400 text-xs tracking-[0.18em] uppercase">Admission Enquiry</p>
-      <h3 class="font-display font-bold text-2xl mt-1.5">Talk to the centre today</h3>
-      <p class="text-brand-200 text-sm mt-1">Fill this — we reply on WhatsApp within minutes.</p>
-    </div>
-    <form id="enquiryForm" class="px-7 py-7 space-y-4.5">
-      <div>
-        <label for="fName" class="block text-xs font-bold text-brand-950 uppercase tracking-wider mb-1.5 font-display">Student / Parent Name</label>
-        <div class="relative">
-          <i data-lucide="user" class="w-4.5 h-4.5 absolute left-4 top-1/2 -translate-y-1/2 text-brand-400"></i>
-          <input id="fName" type="text" required minlength="3" placeholder="e.g. Priya Sharma" class="w-full rounded-2xl border-2 border-brand-100 focus:border-brand-500 focus:ring-4 focus:ring-brand-100 outline-none pl-11 pr-4 py-3.5 text-sm font-medium transition" />
-        </div>
-      </div>
-      <div>
-        <label for="fCourse" class="block text-xs font-bold text-brand-950 uppercase tracking-wider mb-1.5 font-display">Class of the Student</label>
-        <div class="relative">
-          <i data-lucide="book-open" class="w-4.5 h-4.5 absolute left-4 top-1/2 -translate-y-1/2 text-brand-400"></i>
-          <select id="fCourse" required class="w-full appearance-none rounded-2xl border-2 border-brand-100 focus:border-brand-500 focus:ring-4 focus:ring-brand-100 outline-none pl-11 pr-10 py-3.5 text-sm font-medium bg-white transition">
-            <option value="" disabled selected>Select the student's class</option>
-            <option>Class I–V (Primary Wing)</option>
-            <option>Class VI–VIII (Middle School)</option>
-            <option>Class IX–X (Board Years)</option>
-            <option>Other — need guidance</option>
-          </select>
-          <i data-lucide="chevron-down" class="w-4.5 h-4.5 absolute right-4 top-1/2 -translate-y-1/2 text-brand-400 pointer-events-none"></i>
-        </div>
-      </div>
-      <div>
-        <label for="fPhone" class="block text-xs font-bold text-brand-950 uppercase tracking-wider mb-1.5 font-display">WhatsApp / Phone Number</label>
-        <div class="relative">
-          <i data-lucide="phone" class="w-4.5 h-4.5 absolute left-4 top-1/2 -translate-y-1/2 text-brand-400"></i>
-          <input id="fPhone" type="tel" required inputmode="numeric" pattern="[0-9]{10}" maxlength="10" placeholder="10-digit mobile number" class="w-full rounded-2xl border-2 border-brand-100 focus:border-brand-500 focus:ring-4 focus:ring-brand-100 outline-none pl-11 pr-4 py-3.5 text-sm font-medium transition" />
-        </div>
-      </div>
-      <button type="submit" class="w-full inline-flex items-center justify-center gap-2.5 bg-emerald-500 hover:bg-emerald-600 text-white font-extrabold font-display rounded-2xl px-6 py-4 shadow-xl shadow-emerald-500/30 transition-all hover:-translate-y-0.5">
-        <i data-lucide="message-circle" class="w-5 h-5"></i> Send on WhatsApp
-      </button>
-      <p class="text-center text-xs text-slate-500 flex items-center justify-center gap-1.5">
-        <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-500"></i> No spam — just a friendly reply from the centre.
-      </p>
-    </form>
-  </div>
-</div>
-
-<style>
-  /* hero tab pills */
-  .hero-tab {
-    font-family:"Space Grotesk",sans-serif; font-weight:600; font-size:.85rem;
-    padding:.6rem 1.15rem; border-radius:9999px; border:2px solid #e0e7ff;
-    background:#fff; color:#475569; transition:all .25s ease; cursor:pointer;
-  }
-  .hero-tab:hover { border-color:#a5b4fc; color:#4f46e5; transform:translateY(-1px); }
-  .hero-tab.active { background:#4f46e5; border-color:#4f46e5; color:#fff; box-shadow:0 10px 24px -8px rgba(79,70,229,.5); }
-  /* modal entrance */
-  #enquiryModal.open #modalCard { animation: cardPop .4s cubic-bezier(.22,1.2,.36,1) both; }
-  @keyframes cardPop { from { opacity:0; transform:translateY(36px) scale(.96);} to { opacity:1; transform:none;} }
-</style>
+<a href="https://wa.me/919999157710?text=Hi%20Mega%20Rock%20Fitness%20Club!%20I%20have%20a%20question%20about%20membership." target="_blank" rel="noopener" aria-label="Chat on WhatsApp" class="fixed bottom-6 right-6 z-50 group">
+  <span class="absolute inset-0 rounded-full bg-[#25D366] ping-slow"></span>
+  <span class="relative w-14 h-14 rounded-full bg-[#25D366] grid place-items-center shadow-[0_14px_40px_-8px_rgba(37,211,102,.6)] group-hover:scale-110 transition-transform">
+    <i data-lucide="message-circle" class="w-7 h-7 text-white"></i>
+  </span>
+</a>
 
 <script>
   lucide.createIcons();
 
-  /* ── marquee: subjects & offerings mentioned in reviews ── */
-  const subjects = ["Mathematics","Science","English","Social Science","Hindi","Reading & Writing","Grammar","Weekly Unit Tests","Doubt Support","Friendly Environment","Revision Classes"];
-  const buildMarquee = () => subjects.map(s => `<span class="flex items-center gap-8 shrink-0"><span>${s}</span><svg class="w-4 h-4 text-amber-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z"/></svg></span>`).join('');
-  document.getElementById('marqueeA').innerHTML = buildMarquee();
-  document.getElementById('marqueeB').innerHTML = buildMarquee();
+  const WA_NUMBER = "919999157710";
+  const form = document.getElementById("leadForm");
+  const btnText = document.getElementById("btnText");
 
-  /* ── hero tabs ── */
-  const tabs = document.querySelectorAll('.hero-tab');
-  tabs.forEach(tab => tab.addEventListener('click', () => {
-    tabs.forEach(t => t.classList.remove('active'));
-    tab.classList.add('active');
-    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-    document.getElementById(tab.dataset.tab).classList.add('active');
-  }));
-
-  /* ── countdown (evergreen: resets monthly) ── */
-  function nextBatch() {
-    const n = new Date();
-    let t = new Date(n.getFullYear(), n.getMonth(), 5, 10, 0, 0);
-    if (t <= n) t = new Date(n.getFullYear(), n.getMonth() + 1, 5, 10, 0, 0);
-    return t;
-  }
-  let target = nextBatch();
-  const pad = v => String(v).padStart(2, '0');
-  function tick() {
-    let diff = target - new Date();
-    if (diff <= 0) { target = nextBatch(); diff = target - new Date(); }
-    document.getElementById('cd-d').textContent = pad(Math.floor(diff / 864e5));
-    document.getElementById('cd-h').textContent = pad(Math.floor(diff / 36e5) % 24);
-    document.getElementById('cd-m').textContent = pad(Math.floor(diff / 6e4) % 60);
-    document.getElementById('cd-s').textContent = pad(Math.floor(diff / 1e3) % 60);
-  }
-  tick(); setInterval(tick, 1000);
-
-  /* ── mobile menu ── */
-  const menuBtn = document.getElementById('menuBtn');
-  const mobileMenu = document.getElementById('mobileMenu');
-  menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-  mobileMenu.querySelectorAll('a, button').forEach(el => el.addEventListener('click', () => mobileMenu.classList.add('hidden')));
-
-  /* ── enquiry modal ── */
-  const modal = document.getElementById('enquiryModal');
-  const openModal = () => {
-    modal.classList.remove('hidden'); modal.classList.add('flex', 'open');
-    document.body.style.overflow = 'hidden';
-  };
-  const closeModal = () => {
-    modal.classList.add('hidden'); modal.classList.remove('flex', 'open');
-    document.body.style.overflow = '';
-  };
-  document.querySelectorAll('[data-open-modal]').forEach(b => b.addEventListener('click', openModal));
-  document.getElementById('modalClose').addEventListener('click', closeModal);
-  document.getElementById('modalOverlay').addEventListener('click', closeModal);
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
-
-  /* ── form -> wa.me deep link ── */
-  document.getElementById('enquiryForm').addEventListener('submit', e => {
+  form.addEventListener("submit", function (e) {
     e.preventDefault();
-    const name = document.getElementById('fName').value.trim();
-    const course = document.getElementById('fCourse').value;
-    const phone = document.getElementById('fPhone').value.trim();
-    const msg = `Hello Edu. Base! I want to enquire about admissions.\n\nName: ${name}\nStudent's Class: ${course}\nMy Phone: ${phone}\n\nPlease share timing and fee details.`;
-    window.open(`https://wa.me/919711323246?text=${encodeURIComponent(msg)}`, '_blank');
-    closeModal();
+    const name = document.getElementById("fName").value.trim();
+    const phone = document.getElementById("fPhone").value.trim();
+    const service = document.getElementById("fService").value;
+    if (!name || !phone) return;
+
+    const lines = [
+      "Hi Mega Rock Fitness Club!",
+      "My name is " + name + ".",
+      "I am interested in: " + service + ".",
+      "My contact number: " + phone + ".",
+      "Please share membership plans and a free trial slot. Location: Shahdara, Delhi."
+    ];
+    const url = "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(lines.join("\n"));
+
+    btnText.textContent = "Opening WhatsApp…";
+    window.open(url, "_blank", "noopener");
+    setTimeout(function () { btnText.textContent = "Send on WhatsApp"; form.reset(); }, 2600);
   });
 
-  /* ── scroll reveal ── */
-  const io = new IntersectionObserver(entries => {
-    entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  document.querySelectorAll(".svc-cta").forEach(function (a) {
+    a.addEventListener("click", function () {
+      const s = this.getAttribute("data-service");
+      const sel = document.getElementById("fService");
+      if (s && sel) sel.value = s;
+    });
+  });
 
-  lucide.createIcons();
+  const menuBtn = document.getElementById("menuBtn");
+  const mobMenu = document.getElementById("mobMenu");
+  let menuOpen = false;
+  menuBtn.addEventListener("click", function () {
+    menuOpen = !menuOpen;
+    mobMenu.classList.toggle("hidden", !menuOpen);
+    menuBtn.innerHTML = menuOpen ? '<i data-lucide="x" class="w-5 h-5"></i>' : '<i data-lucide="menu" class="w-5 h-5"></i>';
+    lucide.createIcons();
+  });
+  mobMenu.querySelectorAll("a").forEach(function (a) {
+    a.addEventListener("click", function () {
+      menuOpen = false;
+      mobMenu.classList.add("hidden");
+      menuBtn.innerHTML = '<i data-lucide="menu" class="w-5 h-5"></i>';
+      lucide.createIcons();
+    });
+  });
+
+  const progress = document.getElementById("progress");
+  window.addEventListener("scroll", function () {
+    const h = document.documentElement;
+    const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+    progress.style.width = pct + "%";
+  }, { passive: true });
+
+  const io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
+    });
+  }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+  document.querySelectorAll(".rv").forEach(function (el) { io.observe(el); });
 </script>
 </body>
 </html>
